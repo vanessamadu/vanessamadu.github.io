@@ -62,6 +62,7 @@ Communicating science through art tells allows you to tell stories with more dep
 * [Huxley Building Foyer Windows, Imperial College London](https://www.imperial.ac.uk/news/251858/new-window-displays-huxley-building-weave/)
 : Across seven consecutive windows: mathematics' history from 2700 BC until the present day.[^vanessa-woz-here]
 ![Desktop View](/assets/img/windows.jpg)
+
 ### Doing a PhD *and* Science Communication? Why so much effort?
 
 Perspective matters. From where I'm standing, Maths is one of the closest things we have to magic, but many people will never see that. After all, how does one find wonder in maths when all they are ever presented with are problems; not for the fun of solving them, but as the gatekeepers between them and the future they want?
