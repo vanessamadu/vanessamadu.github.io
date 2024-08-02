@@ -3,7 +3,7 @@ title: Rabbit Hole &#35;1 - Consecutive Semi-Primes
 description: What is the longest possible chain of consecutive semi-primes?
 date: 2024-07-28 12:19:00 -0800 # 12:00:00 - 0800 is 9 am
 categories: [Recreational Mathematics, Rabbit Holes]
-tags: [numbers,semi-primes]
+tags: [numbers,semi-primes,moderate-jargon,number-nerds]
 math: true
 published: true
 audience: Number Nerds
