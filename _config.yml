@@ -23,7 +23,7 @@ social:
     - https://profiles.imperial.ac.uk/vanessa.madu18
     - https://www.linkedin.com/in/vanessa-madu
 
-avatar: "assets/img/avatar.jpg"
+avatar: "/assets/img/avatar.jpg"
 # Site Verification Settings
 webmaster_verifications:
   google: # fill in your Google verification code
