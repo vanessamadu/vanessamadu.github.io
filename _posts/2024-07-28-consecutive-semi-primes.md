@@ -5,8 +5,15 @@ date: 2024-07-28 12:19:00 -0800 # 12:00:00 - 0800 is 9 am
 categories: [Recreational Mathematics, Rabbit Holes]
 tags: [numbers,semi-primes]
 math: true
-mermaid: true
+published: true
+audience: Number Nerds
 ---
+<small>Audience: <b>{{ page.audience }}</b></small>
+
+<small><i class= "fas fa-triangle-exclamation"></i> **Moderate Jargon Alert:** This post is primarily aimed at people who are comfortable using numbers as play objects, so the post's jargon rating is moderate. New to this? *don't let that put you off*, we all started somewhere!</small>
+
+---
+
 Colin first posed this one to me after I had told him about a conversation I had on the train about consecutive numbers that have the same number of distinct prime factors. Here's the question:
 
 > **Question:** What is the smallest $$n$$-tuple of consecutive semi-primes for a given $$n$$? Do $$n$$-tuples of consecutive primes exist for all $$n$$?
