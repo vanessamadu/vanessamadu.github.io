@@ -46,7 +46,7 @@ comments: false
 
 
 ### Physically Interpretable Error Metrics for Ocean Surface Models, Imperial College London
-**November 2024 - February 2024**  
+**November 2023 - February 2024**  
 <i class="fas fa-university"></i> Supervisor \: Dr Adam Sykulski
 
 - Proposed a system of model evaluation and uncertainty metrics for a phenomena-centred ocean surface modelling approach to maximise information gain when learning from ocean data.
