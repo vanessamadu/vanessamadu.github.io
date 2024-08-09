@@ -1,7 +1,7 @@
 ---
 title: Rabbit Hole &#35;2 - Consecutive *Odd* Semi-Primes
 description: What is the longest possible chain of consecutive *odd* semi-primes?
-date: 2024-08-09 12:27:00 -0800 # 12:00:00 - 0800 is 9 am
+date: 2024-08-09 07:00:00 -0800 # 12:00:00 - 0800 is 9 am
 categories: [Recreational Mathematics, Rabbit Holes]
 tags: [numbers,semi-primes,moderate-jargon,number-nerds,open-questions]
 math: true
