@@ -60,7 +60,7 @@ I find it interesting when people assert that you're either a maths person or an
 Communicating science through art tells allows you to tell stories with more depth than with words alone. 
 
 * [The Making of a Modeller](https://vanessamadu.github.io/posts/making-of-a-modeller/)
-: Challenger Marine Society Art and Photography Competition (First Runner-up)
+: Challenger Marine Society Art and Photography Competition 2024 (First Runner-up).
 * [Huxley Building Foyer Windows, Imperial College London](https://www.imperial.ac.uk/news/251858/new-window-displays-huxley-building-weave/)
 : Across seven consecutive windows: mathematics' history from 2700 BC until the present day.[^vanessa-woz-here]
 ![Desktop View](/assets/img/windows.jpg)
