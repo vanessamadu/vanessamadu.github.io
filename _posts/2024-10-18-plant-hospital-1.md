@@ -31,7 +31,7 @@ Here's the stats for this plant:
 * Brown stem bases
 * White/grey fungal infection of the soil. 
 
-<img src="/assets/img/plant_hospital/calathea/calathea(4).jpeg" width="155" />{: .left} <img src="/assets/img/plant_hospital/calathea/calathea(1).jpeg" width="155" />{: .left} <img src="/assets/img/plant_hospital/calathea/calathea(2).jpeg" width="155" />{: .left}<img src="/assets/img/plant_hospital/calathea/calathea(5).jpeg" width="117" />{: .left}
+<img src="/assets/img/plant_hospital/calathea/calathea(4).jpeg " alt="Ill Calathea" width="155" />{: .left} <img src="/assets/img/plant_hospital/calathea/calathea(1).jpeg" alt="Ill Calathea" width="155" />{: .left} <img src="/assets/img/plant_hospital/calathea/calathea(2).jpeg" alt="Ill Calathea"width="155" />{: .left}<img src="/assets/img/plant_hospital/calathea/calathea(5).jpeg" alt="Ill Calathea"width="117" />{: .left}
 
 There are a couple of new leaves that appear healthy in the centre of the plant.
 
@@ -60,5 +60,5 @@ I've never dealt with a calathea before so I had to do some research regarding t
 * Watered with rain water
 * Misted with filtered water
 
-<img src="/assets/img/plant_hospital/calathea/intervention1/calathea_update1(3).jpeg" width="165" />{: .left} <img src="/assets/img/plant_hospital/calathea/intervention1/calathea_update1(5).jpeg" width="165" />{: .left} <img src="/assets/img/plant_hospital/calathea/intervention1/calathea_update1(6).jpeg" width="295" />{: .left}
+<img src="/assets/img/plant_hospital/calathea/intervention1/calathea_update1(3).jpeg" alt="Calathea after intervention 1" width="165" />{: .left} <img src="/assets/img/plant_hospital/calathea/intervention1/calathea_update1(5).jpeg" alt="Calathea after intervention 1" width="165" />{: .left} <img src="/assets/img/plant_hospital/calathea/intervention1/calathea_update1(6).jpeg" alt="Calathea after intervention 1" width="295" />{: .left}
 
