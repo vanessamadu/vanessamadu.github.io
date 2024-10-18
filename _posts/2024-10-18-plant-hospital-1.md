@@ -31,7 +31,7 @@ Here's the stats for this plant:
 * Brown stem bases
 * White/grey fungal infection of the soil. 
 
-<img src="/assets/img/plant_hospital/calathea/calathea(4).jpeg " alt="Ill Calathea" width="155" />{: .left} <img src="/assets/img/plant_hospital/calathea/calathea(1).jpeg" alt="Ill Calathea" width="155" />{: .left} <img src="/assets/img/plant_hospital/calathea/calathea(2).jpeg" alt="Ill Calathea"width="155" />{: .left}<img src="/assets/img/plant_hospital/calathea/calathea(5).jpeg" alt="Ill Calathea"width="117" />{: .left}
+<img src="/assets/img/plant_hospital/calathea/calathea(4).jpeg " alt="Ill Calathea" width="155" />{: .left} <img src="/assets/img/plant_hospital/calathea/calathea(1).jpeg" alt="Ill Calathea" width="155" /> {: .left} <img src="/assets/img/plant_hospital/calathea/calathea(2).jpeg" alt="Ill Calathea" width="155" />{: .left} <img src="/assets/img/plant_hospital/calathea/calathea(5).jpeg" alt="Ill Calathea" width="117" />{: .left}
 
 There are a couple of new leaves that appear healthy in the centre of the plant.
 
