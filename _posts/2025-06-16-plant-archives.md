@@ -14,7 +14,7 @@ audience: General
 
 I love plants! I have several houseplants and have inherited a few over the last few months. I don't know much about all of them, so I want to learn about them and see if I can take better care of them. 
 
-Right now there are no photos here but I plan to update this to include photos, haha!
+Right now there are no photos here but I plan to update this to include photos.
 
 Introducing...
 
