@@ -54,7 +54,7 @@ analytics:
 pageviews:
   provider: # now only supports 'goatcounter'
 
-theme_mode:  #[light | dark]
+theme_mode:  light #[light | dark]
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
