@@ -228,6 +228,10 @@ I anticipated this being a definition for 'move slowly'.
 
 Then I noticed: Move slowly [in ch]urch. However, I think 'church' might be an indicator for 'ch', so it could have been 'in' 'ch'.
 
+Anyway:<br>
+
+<dd>Inch: To move slowly.
+
 </details>
 
 ---
