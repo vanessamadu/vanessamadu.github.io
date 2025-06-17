@@ -62,7 +62,3 @@ Plan to check in every week with notes and photos.
 # Info About This Plant Species
 
 See species notes: [Spider Plant Species & Care Notes (WIP)]({% link _posts/2025-06-17-spider-plant-species-notes.md %})
-
-# Last Updated
-
-17/06/2025

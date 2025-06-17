@@ -10,4 +10,4 @@ audience: General
 ---
 <small>Audience: <b>{{ page.audience }}</b></small>
 
-<small><i class= "fas fa-list-check"></i> Congratulations, you found a stub! This page is in my to-do list, but I haven't gotten to it yet.</small>
+<small><i class= "fas fa-list-check"></i> Congratulations, you found a stub! This page is on my to-do list, but I haven't gotten to it yet.</small>
