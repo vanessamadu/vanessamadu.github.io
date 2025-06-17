@@ -224,13 +224,13 @@ audience: Puzzlers
 
 <strong>Working:</strong> <br>    
 
-I anticipated this being a definition for 'move slowly'.
+I anticipated this being a definition for '<i>move slowly</i>'.
 
-Then I noticed: Move slowly [in ch]urch. However, I think 'church' might be an indicator for 'ch', so it could have been 'in' 'ch'.
+Then I noticed: Move slowly [in ch]urch. However, I think '<i>church</i>' might be an indicator for '<i>ch</i>', so it could have been '<i>in</i>' '<i>ch</i>'.
 
 Anyway:<br>
 
-<dd>Inch: To move slowly.
+<i>Inch</i>: To move slowly.
 
 </details>
 
