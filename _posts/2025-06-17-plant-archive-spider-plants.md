@@ -5,7 +5,7 @@ date: 2025-06-17
 categories: [Plant Archives, Spider Plants]
 tags: [plants,spider-plant,research-log,experiment,chlorophytum]
 math: false
-published: true
+published: false
 audience: General
 ---
 <small>Audience: <b>{{ page.audience }}</b></small>
@@ -61,7 +61,7 @@ Plan to check in every week with notes and photos.
 
 # Info About This Plant Species
 
-See species notes: [Spider Plant Species & Care Notes (WIP)]({% link _posts/2025-06-17-spider-plant-species-notes %})
+See species notes: [Spider Plant Species & Care Notes (WIP)]({% link _posts/2025-06-17-spider-plant-species-notes.md %})
 
 # Last Updated
 
