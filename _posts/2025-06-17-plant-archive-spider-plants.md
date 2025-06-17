@@ -5,7 +5,7 @@ date: 2025-06-17
 categories: [Plant Archives, Spider Plants]
 tags: [plants,spider-plant,research-log,experiment,chlorophytum]
 math: false
-published: true
+published: false
 audience: General
 ---
 <small>Audience: <b>{{ page.audience }}</b></small>
