@@ -12,9 +12,9 @@ audience: General
 
 <small><i class= "fas fa-triangle-exclamation"></i> **Messy Archive**: This is part of a rough series where I'm logging what I learn about the plants I own. These aren't polished care guides — they're notes to myself. Accuracy over aesthetics. Mistakes allowed. Learning in progress. </small>
 
-I love plants! I have several houseplants and have inherited a few over the last few months. I don't know much about all of them, so I want to learn about them and see if I can take better care of them. 
+<small><i class= "fas fa-images"></i> Right now there are no photos here but I plan to update this to include photos.</small>
 
-Right now there are no photos here but I plan to update this to include photos.
+I love plants! I have several houseplants and have inherited a few over the last few months. I don't know much about all of them, so I want to learn about them and see if I can take better care of them. 
 
 Introducing...
 
