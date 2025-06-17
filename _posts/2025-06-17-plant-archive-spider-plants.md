@@ -1,11 +1,11 @@
 ---
 title: Spider Plant Research Log &#35;2 - Light Experiment
 description: Scientists are going to science.
-date: 2025-06-17 
+date: 2025-06-17 16:00:00 + 0100 # BST
 categories: [Plant Archives, Spider Plants]
 tags: [plants,spider-plant,research-log,experiment,chlorophytum]
 math: false
-published: false
+published: true
 audience: General
 ---
 <small>Audience: <b>{{ page.audience }}</b></small>
