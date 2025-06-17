@@ -15,9 +15,11 @@ audience: Puzzlers
 <small><i class= "fas fa-link"></i> [https://puzzles.standard.co.uk/games/cryptic-crossword-eveningstandard](https://puzzles.standard.co.uk/games/cryptic-crossword-eveningstandard) </small> (12/06/2025)
 # New Indicator Words
 
-|Indicator|Word/Idea|
+|Word in Clue|Idea/Word in Answer|
 |---|---|
 |'advanced'|'on' (syn.)|
+|'church'|'ch' (abbr.)|
+|'direction'|**Example indicator** for a specific direction|
 
 ---
 
@@ -197,8 +199,12 @@ audience: Puzzlers
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> East <br>  
+<strong>Type:</strong> Hidden Word <br>  
 
-<strong>Working:</strong> <br>    
+<strong>Working:</strong>  I expected the solution to this to be some kind of direction, e.g., north, south, left, right. From there it was straightforward to spot, especially given that the answer had four letters:<br>  
+<blockquote>
+Direction of th<b>E AST</b>eroids?
+</blockquote>
 
 </details>
 
@@ -221,16 +227,17 @@ audience: Puzzlers
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> Inch <br>    
-
-<strong>Working:</strong> <br>    
+<strong>Type:</strong> Wordplay, Hidden Word <br>    
+<strong>Working:</strong> 
 
 I anticipated this being a definition for 'move slowly'.
 
-Then I noticed: Move slowly [in ch]urch. However, I think 'church' might be an indicator for 'ch', so it could have been 'in' 'ch'.<br>
+Then I noticed: 
 
-Anyway:<br>
-
-<b>Inch</b>: To move slowly.
+<blockquote>
+Move slowly <b>IN CH</b>urch. 
+</blockquote>
+However, I think 'church' might be an indicator for 'ch', so it could have been 'in' 'ch'.
 
 </details>
 
