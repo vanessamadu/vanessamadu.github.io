@@ -1,5 +1,5 @@
 ---
-title: Plant Archives &#35;1 - The Office Calathea
+title: Calathea Research Log &#35;1 - The Office Calathea
 description: ICU - There are so many things wrong with this plant
 date: 2024-10-18 17:50:00 + 0100 # BST
 categories: [Plant Archives, Calatheas]
