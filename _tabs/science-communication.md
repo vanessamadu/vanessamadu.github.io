@@ -30,9 +30,11 @@ Wisdom From Wonderland:
 : [*Why Do We Need to Prove 1+1=2?*](https://youtu.be/PsWQMwSbTe0)
 
 ### <i class="fas fa-person-chalkboard"></i> Longer More Curious Stories (Lectures)
+* *Rubber Ducks, Oceans, and Ridiculous Hypotheticals About Jam Tarts*. [Young Scientists Journal Conference 2024](https://www.youngscientistsjournal.com/conference-2024). The King's School Canterbury
+![alt text](/assets/img/ysj.png)
 * *Exploring Mathematical Ocean Sciences*. Lecture Theatre at the Royal Institution for Climate Innovation Day 
 : Audience\: Year 5-6 students + General 
-![Desktop View](/assets/img/ri.jpg)
+![Vanessa doing a talk in the Lecture theatre at the Royal Institution](/assets/img/ri.jpg)
 * *Go With The Flow\: Introduction to Fluid Dynamics Session* (Sutton Trust Summer School) 
 : Audience\: Year 12 students
 * *Meet an Oceanographically-Enabled Mathematical Statistician:* (Imperial College Outreach) 
