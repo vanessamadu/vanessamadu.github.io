@@ -227,7 +227,7 @@ Direction of th<b>E AST</b>eroids?
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> Inch <br>    
-<strong>Type:</strong> Wordplay, Hidden Word <br>    
+<strong>Type:</strong> Charades, Hidden Word <br>    
 <strong>Working:</strong> 
 
 I anticipated this being a definition for 'move slowly'.
@@ -437,14 +437,19 @@ However, I think 'church' might be an indicator for 'ch', so it could have been 
 
 ---
 
-##  18D: City managed by thanes?(6)
+##  <i class="fas fa-check-square"></i> 18D: City managed by thanes?(6)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
+<strong>Answer:</strong> Athens <br>    
+<strong>Type:</strong> Anagram <br> 
 
 <strong>Working:</strong> <br>    
+_ _ _ E N S<br>
 
+As a half Greek woman, this answer was in my veins. This was helped by that I didn't know what a 'thane' was and so it registered as a weird word. If there is a weird word or idiosyncratic phrase, I've found that it's because the clue needs the letters so check if it's an anagram. 
+
+From there, knowing I was looking for a city and having the last three letters made the answer immediately clear to me.
 </details>
 
 ---
@@ -485,13 +490,22 @@ However, I think 'church' might be an indicator for 'ch', so it could have been 
 
 ---
 
-##  23D: Not allowed to be revealed outright(6)
+## <i class="fas fa-check-square"></i>  23D: Not allowed to be revealed outright(6)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
+<strong>Answer:</strong> Barred <br>    
+<strong>Type:</strong> Charades <br>
 
 <strong>Working:</strong> <br>    
+_ _ _ R _ _ <br>
+
+This is one of those clues that I simultaneously felt very clever for solving but irritated because it felt correct enough to be confident with a justification awkward enough that some doubt remains. Expected a definition here, something that meant 'not allowed'. 'Barred' immediately came to mind because of a few rapid fire realisations: <br>
+<ul>
+- '<b>bared</b>' is a synonym of 'revealed'<br>
+- 'outright' as a rearrangement indicator, to arrange the preceding word, 'bared' around the <b>out</b>side for an '<b>r</b>' as the word 'right' can be an abbreviated to 'r'.
+</ul>
+
 
 </details>
 
@@ -513,7 +527,8 @@ However, I think 'church' might be an indicator for 'ch', so it could have been 
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> Acton <br>    
+<strong>Answer:</strong> Acton <br> 
+<strong>Type:</strong> Charades   
 
 <strong>Working:</strong> <br>    
 
