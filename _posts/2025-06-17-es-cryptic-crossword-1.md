@@ -127,7 +127,9 @@ audience: Puzzlers
 
 <strong>Answer:</strong> <br>    
 
-<strong>Working:</strong> <br>    
+<strong>Working:</strong> <br>   
+
+_ A _ _
 
 </details>
 
@@ -150,9 +152,9 @@ audience: Puzzlers
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> <br> 
-
-
 <strong>Working:</strong> <br>    
+
+_ _ T  _ _ _  _ _ _
 
 </details>
 
@@ -162,7 +164,7 @@ audience: Puzzlers
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
+<strong>Answer:</strong> Bath<br>    
 
 <strong>Working:</strong> <br>    
 
@@ -189,6 +191,8 @@ audience: Puzzlers
 <strong>Answer:</strong> <br>    
 
 <strong>Working:</strong> <br>    
+
+_ A _
 
 </details>
 
@@ -260,8 +264,10 @@ However, I think 'church' might be an indicator for 'ch', so it could have been 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> Breast <br>    
-
+<strong>Type:</strong> Charades <br>
 <strong>Working:</strong> <br>    
+
+_ _ _ _ _ T
 
 </details>
 
@@ -275,17 +281,21 @@ However, I think 'church' might be an indicator for 'ch', so it could have been 
 
 <strong>Working:</strong> <br>    
 
+O _ _ _ _ _ _ _
+
 </details>
 
 ---
 
-##  36A: Be close to making a lot of noise about a bit of a joke(6)
+##  <i class="fas fa-check-square"></i> 36A: Be close to making a lot of noise about a bit of a joke(6)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
-
+<strong>Answer:</strong> Adjoin <br>    
+<strong>Type:</strong> Charades <br>
 <strong>Working:</strong> <br>    
+
+_ _ _ O _ N
 
 </details>
 
@@ -532,6 +542,8 @@ This is one of those clues that I simultaneously felt very clever for solving bu
 
 <strong>Working:</strong> <br>    
 
+A C _ _ _
+
 </details>
 
 ---
@@ -563,10 +575,11 @@ This is one of those clues that I simultaneously felt very clever for solving bu
 ## <i class="fas fa-check-square"></i> 32D: Villain's first class return on leave(4)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
-
 <strong>Answer:</strong> Iago <br>    
-
+<strong>Type:</strong> Charades <br>
 <strong>Working:</strong> <br>    
+
+I _ _ _
 
 </details>
 
