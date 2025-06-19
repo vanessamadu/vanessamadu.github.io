@@ -20,6 +20,11 @@ audience: Puzzlers
 |'advanced'|'on' (syn.)|
 |'church'|'ch' (abbr.)|
 |'direction'|**Example indicator** for a specific direction|
+|'outright'|**Container indicator** for the previous word around 'r'|
+|'a bit of'|**Letter selection indicator**|
+|'about'|**Container indicator**|
+|'first class'|'ai' (abbr.)|
+|'return'|**Reversal indicator**|
 
 ---
 
@@ -165,7 +170,7 @@ _ _ T  _ _ _  _ _ _
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> Bath<br>    
-<strong>Type:</strong>: Charades
+<strong>Type:</strong>: Charades <br>
 <strong>Working:</strong> <br>    
 
 </details>
