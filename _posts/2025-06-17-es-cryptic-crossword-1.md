@@ -160,12 +160,12 @@ _ _ T  _ _ _  _ _ _
 
 ---
 
-##  23A: A town to get clean out of?(4)
+## <i class="fas fa-check-square"></i> 23A: A town to get clean out of?(4)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> Bath<br>    
-
+<strong>Type:</strong>: Charades
 <strong>Working:</strong> <br>    
 
 </details>
