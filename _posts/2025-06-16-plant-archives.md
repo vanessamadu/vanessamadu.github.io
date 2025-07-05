@@ -1,5 +1,5 @@
 ---
-title: The Rough Plant Catalogue
+title: The Plant Archive
 description: The plants under my care.
 date: 2025-06-16 17:50:00 + 0100 # BST
 categories: [Plant Archives]
