@@ -3,7 +3,7 @@ title: The Rough Plant Catalogue
 description: The plants under my care.
 date: 2025-06-16 17:50:00 + 0100 # BST
 categories: [Plant Archives]
-tags: [plants]
+tags: [plants,collections,archives]
 math: false
 published: true
 audience: General
