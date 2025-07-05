@@ -1,5 +1,5 @@
 ---
-title: The Rough Coin Catalogue
+title: Coin Collection Archive
 description: The coins in my collection
 date: 2025-07-04 17:50:00 + 0100 # BST
 categories: [Coin Archives]
