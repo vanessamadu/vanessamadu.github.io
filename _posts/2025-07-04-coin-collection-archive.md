@@ -45,6 +45,7 @@ audience: General
 | Coin Name | Year | Status |
 |----------|------|------|
 | [2006 Isambard Kingdom Brunel - Portrait (200th Anniversary of Birth) £2]({% link _posts/2025-07-04-2006-brunel-portrait-2-pound.md %}) | 2006 | Researching |
+| [2009 Robert Burns (250th Anniversary of Birth) £2]({% link _posts/2025-07-04-2009-robert-burns-2-pound.md %}) | 2009 | Researching |
 | [2012 Charles Dickens (200th Anniversary of Birth) £2]({% link _posts/2025-07-04-2012-charles-dickens-2-pound.md %}) | 2012 | Researching |
 
 #### Standalone Commemoratives
