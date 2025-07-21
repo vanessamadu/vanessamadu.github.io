@@ -10,8 +10,6 @@ audience: General
 ---
 <small>Audience: <b>{{ page.audience }}</b></small>
 
-<small><i class= "fas fa-triangle-exclamation"></i> **Messy Archive**: This is part of a rough series where I'm logging what I learn about the coins I have collected; they're notes to myself. Accuracy over aesthetics. Mistakes allowed. Learning in progress. </small>
-
 ## Commemorative £2 Coins
 
 ### Uni-Metalic Coins
@@ -73,6 +71,7 @@ audience: General
 | Benjamin Bunny 50p | 2017 | Researching |
 | Mr Jeremy Fisher 50p | 2017 | Researching |
 | Tom Kitten 50p | 2017 | Researching |
+| Flopsy Bunny 50p | 2018 | Researching |
 
 #### 2012 Olympic Games Collection
 
