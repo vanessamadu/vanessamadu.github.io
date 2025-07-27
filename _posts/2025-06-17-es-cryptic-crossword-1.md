@@ -547,7 +547,7 @@ This is one of those clues that I simultaneously felt very clever for solving bu
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> Acton <br> 
-<strong>Type:</strong> Charades   
+<strong>Type:</strong> Charades <br>
 
 <strong>Working:</strong> <br>    
 
