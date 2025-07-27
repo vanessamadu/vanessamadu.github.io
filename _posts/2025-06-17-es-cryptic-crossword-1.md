@@ -594,7 +594,7 @@ I _ _ _ <br>
 I needed a bit of help with this as well. I vaguely remember Iago as a Villain from a Shakespearean play (turns out that it's Othello) but needed reminding of this. <br>
 <ul>
 - '<b>ai</b>' as an abbreviation of 'first class'<br>
-- reversal indicated by '<b>return</b>'<br>
+- <b>reversal indicated</b> by 'return'<br>
 - '<b>go</b>' is synonymous with 'leave'
 </ul>
 
