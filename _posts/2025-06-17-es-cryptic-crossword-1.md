@@ -273,7 +273,7 @@ However, I think 'church' might be an indicator for 'ch', so it could have been 
 <strong>Type:</strong> Charades <br>
 <strong>Working:</strong> <br>    
 
-_ _ _ _ _ T
+_ _ _ _ _ T <br>
 
 I am pretty sure I am right but am not totally sound on the reasoning with this one. This word is a 'portion of chicken', with 'BR' 'by' a rearrangement of 'teas' which leads to 'Breast' but I don't know what the indicator is for rearranging 'teas' is.
 
@@ -303,7 +303,7 @@ O _ _ _ _ _ _ _
 <strong>Type:</strong> Charades <br>
 <strong>Working:</strong> <br>    
 
-_ _ _ O _ N
+_ _ _ O _ N <br>
 
 I needed a bit of help with this one because I wasn't familiar with the word 'adin' which means 'a lot of noise'. 'Around a bit of' is an indicator to arrange the letters of 'adin' around 'jo' which is a bit of the word 'joke'! 
 </details>
@@ -551,7 +551,7 @@ This is one of those clues that I simultaneously felt very clever for solving bu
 
 <strong>Working:</strong> <br>    
 
-A C _ _ _
+A C _ _ _ <br>
 
 To 'act' is a synonym for 'working' and 'on' is synonymous with 'advanced' as in to 'move on'. Putting 'act' and 'on' together gives 'acton' which is a town in West London.
 </details>
@@ -589,7 +589,7 @@ To 'act' is a synonym for 'working' and 'on' is synonymous with 'advanced' as in
 <strong>Type:</strong> Charades <br>
 <strong>Working:</strong> <br>    
 
-I _ _ _
+I _ _ _ <br>
 
 I needed a bit of help with this as well. I vaguely remember Iago as a Villain from a Shakespearean play (turns out that it's Othello) but needed reminding of this. <br>
 <ul>
