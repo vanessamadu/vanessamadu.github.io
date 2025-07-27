@@ -173,6 +173,7 @@ _ _ T  _ _ _  _ _ _
 <strong>Type:</strong>: Charades <br>
 <strong>Working:</strong> <br>    
 
+I liked this one! 'Bath' is a town and it is also something that one (ideally) gets out of clean.
 </details>
 
 ---
@@ -274,6 +275,8 @@ However, I think 'church' might be an indicator for 'ch', so it could have been 
 
 _ _ _ _ _ T
 
+I am pretty sure I am right but am not totally sound on the reasoning with this one. This word is a 'portion of chicken', with 'BR' 'by' a rearrangement of 'teas' which leads to 'Breast' but I don't know what the indicator is for rearranging 'teas' is.
+
 </details>
 
 ---
@@ -302,6 +305,7 @@ O _ _ _ _ _ _ _
 
 _ _ _ O _ N
 
+I needed a bit of help with this one because I wasn't familiar with the word 'adin' which means 'a lot of noise'. 'Around a bit of' is an indicator to arrange the letters of 'adin' around 'jo' which is a bit of the word 'joke'! 
 </details>
 
 ---
@@ -549,6 +553,7 @@ This is one of those clues that I simultaneously felt very clever for solving bu
 
 A C _ _ _
 
+To 'act' is a synonym for 'working' and 'on' is synonymous with 'advanced' as in to 'move on'. Putting 'act' and 'on' together gives 'acton' which is a town in West London.
 </details>
 
 ---
@@ -585,6 +590,13 @@ A C _ _ _
 <strong>Working:</strong> <br>    
 
 I _ _ _
+
+I needed a bit of help with this as well. I vaguely remember Iago as a Villain from a Shakespearean play (turns out that it's Othello) but needed reminding of this. <br>
+<ul>
+- '<b>ai</b>' as an abbreviation of 'first class'<br>
+- reversal indicated by '<b>return</b>'<br>
+- '<b>go</b>' is synonymous with 'leave'
+</ul>
 
 </details>
 
