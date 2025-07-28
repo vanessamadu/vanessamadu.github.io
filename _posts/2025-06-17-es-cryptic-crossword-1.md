@@ -570,17 +570,26 @@ To 'act' is a synonym for 'working' and 'on' is synonymous with 'advanced' as in
 
 ---
 
-##  31D: Anything that gets a thug drunk(5)
+##  <i class="fas fa-check-square"></i> 31D: Anything that gets a thug drunk(5)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
-
+<strong>Answer:</strong> Aught <br>    
+<strong>Type:</strong> Anagram<br>
 <strong>Working:</strong> <br>    
 
 </details>
 
----
+--- <br>
+
+I needed to do a Google search to confirm this one. <br>
+<ul>
+- <b>anagram indicated</b> by 'drunk'<br>
+- <b>aught</b> is an anagram of 'a thug'<br>
+- <b>aught</b> is synonymous with 'anything<br>
+</ul>
+
+New Word: Aught, which apparently, is an archaic word meaning 'anything at all'.
 
 ## <i class="fas fa-check-square"></i> 32D: Villain's first class return on leave(4)
 
