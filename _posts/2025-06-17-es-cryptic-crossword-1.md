@@ -241,7 +241,7 @@ Direction of th<b>E AST</b>eroids?
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
+<strong>Answer:</strong> Rhea <br>    
 
 <strong>Working:</strong> <br>    
 
@@ -310,7 +310,7 @@ I am pretty sure I am right but am not totally sound on the reasoning with this 
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
+<strong>Answer:</strong>Outreach <br>    
 
 <strong>Working:</strong> <br>    
 
@@ -425,7 +425,7 @@ I needed a bit of help with this one because I wasn't familiar with the word 'ad
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>   
+<strong>Answer:</strong>Eva <br>   
 
 <strong>Working:</strong> <br>    
 
@@ -437,7 +437,7 @@ I needed a bit of help with this one because I wasn't familiar with the word 'ad
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>   
+<strong>Answer:</strong>Uncut <br>   
 
 <strong>Working:</strong> <br>    
 
@@ -514,7 +514,7 @@ From there, knowing I was looking for a city and having the last three letters m
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
+<strong>Answer:</strong>Oar <br>    
 
 <strong>Working:</strong> <br>    
 
@@ -559,7 +559,7 @@ This is one of those clues that I simultaneously felt very clever for solving bu
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
+<strong>Answer:</strong>Fee <br>    
 
 <strong>Working:</strong> <br>    
 
