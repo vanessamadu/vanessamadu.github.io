@@ -446,6 +446,7 @@ I needed a bit of help with this one because I wasn't familiar with the word 'ad
 - <b>girl's name indicated</b> by "she's". <br>
 - <b>hidden word indicated</b> by 'less than' (applied to next word)<br>
 </ul>
+
 <blockquote>
     She's less than el<b>EVA</b>ting
 </blockquote>
@@ -623,10 +624,6 @@ To 'act' is a synonym for 'working' and 'on' is synonymous with 'advanced' as in
 <strong>Type:</strong> Anagram<br>
 <strong>Working:</strong> <br>    
 
-</details>
-
---- <br>
-
 I needed to do a Google search to confirm this one. <br>
 <ul>
 - <b>anagram indicated</b> by 'drunk'<br>
@@ -635,6 +632,10 @@ I needed to do a Google search to confirm this one. <br>
 </ul>
 
 New Word: Aught, which apparently, is an archaic word meaning 'anything at all'.
+
+</details>
+
+--- 
 
 ## <i class="fas fa-check-square"></i> 32D: Villain's first class return on leave(4)
 
