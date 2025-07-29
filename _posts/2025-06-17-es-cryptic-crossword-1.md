@@ -85,7 +85,7 @@ This is where my brief stint in the musical theatre society comes in very helpfu
 - 'good man' is referring to a 'reverend' or <b>'rev'</b>. I will be witholding my opinion on the accuracy of that descriptor.<br>
 - <b>letter selection indicated</b> by 'little'. Applied to the subsequent word 'cruelty' gives 'ue'
 </ul>
-\<click\> I performed in a something called a 'revue'! It was a type of 'show'!
+* click * I performed in a something called a 'revue'! It was a type of 'show'!
 </details>
 
 ---
@@ -131,7 +131,7 @@ This is where my brief stint in the musical theatre society comes in very helpfu
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> Ate<br>   
-<strong>Type:</strong> Hidden word
+<strong>Type:</strong> Hidden word<br>
 <strong>Working:</strong> <br>    
 
 A little redherring-y since it's easy to go straight to 'eat' in gr<b>EAT</b> but 'consumed' being given in past tense helps avoid that. <br>
