@@ -29,6 +29,7 @@ audience: Puzzlers
 |phonetic alphabet word|**Indicator for associated letter**|
 |'good man'|'rev' (syn. -- if you say so -- then abbr.)|
 |'little'| **Letter selection indicator**|
+|'possibly'|**Anagram indicator**|
 
 ---
 
@@ -318,8 +319,14 @@ I am pretty sure I am right but am not totally sound on the reasoning with this 
 
 <strong>Working:</strong> <br>    
 
-O _ _ _ _ _ _ _
+O _ _ _ _ _ _ _ <br>
 
+I feel a bit more tentative on this one, but here is my logic: <br>
+<ul>
+- rearrange 'tour', indicated by 'maybe', to 'outr'<br>
+- 'everyone' is semantically similar to but not exactly synonymous with 'each'<br>
+</ul>
+'each' on 'tour' rearranged  -> 'outreach' which is semantically similar but not exactly synonymous with 'go farther'
 </details>
 
 ---
