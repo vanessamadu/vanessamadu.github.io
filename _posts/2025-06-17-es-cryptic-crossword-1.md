@@ -25,6 +25,7 @@ audience: Puzzlers
 |'about'|**Container indicator**|
 |'first class'|'ai' (abbr.)|
 |'return'|**Reversal indicator**|
+|'drunk'|**Anagram indicator**|
 
 ---
 
@@ -66,7 +67,7 @@ audience: Puzzlers
 
 ---
 
-##  10A: Show a good man has little cruelty (5)
+##  <i class="fas fa-check-square"></i> 10A: Show a good man has little cruelty (5)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
@@ -114,7 +115,7 @@ audience: Puzzlers
 
 ---
 
-##  16A: Consumed in great expectation(3)
+##  <i class="fas fa-check-square"></i> 16A: Consumed in great expectation(3)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
@@ -220,7 +221,7 @@ Direction of th<b>E AST</b>eroids?
 
 ---
 
-##  29A: Possibly hear like an ostrich(4)
+##  <i class="fas fa-check-square"></i> 29A: Possibly hear like an ostrich(4)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
@@ -253,14 +254,22 @@ However, I think 'church' might be an indicator for 'ch', so it could have been 
 
 ---
 
-##  33A: Goodbye to a new idea for a uniform(5)
+##  <i class="fas fa-check-square"></i> 33A: Goodbye to a new idea for a uniform(5)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>    
-
+<strong>Answer:</strong> Adieu <br>    
+<strong>Type:</strong> Anagram + Charades
 <strong>Working:</strong> <br>    
 
+_ _ _ _ U <br>
+
+I like this one. There are a couple of nice cryptic things here that I liked! <br>
+<ul>
+- <b>anagram indicated</b> by 'new' <br> for subsequent word 'idea'<br>
+- 'uniform' is the phonetic alphabet term for <b>'u'</b><br>
+</ul>
+Rearranging the letters in 'idea' followed by 'u' results in 'adieu', which is a synonym for goodbye.
 </details>
 
 ---
@@ -281,7 +290,7 @@ I am pretty sure I am right but am not totally sound on the reasoning with this 
 
 ---
 
-##  35A: On tour, maybe, everyone can go farther(8)
+##  <i class="fas fa-check-square"></i> 35A: On tour, maybe, everyone can go farther(8)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
@@ -396,7 +405,7 @@ I needed a bit of help with this one because I wasn't familiar with the word 'ad
 
 ---
 
-##  11D: She's less than elevating(3)
+##  <i class="fas fa-check-square"></i> 11D: She's less than elevating(3)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
@@ -408,7 +417,7 @@ I needed a bit of help with this one because I wasn't familiar with the word 'ad
 
 ---
 
-##  12D: Of a movie, the whole story(5)
+##  <i class="fas fa-check-square"></i> 12D: Of a movie, the whole story(5)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
@@ -485,7 +494,7 @@ From there, knowing I was looking for a city and having the last three letters m
 
 ---
 
-##  21D: Outboard propeller!(3)
+##  <i class="fas fa-check-square"></i> 21D: Outboard propeller!(3)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
@@ -530,7 +539,7 @@ This is one of those clues that I simultaneously felt very clever for solving bu
 
 ---
 
-##  25D: A charge that makes you feel robbed?(3)
+##  <i class="fas fa-check-square"></i> 25D: A charge that makes you feel robbed?(3)
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
