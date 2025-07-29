@@ -83,7 +83,7 @@ _ _ _ U _ <br>
 This is where my brief stint in the musical theatre society comes in very helpful. I only performed in one show during my time in the society and it was called 'Revue: It's All Happening'. I performed in three musical numbers and found the structure interesting; a collection musical numbers from different popular musicals. I didn't know a revue was at the time or really until I encountered this clue. <br>
 <ul>
 - 'good man' is referring to a 'reverend' or <b>'rev'</b>. I will be witholding my opinion on the accuracy of that descriptor.<br>
-- <b>letter selection indicated</b> by 'little'<br>. Applied to the subsequent word 'cruelty' gives 'ue'
+- <b>letter selection indicated</b> by 'little'. Applied to the subsequent word 'cruelty' gives 'ue'
 </ul>
 \<click\> I performed in a something called a 'revue'! It was a type of 'show'!
 </details>
@@ -130,10 +130,15 @@ This is where my brief stint in the musical theatre society comes in very helpfu
 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
-<strong>Answer:</strong> <br>   
-
+<strong>Answer:</strong> Ate<br>   
+<strong>Type:</strong> Hidden word
 <strong>Working:</strong> <br>    
 
+A little redherring-y since it's easy to go straight to 'eat' in gr<b>EAT</b> but 'consumed' being given in past tense helps avoid that. <br>
+
+<blockquote>
+Consumed in gre<b>AT E</b>xpectation.
+</blockquote>
 </details>
 
 ---
