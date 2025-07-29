@@ -32,6 +32,7 @@ audience: Puzzlers
 |'possibly'|**Anagram indicator**|
 |'maybe'|**Anagram indicator**|
 |"she's"|**Girl's name indicator**|
+|'less than'|**Hidden word indicator**|
 
 ---
 
@@ -442,6 +443,8 @@ I needed a bit of help with this one because I wasn't familiar with the word 'ad
 <strong>Type:</strong> Hidden word<br>
 <strong>Working:</strong> <br>    
 
+E _ _ <br>
+
 <ul>
 - <b>girl's name indicated</b> by "she's". <br>
 - <b>hidden word indicated</b> by 'less than' (applied to next word)<br>
@@ -581,8 +584,12 @@ This is one of those clues that I simultaneously felt very clever for solving bu
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong>Fee <br>    
-
+<strong>Type:</strong> Hidden word <br>
 <strong>Working:</strong> <br>    
+
+_ _ E <br>
+
+hidden/partial word indicated by 'robbed' applied to 'feel' and synonymous with 'a charge' leads to 'fee'.
 
 </details>
 
