@@ -1,7 +1,7 @@
 ---
 title: Evening Standard Cryptic Crossword &#35;1 
 description: My attempts at the Thursday 12th June 2025 crossword.
-date: 2025-06-17
+date: 2025-06-17 17:50:00 + 0100 # BST
 categories: [Puzzles, Cryptic Crosswords]
 tags: [cryptic-crossword,word-puzzle,crosswords]
 math: false
