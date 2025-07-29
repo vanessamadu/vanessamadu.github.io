@@ -242,8 +242,12 @@ Direction of th<b>E AST</b>eroids?
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong> Rhea <br>    
-
+<strong>Type:</strong> Anagram
 <strong>Working:</strong> <br>    
+
+_ _ E A<br>
+
+This is one of those clues where I had sussed out the word but didn't know the full reasoning, though I had a feeling. An <b>anagram indicated</b> by 'possibly'. Rearranging 'hear' results in 'rhea' which turns out is a type of South American ostrich; they are a distant relative of emus.
 
 </details>
 
