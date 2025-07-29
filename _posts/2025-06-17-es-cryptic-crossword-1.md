@@ -30,6 +30,7 @@ audience: Puzzlers
 |'good man'|'rev' (syn. -- if you say so -- then abbr.)|
 |'little'| **Letter selection indicator**|
 |'possibly'|**Anagram indicator**|
+|'maybe'|**Anagram indicator**|
 
 ---
 
@@ -319,7 +320,7 @@ I am pretty sure I am right but am not totally sound on the reasoning with this 
 
 <strong>Working:</strong> <br>    
 
-O _ _ _ _ _ _ _ <br>
+O _ _ _ _ _ _ H <br>
 
 I feel a bit more tentative on this one, but here is my logic: <br>
 <ul>
