@@ -31,6 +31,7 @@ audience: Puzzlers
 |'little'| **Letter selection indicator**|
 |'possibly'|**Anagram indicator**|
 |'maybe'|**Anagram indicator**|
+|"she's"|**Girl's name indicator**|
 
 ---
 
@@ -317,7 +318,7 @@ I am pretty sure I am right but am not totally sound on the reasoning with this 
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong>Outreach <br>    
-
+<strong>Type:</strong> Charades + Anagram <br>
 <strong>Working:</strong> <br>    
 
 O _ _ _ _ _ _ H <br>
@@ -438,9 +439,16 @@ I needed a bit of help with this one because I wasn't familiar with the word 'ad
 <details><summary><strong>Show Answer + Working</strong></summary>
 
 <strong>Answer:</strong>Eva <br>   
-
+<strong>Type:</strong> Hidden word<br>
 <strong>Working:</strong> <br>    
 
+<ul>
+- <b>girl's name indicated</b> by "she's". <br>
+- <b>hidden word indicated</b> by 'less than' (applied to next word)<br>
+</ul>
+<blockquote>
+    She's less than el<b>EVA</b>ting
+</blockquote>
 </details>
 
 ---
