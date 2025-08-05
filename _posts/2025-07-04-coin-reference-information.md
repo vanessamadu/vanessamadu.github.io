@@ -13,6 +13,7 @@ audience: General
 ---
 \* Found in change   
 ** Found by Laurence 
+*** Coin Swap
 
 ---
 
@@ -92,7 +93,7 @@ audience: General
 | Kew Gardens                          | 2009 |                                   |               | 210,000   |
 | Girlguiding UK                       | 2010 | <i class="fa-solid fa-check"></i> | £3.50         | 7,410,090 |
 | WWF                                  | 2011 |                                   |               | 3,400,000 |
-| Christopher Ironside                 | 2013 |                                   |               | 7,000,000 |
+| Christopher Ironside                 | 2013 | <i class="fa-solid fa-check"></i> |  *            | 7,000,000 |
 | Benjamin Britten                     | 2013 | <i class="fa-solid fa-check"></i> |  **           | 5,300,000 |
 | Glasgow Commonwealth Games           | 2014 | <i class="fa-solid fa-check"></i> | £3.50         | 6,500,000 |
 | Battle of Britain                    | 2015 | <i class="fa-solid fa-check"></i> | approx. £2.00 | 5,900,000 |
