@@ -14,6 +14,18 @@ audience: General
 <!-- 1) Load the sorter -->
 <script src="https://cdn.jsdelivr.net/npm/sorttable@1.0.2/sorttable.js" defer></script>
 
+<!-- 2) After DOM is ready, add class="sortable" to all tables in the post -->
+{% raw %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Narrow the selector if your theme uses a specific container, e.g. '.post-content table'
+  document.querySelectorAll('article table, .post-content table, main table, table')
+    .forEach(t => t.classList.add('sortable'));
+});
+</script>
+{% endraw %}
+
+
 ---
 \* Found in change  
 ** Found by Laurence  
