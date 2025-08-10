@@ -66,7 +66,6 @@ Most of our collection consists of coins that are still in circulation or were i
 | WWI Army                                  | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>£4.00 | 9,550,000 |
 | Great Fire of London                      | 2016 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,625,000 |
 | Britannia                                 | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>£4.00 | 2,925,000 |
-
 {: .sortable}
 
 ### Non-Circulating £2 Coins
@@ -82,7 +81,6 @@ Most of our collection consists of coins that are still in circulation or were i
 | End of WWII                               | 1995 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>approx. £4.00 | 4,394,566 |
 | United Nations                            | 1995 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,668,575 |
 | 1996 European Football Championship       | 1996 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>£4.00 | 5,141,350 |
-
 {: .sortable}
 
 #### Brilliant Uncirculated £2 Coins
@@ -123,7 +121,6 @@ We haven't started this collection yet!
 | Queen Elizabeth Memorial 50p                                    | 2022 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 9,600,000 |
 | Coronation of King Charles III                                  | 2023 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 5,000,000 |
 | Atlantic Salmon                                                 | 2023 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 200,000 |
-
 {: .sortable}
 
 #### Beatrix Potter Series
@@ -143,7 +140,6 @@ We haven't started this collection yet!
 | Flopsy Bunny                   | 2018 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">300</span>£3.00 | 1,400,000 |
 | Tailor of Gloucester           | 2018 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 3,900,000 |
 | Mrs. Tittlemouse               | 2018 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,700,000 |
-
 {: .sortable}
 
 #### Paddington Bear Series
@@ -154,7 +150,6 @@ We haven't started this collection yet!
 | Paddington at Buckingham Palace | 2018 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 5,901,000 |
 | Paddington at the Tower         | 2019 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 9,001,000 |
 | Paddington at St. Paul's        | 2019 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 9,001,000 |
-
 {: .sortable}
 
 #### 2012 Olympic Games Series
@@ -190,7 +185,6 @@ We haven't started this collection yet!
 | Weightlifting       | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,879,500 |
 | Wheelchair Rugby    | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,765,500 |
 | Wrestling           | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,129,500 |
-
 {: .sortable}
 
 ### Non-Circulating 50p Coins 
