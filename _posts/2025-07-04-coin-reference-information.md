@@ -129,7 +129,7 @@ We haven't started this collection yet!
 |--------------------------------|:----:|:--------:|:-----:|-------:|
 | Beatrix Potter Portrait        | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 6,900,000 |
 | Peter Rabbit (2016)            | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 9,700,000 |
-| Jemima Puddle-Duck             | 2016 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2100000 |
+| Jemima Puddle-Duck             | 2016 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,100,000 |
 | Mrs. Tiggy-Winkle              | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 8,800,000 |
 | Squirrel Nutkin                | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 5,000,000 |
 | Benjamin Bunny                 | 2017 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 25,000,000 |
