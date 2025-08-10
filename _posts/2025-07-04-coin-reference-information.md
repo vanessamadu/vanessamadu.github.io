@@ -13,6 +13,7 @@ audience: General
 ---
 \* Found in change   
 ** Found by Laurence 
+
 *** Coin Swap
 
 ---
@@ -126,7 +127,7 @@ audience: General
 | Peter Rabbit (2017)            | 2017 | <i class="fa-solid fa-check"></i> | approx. £2.00 | 19,000,000 |
 | Peter Rabbit (2018)            | 2018 |                                   |               | 1,400,000 |
 | Flopsy Bunny                   | 2018 | <i class="fa-solid fa-check"></i> | £3.00         | 1,400,000 |
-| Tailor of Gloucester           | 2018 |                                   |               | 3,900,000 |
+| Tailor of Gloucester           | 2018 | <i class="fa-solid fa-check"></i> | *             | 3,900,000 |
 | Mrs. Tittlemouse               | 2018 |                                   |               | 1,700,000 |
 
 #### Paddington Bear Series
