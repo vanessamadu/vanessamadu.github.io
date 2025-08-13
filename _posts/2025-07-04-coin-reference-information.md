@@ -56,7 +56,7 @@ Most of our collection consists of coins that are still in circulation or were i
 | London Underground – Train                | 2013 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,690,000 |
 | London Underground – Roundel              | 2013 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">300</span>approx. £3.00 | 1,560,000 |
 | Anniversary of the Guinea                 | 2013 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,990,000 |
-| WWI Outbreak                              | 2014 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 5,720,000 |
+| WWI Outbreak                              | 2014 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-5000003</span>*** | 5,720,000 |
 | Trinity House                             | 2014 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>£4.00 | 3,705,000 |
 | Magna Carta                               | 2015 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">300</span>approx. £3.00 | 1,495,000 |
 | WWI Navy                                  | 2015 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 650,000 |
