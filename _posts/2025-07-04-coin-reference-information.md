@@ -48,7 +48,7 @@ Most of our collection consists of coins that are still in circulation or were i
 | Beijing–London Olympic Handover           | 2008 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 918,000 |
 | Charles Darwin                            | 2009 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>£4.00 | 3,903,000 |
 | Robert Burns                              | 2009 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000002</span>** | 3,253,000 |
-| Florence Nightingale                      | 2010 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-6000000</span> | 6,175,000 |
+| Florence Nightingale                      | 2010 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-5000002</span>** | 6,175,000 |
 | King James Bible                          | 2011 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">300</span>approx. £3.00 | 975,000 |
 | Mary Rose                                 | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,040,000 |
 | Charles Dickens                           | 2012 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000002</span>** | 8,190,000 |
