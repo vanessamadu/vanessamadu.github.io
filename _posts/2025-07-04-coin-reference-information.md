@@ -94,7 +94,7 @@ We haven't started this collection yet!
 | Coin Name                                                       | Year | Acquired | Price | Mintage |
 |-----------------------------------------------------------------|:----:|:--------:|:-----:|-------:|
 | Britannia                                                       | 1997 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 456,364,100 |
-| European Union                                                  | 1998 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 5,043,000 |
+| Grosnez Castle (Jersey)                                                  | 1998 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 5,043,000 |
 | European Union                                                  | 1998 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 5,043,000 |
 | NHS                                                             | 1998 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 5,001,000 |
 | Public Libraries Act                                            | 2000 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 11,263,000 |
