@@ -116,6 +116,7 @@ We haven't started this collection yet!
 | Sir Isaac Newton                                                | 2017 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,801,500 |
 | Representation of the People                                    | 2018 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 9,000,000 |
 | Sherlock Holmes                                                 | 2019 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 8,602,000 |
+| Royal Shield                                            | 2019 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 122,000,000 |
 | Withdrawal from the EU                                          | 2020 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 10,001,000 |
 | Diversity                                                       | 2020 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 10,300,000 |
 | Platinum Jubilee                                                | 2022 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 5,000,070 |
