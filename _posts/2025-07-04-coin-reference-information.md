@@ -93,6 +93,8 @@ We haven't started this collection yet!
 
 | Coin Name                                                       | Year | Acquired | Price | Mintage |
 |-----------------------------------------------------------------|:----:|:--------:|:-----:|-------:|
+| Grosnez Castle (Jersey)                                         | 1997 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 1,500,000 |
+| Britannia                                                  | 1997 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 456,364,100 |
 | European Union                                                  | 1998 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 5,043,000 |
 | NHS                                                             | 1998 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 5,001,000 |
 | Public Libraries Act                                            | 2000 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 11,263,000 |
@@ -208,6 +210,7 @@ Crowns are *not in circulation* anymore and these coins were primarily issued to
 
 | Coin Name                                                       | Year | Acquired | Price | Mintage |
 |-----------------------------------------------------------------|:----:|:--------:|:-----:|-------:|
+| Coronation Crown Elizabeth II                              | 1953 | <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 5,962,600 |
 | 1960 British Exhibition in New York                        | 1960 | <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 1,024,038 |
 | Winston Churchill                                    | 1965 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 19,640,000 |
 | Silver Wedding Anniversary (E&P)              | 1972 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 7,452,100 |
