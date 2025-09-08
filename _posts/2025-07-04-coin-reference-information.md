@@ -101,7 +101,7 @@ We haven't started this collection yet!
 | Suffragettes                                                    | 2003 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 3,124,030 |
 | Roger Bannister                                                 | 2004 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000002</span>** | 9,032,500 |
 | Johnson’s Dictionary                                            | 2005 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 17,649,000 |
-| Victoria Cross (Award)                                          | 2006 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 12,087,000 |
+| Victoria Cross (Award)                                          | 2006 |  <span style="display:none">1</span>  | <span style="display:none">-5000003</span>*** | 12,087,000 |
 | Victoria Cross (Heroic Acts)                                    | 2006 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 10,000,500 |
 | Scouting                                                        | 2007 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 7,710,750 |
 | Kew Gardens                                                     | 2009 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 210,000 |
