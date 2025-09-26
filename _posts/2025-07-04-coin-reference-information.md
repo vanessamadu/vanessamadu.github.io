@@ -55,7 +55,7 @@ Most of our collection consists of coins that are still in circulation or were i
 | London–Rio Olympic Handover               | 2012 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 845,000 |
 | London Underground – Train                | 2013 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,690,000 |
 | London Underground – Roundel              | 2013 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">300</span>approx. £3.00 | 1,560,000 |
-| Anniversary of the Guinea                 | 2013 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,990,000 |
+| Anniversary of the Guinea                 | 2013 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-5000003</span>*** | 2,990,000 |
 | WWI Outbreak                              | 2014 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-5000003</span>*** | 5,720,000 |
 | Trinity House                             | 2014 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>£4.00 | 3,705,000 |
 | Magna Carta                               | 2015 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">300</span>approx. £3.00 | 1,495,000 |
@@ -115,7 +115,7 @@ We haven't started this collection yet!
 | Battle of Hastings                                              | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 6,700,000 |
 | Sir Isaac Newton                                                | 2017 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,801,500 |
 | Representation of the People                                    | 2018 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 9,000,000 |
-| Sherlock Holmes                                                 | 2019 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 8,602,000 |
+| Sherlock Holmes                                                 | 2019 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-5000003</span>*** | 8,602,000 |
 | Royal Shield                                            | 2019 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 122,000,000 |
 | Withdrawal from the EU                                          | 2020 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 10,001,000 |
 | Diversity                                                       | 2020 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 10,300,000 |
