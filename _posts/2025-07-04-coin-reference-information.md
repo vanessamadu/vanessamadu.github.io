@@ -17,7 +17,8 @@ audience: General
 ---
 \* Found in change  
 ** Found by Laurence  
-*** Coin Swap
+*** Coin Swap 
+**** Found by Seph 
 
 ---
 
@@ -216,6 +217,6 @@ Crowns are *not in circulation* anymore and these coins were primarily issued to
 | Winston Churchill                                    | 1965 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 19,640,000 |
 | Silver Wedding Anniversary (E&P)              | 1972 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 7,452,100 |
 | Silver Jubilee (Queen Elizabeth II)                                                | 1977 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 37,061,160 |
-| Queen Mother's 80th Birthday                                    | 1980 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 9,306,000 |
+| Queen Mother's 80th Birthday                                    | 1980 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-5000004</span>**** | 9,306,000 |
 | Charles and Diana's Wedding                                     | 1981 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 26,773,600 |
 {: .sortable}
