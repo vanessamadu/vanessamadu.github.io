@@ -17,8 +17,8 @@ audience: General
 ---
 \* Found in change  
 ** Found by Laurence  
-*** Coin Swap 
-**** Found by Seph 
+*** Coin Swap  
+**** Found by Seph  
 
 ---
 
