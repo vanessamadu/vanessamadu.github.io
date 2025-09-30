@@ -30,7 +30,7 @@ Most of our collection consists of coins that are still in circulation or were i
 
 | Coin Name                                 | Year | Acquired | Price | Mintage |
 |-------------------------------------------|:----:|:--------:|:-----:|-------:|
-| Technology                                | 1997 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>£2.00 | 13,734,625 |
+| Technology                                | 1997 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>£4.00 | 13,734,625 |
 | Rugby World Cup                           | 1999 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">400</span>£4.00 | 4,933,000 |
 | Marconi                                   | 2001 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 4,558,000 |
 | Commonwealth Games – Scotland             | 2002 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">1000</span>£10.00 | 771,750 |
