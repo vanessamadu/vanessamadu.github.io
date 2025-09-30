@@ -115,13 +115,13 @@ We haven't started this collection yet!
 | Team GB                                                         | 2016 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 6,400,000 |
 | Battle of Hastings                                              | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 6,700,000 |
 | Sir Isaac Newton                                                | 2017 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,801,500 |
-| Representation of the People                                    | 2018 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 9,000,000 |
+| Representation of the People                                    | 2018 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 9,000,000 |
 | Sherlock Holmes                                                 | 2019 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-5000003</span>*** | 8,602,000 |
 | Royal Shield                                            | 2019 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 122,000,000 |
 | Withdrawal from the EU                                          | 2020 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 10,001,000 |
 | Diversity                                                       | 2020 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 10,300,000 |
 | Platinum Jubilee                                                | 2022 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 5,000,070 |
-| Pride                                                           | 2022 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 5,000,000 |
+| Pride                                                           | 2022 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 5,000,000 |
 | Queen Elizabeth Memorial 50p                                    | 2022 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 9,600,000 |
 | Coronation of King Charles III                                  | 2023 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000001</span>* | 5,000,000 |
 | Atlantic Salmon                                                 | 2023 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 200,000 |
@@ -152,8 +152,8 @@ We haven't started this collection yet!
 |---------------------------------|:----:|:--------:|:-----:|-------:|
 | Paddington at the Station       | 2018 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 5,100,000 |
 | Paddington at Buckingham Palace | 2018 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 5,901,000 |
-| Paddington at the Tower         | 2019 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 9,001,000 |
-| Paddington at St. Paul's        | 2019 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 9,001,000 |
+| Paddington at the Tower         | 2019 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>£2.00 | 9,001,000 |
+| Paddington at St. Paul's        | 2019 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>£2.00 | 9,001,000 |
 {: .sortable}
 
 #### 2012 Olympic Games Series
@@ -201,7 +201,7 @@ The first 50p coins were minted in 1971 as part of the new coins issued from dec
 |-----------------------------------------------------------------|:----:|:--------:|:-----:|-------:|
 | European Economic Community                                     | 1973 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>£2.00 | 89,775,000 |
 | Single Market                                                   | 1992 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 109,000 |
-| D-Day                                                           | 1994 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 6,705,520 |
+| D-Day                                                           | 1994 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 6,705,520 |
 {: .sortable}
 
 #### Brilliant Uncirculated 50p Coins
@@ -212,7 +212,7 @@ Crowns are *not in circulation* anymore and these coins were primarily issued to
 
 | Coin Name                                                       | Year | Acquired | Price | Mintage |
 |-----------------------------------------------------------------|:----:|:--------:|:-----:|-------:|
-| Coronation Crown Elizabeth II                              | 1953 | <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 5,962,600 |
+| Coronation Crown Elizabeth II                              | 1953 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">300</span>£3.00 | 5,962,600 |
 | 1960 British Exhibition in New York                        | 1960 | <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 1,024,038 |
 | Winston Churchill                                    | 1965 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 19,640,000 |
 | Silver Wedding Anniversary (E&P)              | 1972 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span> approx. £2.00 | 7,452,100 |
