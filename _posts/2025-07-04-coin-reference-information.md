@@ -112,7 +112,7 @@ We haven't started this collection yet!
 | Benjamin Britten                                                | 2013 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">-5000002</span>** | 5,300,000 |
 | Glasgow Commonwealth Games                                      | 2014 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 6,500,000 |
 | Battle of Britain                                               | 2015 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 5,900,000 |
-| Team GB                                                         | 2016 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 6,400,000 |
+| Team GB                                                         | 2016 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span>~£2.00 | 6,400,000 |
 | Battle of Hastings                                              | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 6,700,000 |
 | Sir Isaac Newton                                                | 2017 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,801,500 |
 | Representation of the People                                    | 2018 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">350</span>£3.50 | 9,000,000 |
@@ -133,7 +133,7 @@ We haven't started this collection yet!
 |--------------------------------|:----:|:--------:|:-----:|-------:|
 | Beatrix Potter Portrait        | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 6,900,000 |
 | Peter Rabbit (2016)            | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 9,700,000 |
-| Jemima Puddle-Duck             | 2016 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,100,000 |
+| Jemima Puddle-Duck             | 2016 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">200</span>~£2.00 | 2,100,000 |
 | Mrs. Tiggy-Winkle              | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 8,800,000 |
 | Squirrel Nutkin                | 2016 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 5,000,000 |
 | Benjamin Bunny                 | 2017 | <span style="display:none">1</span><i class="fa-solid fa-check"></i> | <span style="display:none">200</span>approx. £2.00 | 25,000,000 |
@@ -168,7 +168,7 @@ We haven't started this collection yet!
 | Boccia              | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,166,000 |
 | Boxing              | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,148,500 |
 | Canoeing            | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,166,500 |
-| Cycling             | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,090,500 |
+| Cycling             | 2011 |  <span style="display:none">1</span><i class="fa-solid fa-check"></i>  | <span style="display:none">-5000003</span>*** | 2,090,500 |
 | Equestrian          | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,142,500 |
 | Fencing             | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 2,115,500 |
 | Football            | 2011 |  <span style="display:none">0</span>  | <span style="display:none">-6000000</span> | 1,125,500 |
