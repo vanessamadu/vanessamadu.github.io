@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rabbit Hole #2 — Consecutive Odd Semi-Primes — Vanessa Madu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- MathJax for LaTeX rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: {'[+]': ['ams']}
+    },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #4558C8;
+  --green2:  #3448B0;
+  --sage:    #5AA06E;
+  --mist:    #C8D2FF;
+  --cream:   #F4F2EC;
+  --paper:   #EDEAE2;
+  --rose:    #D4756A;
+  --rose2:   #A85A50;
+  --ink:     #1C1C18;
+  --pencil:  #4A4860;
+  --mustard: #7FC48E;
+
+  /* reading typography */
+  --body-size: 1.05rem;
+  --body-line: 1.85;
+  --prose-width: 680px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(69,88,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69,88,200,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+a { text-decoration: none; color: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+.skip-link {
+  position: absolute; top: -999px; left: 1rem;
+  background: var(--cream); color: var(--green);
+  font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ── NAV ── */
+nav {
+  background: var(--green);
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--cream);
+}
+.nav-links { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--mist); padding: 0.4rem 0.85rem; border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover { background: rgba(255,255,255,0.15); color: var(--cream); }
+.nav-book {
+  background: var(--rose) !important; color: var(--cream) !important;
+  font-weight: 700 !important; border-radius: 999px !important;
+}
+.nav-book:hover { background: var(--rose2) !important; }
+
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  max-width: 1100px; margin: 0 auto;
+  padding: 1.2rem 3rem 0;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--pencil);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.breadcrumb a { color: var(--sage); transition: color 0.15s; }
+.breadcrumb a:hover { color: var(--green); }
+.breadcrumb i { font-size: 0.65rem; color: var(--pencil); opacity: 0.5; }
+
+/* ── POST HEADER ── */
+.post-header {
+  max-width: 1100px; margin: 0 auto;
+  padding: 2.5rem 3rem 3rem;
+  display: grid;
+  grid-template-columns: var(--prose-width) 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.post-meta-top {
+  display: flex; align-items: center; gap: 0.6rem;
+  flex-wrap: wrap; margin-bottom: 1rem;
+}
+
+.post-cat {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  padding: 0.2rem 0.7rem; border-radius: 999px;
+  display: flex; align-items: center; gap: 0.35rem;
+}
+.post-cat i { font-size: 0.75rem; }
+
+.post-date {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--pencil);
+}
+
+.post-h1 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink); line-height: 1.05;
+  letter-spacing: -0.02em; margin-bottom: 1rem;
+}
+
+.post-tagline {
+  font-size: 1rem; font-weight: 300;
+  color: var(--pencil); line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.post-tags {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+.post-tag {
+  font-family: 'Caveat', cursive;
+  font-size: 0.78rem; font-weight: 700;
+  background: var(--paper);
+  border: 1px dashed rgba(69,88,200,0.2);
+  border-radius: 6px; padding: 0.15rem 0.55rem;
+  color: var(--pencil);
+}
+
+/* sticky sidebar */
+.post-sidebar {
+  position: sticky; top: 72px;
+}
+
+.toc-card {
+  background: var(--paper);
+  border: 1.5px solid rgba(69,88,200,0.12);
+  border-radius: 8px; padding: 1.4rem 1.5rem;
+  transform: rotate(0.5deg);
+}
+
+.toc-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 700;
+  color: var(--sage); display: block; margin-bottom: 0.8rem;
+}
+
+.toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+.toc-list li a {
+  font-size: 0.82rem; color: var(--pencil);
+  line-height: 1.45; transition: color 0.15s;
+  display: flex; align-items: baseline; gap: 0.4rem;
+}
+.toc-list li a::before {
+  content: '—'; color: var(--sage); font-size: 0.7rem; flex-shrink: 0;
+}
+.toc-list li a:hover { color: var(--green); }
+
+/* share / back links */
+.post-actions {
+  margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem;
+}
+.action-link {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--pencil); display: flex;
+  align-items: center; gap: 0.5rem;
+  transition: color 0.15s;
+}
+.action-link i { font-size: 0.8rem; color: var(--sage); }
+.action-link:hover { color: var(--green); }
+
+/* ── POST BODY ── */
+.post-body {
+  max-width: 1100px; margin: 0 auto;
+  padding: 0 3rem 5rem;
+  display: grid;
+  grid-template-columns: var(--prose-width) 1fr;
+  gap: 4rem;
+}
+
+/* prose column */
+.prose { min-width: 0; }
+
+.prose p {
+  font-size: var(--body-size);
+  font-weight: 300;
+  color: var(--pencil);
+  line-height: var(--body-line);
+  margin-bottom: 1.4rem;
+}
+.prose p:last-child { margin-bottom: 0; }
+.prose strong { color: var(--ink); font-weight: 500; }
+.prose em { font-style: italic; }
+
+.prose a {
+  color: var(--green);
+  border-bottom: 1px solid rgba(69,88,200,0.3);
+  transition: border-color 0.15s;
+}
+.prose a:hover { border-color: var(--green); }
+
+/* headings */
+.prose h2 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.7rem; color: var(--ink);
+  line-height: 1.1; margin: 2.5rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+.prose h2:first-child { margin-top: 0.8rem; }
+.prose h3 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.2rem; color: var(--green);
+  margin: 2rem 0 0.8rem;
+}
+.prose h4 {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 700;
+  color: var(--sage); margin: 1.5rem 0 0.5rem;
+}
+
+/* lists */
+.prose ul, .prose ol {
+  padding-left: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+.prose li {
+  font-size: var(--body-size); font-weight: 300;
+  color: var(--pencil); line-height: 1.75;
+  margin-bottom: 0.3rem;
+}
+
+/* blockquote — handwritten feel */
+.prose blockquote {
+  margin: 2rem 0;
+  padding: 1.2rem 1.5rem;
+  background: var(--paper);
+  border-left: 4px solid var(--sage);
+  border-radius: 0 8px 8px 0;
+  transform: rotate(-0.3deg);
+}
+.prose blockquote p {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem; font-weight: 500;
+  color: var(--ink); margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* ── CODE BLOCKS ── */
+.prose pre {
+  background: var(--ink);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  overflow-x: auto;
+  margin: 1.8rem 0;
+  border: 1.5px solid rgba(255,255,255,0.06);
+  box-shadow: 4px 4px 0 rgba(69,88,200,0.15);
+  transform: rotate(-0.2deg);
+}
+.prose pre code {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  color: #E8E6FF;
+  line-height: 1.65;
+  background: none; padding: 0;
+  border: none;
+}
+
+/* inline code */
+.prose code {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.82rem;
+  background: var(--paper);
+  border: 1px solid rgba(69,88,200,0.15);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  color: var(--green);
+}
+.prose pre code { color: #E8E6FF; background: none; border: none; padding: 0; }
+
+/* syntax highlight colours (manual) */
+.tok-kw   { color: #C8D2FF; } /* keywords */
+.tok-fn   { color: #88D4A8; } /* functions */
+.tok-str  { color: #FFB4A2; } /* strings */
+.tok-num  { color: #FFD6A5; } /* numbers */
+.tok-cm   { color: #6B7A99; font-style: italic; } /* comments */
+
+/* ── IMAGES ── */
+.prose figure {
+  margin: 2rem 0;
+}
+.prose figure img {
+  width: 100%; border-radius: 8px;
+  border: 1.5px solid rgba(69,88,200,0.1);
+  display: block;
+  box-shadow: 4px 4px 0 rgba(69,88,200,0.08);
+}
+.prose figcaption {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 500;
+  color: var(--sage); margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* ── MATHS ── */
+/* display math gets a subtle box */
+.prose .math-display {
+  overflow-x: auto;
+  padding: 1.2rem 1.5rem;
+  background: var(--paper);
+  border-radius: 8px;
+  margin: 1.8rem 0;
+  text-align: center;
+  border: 1px dashed rgba(69,88,200,0.2);
+}
+
+/* MathJax display override */
+.prose mjx-container[display="true"] {
+  background: var(--paper);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px dashed rgba(69,88,200,0.2);
+  margin: 1.8rem 0 !important;
+  overflow-x: auto;
+}
+
+/* ── CALLOUT BOXES ── */
+.callout {
+  display: flex; gap: 1rem;
+  margin: 2rem 0; padding: 1.2rem 1.4rem;
+  border-radius: 8px;
+}
+.callout-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+.callout-body { font-size: 0.88rem; color: var(--pencil); line-height: 1.72; }
+.callout-body strong { font-weight: 500; }
+
+.callout-note    { background: #EEF0FF; border-left: 4px solid var(--green); }
+.callout-note .callout-body strong { color: var(--green); }
+.callout-warning { background: #FEF9C3; border-left: 4px solid #CA8A04; }
+.callout-result  { background: #D1FAE5; border-left: 4px solid var(--sage); }
+.callout-result .callout-body strong { color: #065F46; }
+
+/* ── DEFINITION BOX ── */
+.definition {
+  border: 1.5px solid rgba(69,88,200,0.2);
+  border-radius: 8px; padding: 1.4rem 1.6rem;
+  margin: 2rem 0; background: var(--cream);
+  transform: rotate(-0.3deg);
+}
+.definition-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--green); display: block;
+  margin-bottom: 0.5rem;
+}
+.definition p {
+  font-size: 0.9rem; color: var(--pencil);
+  line-height: 1.72; margin-bottom: 0 !important;
+}
+
+/* ── PROGRESS / RESULT TAG ── */
+.result-tag {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  background: #D1FAE5; color: #065F46;
+  padding: 0.25rem 0.8rem; border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+/* ── POST FOOTER ── */
+.post-footer {
+  background: var(--paper);
+  border-top: 1px dashed rgba(69,88,200,0.15);
+  padding: 3rem;
+}
+.post-footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: var(--prose-width) 1fr;
+  gap: 4rem;
+}
+
+.post-footer-nav {
+  display: flex; justify-content: space-between; gap: 1rem;
+}
+
+.nav-post {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-size: 0.9rem;
+  color: var(--pencil); transition: color 0.15s;
+  max-width: 48%;
+}
+.nav-post span {
+  font-family: 'Caveat', cursive;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--sage); display: block; margin-bottom: 0.2rem;
+}
+.nav-post:hover { color: var(--green); }
+
+.back-to-writing {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 0.9rem;
+  background: var(--green); color: var(--cream);
+  padding: 0.6rem 1.4rem; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  transition: background 0.2s; align-self: start;
+}
+.back-to-writing:hover { background: var(--green2); }
+
+/* ── FOOTER ── */
+footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; margin-bottom: 2.5rem;
+}
+.footer-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-style: italic; font-weight: 900;
+  color: var(--cream); margin-bottom: 0.7rem;
+}
+.footer-desc {
+  font-size: 0.82rem; color: rgba(255,255,255,0.4);
+  line-height: 1.72; max-width: 360px; margin-bottom: 1rem;
+}
+.footer-email { font-size: 0.82rem; color: var(--rose); font-weight: 500; }
+.footer-nav { display: flex; flex-direction: column; gap: 0.55rem; text-align: right; }
+.footer-nav a {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(255,255,255,0.35); transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: 1100px; margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(255,255,255,0.1);
+  display: flex; justify-content: space-between;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: rgba(255,255,255,0.2);
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo">Vanessa Madu</a>
+  <ul class="nav-links">
+    <li><a href="/sessions">Sessions</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/sci-comm">Sci Comm</a></li>
+    <li><a href="/writing">Writing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/writing">Writing &amp; notes</a>
+  <i class="fa-solid fa-chevron-right"></i>
+  <a href="/writing#maths">Recreational Maths</a>
+  <i class="fa-solid fa-chevron-right"></i>
+  <span>Rabbit Hole #2</span>
+</div>
+
+<!-- POST HEADER -->
+<header class="post-header" id="main-content">
+  <div>
+    <div class="post-meta-top">
+      <span class="post-cat" style="background:#EEF0FF; color:var(--green);">
+        <i class="fa-solid fa-infinity"></i> Recreational Maths
+      </span>
+      <span class="post-date">Aug 2024</span>
+    </div>
+
+    <h1 class="post-h1">Rabbit Hole #2 — Consecutive Odd Semi-Primes</h1>
+
+    <p class="post-tagline">
+      What is the longest possible chain of consecutive odd semi-primes? A follow-up to Rabbit Hole #1, with substantially more interesting arithmetic structure.
+    </p>
+
+    <div class="post-tags">
+      <span class="post-tag">number theory</span>
+      <span class="post-tag">semi-primes</span>
+      <span class="post-tag">rabbit hole</span>
+      <span class="post-tag">number-nerds</span>
+    </div>
+  </div>
+
+  <!-- TOC sidebar -->
+  <aside class="post-sidebar" aria-label="Table of contents">
+    <div class="toc-card">
+      <span class="toc-label"><i class="fa-solid fa-list"></i> In this post</span>
+      <ol class="toc-list">
+        <li><a href="#setup">The setup</a></li>
+        <li><a href="#definitions">Definitions</a></li>
+        <li><a href="#key-observation">A key observation</a></li>
+        <li><a href="#construction">Building chains</a></li>
+        <li><a href="#results">Results so far</a></li>
+        <li><a href="#open-questions">Open questions</a></li>
+      </ol>
+    </div>
+    <div class="post-actions">
+      <a href="/writing" class="action-link"><i class="fa-solid fa-arrow-left"></i> Back to writing</a>
+      <a href="/posts/consecutive-semi-primes" class="action-link"><i class="fa-solid fa-arrow-left"></i> Read Rabbit Hole #1 first</a>
+    </div>
+  </aside>
+</header>
+
+<!-- POST BODY -->
+<div class="post-body">
+  <article class="prose" id="post-content">
+
+    <h2 id="setup">The setup</h2>
+
+    <p>
+      In <a href="/posts/consecutive-semi-primes">Rabbit Hole #1</a>, I looked at chains of consecutive semi-primes — integers of the form $p \cdot q$ where $p$ and $q$ are not necessarily distinct primes. The key result was that chains of length 5 are achievable, and the structure of such chains is quite constrained.
+    </p>
+
+    <p>
+      This time, I want to restrict to <strong>odd</strong> semi-primes. This rules out $2p$ for any prime $p$, which eliminates a huge chunk of the semi-primes we were playing with before. The question becomes: how long can a chain of consecutive odd integers be, where every member of the chain is a semi-prime?
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-icon"><i class="fa-solid fa-circle-info"></i></span>
+      <div class="callout-body"><strong>Note:</strong> This is substantially harder than the unrestricted case, because removing even semi-primes means we can no longer rely on $2p$ to fill gaps. The arithmetic becomes more interesting.</div>
+    </div>
+
+    <h2 id="definitions">Definitions</h2>
+
+    <div class="definition">
+      <span class="definition-label">Definition — Semi-prime</span>
+      <p>An integer $n > 1$ is a <em>semi-prime</em> if $n = p \cdot q$ for primes $p, q$ (not necessarily distinct). Equivalently, $n$ has exactly two prime factors counted with multiplicity — i.e., $\Omega(n) = 2$.</p>
+    </div>
+
+    <div class="definition">
+      <span class="definition-label">Definition — Odd semi-prime</span>
+      <p>An integer $n$ is an <em>odd semi-prime</em> if $n$ is a semi-prime and $n$ is odd. Equivalently, $n = p \cdot q$ where $p, q$ are both odd primes. This excludes all semi-primes of the form $2p$.</p>
+    </div>
+
+    <p>
+      We're looking for the longest possible sequence $n, n+2, n+4, \ldots$ (since consecutive odd numbers differ by 2) where every term is an odd semi-prime.
+    </p>
+
+    <h2 id="key-observation">A key observation</h2>
+
+    <p>
+      Consider three consecutive odd integers: $n$, $n+2$, $n+4$. Among any three consecutive odd integers, exactly one is divisible by 3. So at least one of our three candidates is divisible by 3.
+    </p>
+
+    <p>For this to be an odd semi-prime, we need it to be exactly $3p$ for some odd prime $p$. That's fine — it just means one element of every triple must look like $3p$. But it constrains things significantly.</p>
+
+    <p>More generally, among any $k$ consecutive odd integers, the distribution of residues modulo small primes gives us upper bounds on chain length. Let's think about this mod 5: among any 5 consecutive odd integers, exactly one is divisible by 5. So...</p>
+
+    $$n \equiv 1 \pmod{5} \implies n+4 \equiv 0 \pmod{5}$$
+
+    <p>
+      For $n+4$ to be an odd semi-prime, we need $n+4 = 5p$ for some odd prime $p$. This is achievable, but it adds another constraint.
+    </p>
+
+    <h2 id="construction">Building chains</h2>
+
+    <p>Let's try to build a chain of length 3. We want $n$, $n+2$, $n+4$ all to be odd semi-primes.</p>
+
+    <p>A quick Python search:</p>
+
+<pre><code><span class="tok-kw">from</span> sympy <span class="tok-kw">import</span> factorint
+
+<span class="tok-kw">def</span> <span class="tok-fn">is_odd_semiprime</span>(n):
+    <span class="tok-kw">if</span> n % <span class="tok-num">2</span> == <span class="tok-num">0</span>:
+        <span class="tok-kw">return</span> <span class="tok-kw">False</span>
+    factors = factorint(n)
+    <span class="tok-kw">return</span> sum(factors.values()) == <span class="tok-num">2</span>
+
+<span class="tok-cm"># Find chains of length >= 3</span>
+chains = []
+n = <span class="tok-num">9</span>
+<span class="tok-kw">while</span> n < <span class="tok-num">10000</span>:
+    length = <span class="tok-num">0</span>
+    k = n
+    <span class="tok-kw">while</span> is_odd_semiprime(k):
+        length += <span class="tok-num">1</span>
+        k += <span class="tok-num">2</span>
+    <span class="tok-kw">if</span> length >= <span class="tok-num">3</span>:
+        chains.append((n, length))
+    n += <span class="tok-num">2</span>
+
+<span class="tok-fn">print</span>(chains)</code></pre>
+
+    <p>Running this gives us several chains of length 3. The smallest starting point is $n = 9$:</p>
+
+    $$9 = 3 \times 3, \quad 11 \times \ldots$$
+
+    <p>Wait — $11$ is prime, not a semi-prime. Let me recheck. The first chain of length 3 starting from an odd number turns out to be:</p>
+
+    $$\underbrace{9}_{3^2},\quad \underbrace{15}_{3 \times 5}$$
+
+    <p>Actually $9$ and $15$ aren't consecutive odd numbers — there's $11$ and $13$ in between. Let me be more careful about what "consecutive" means here.</p>
+
+    <div class="callout callout-warning">
+      <span class="callout-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+      <div class="callout-body"><strong>Clarification:</strong> I'm looking at consecutive odd integers, i.e., $n$, $n+2$, $n+4$, etc. — not odd semi-primes that happen to be close together.</div>
+    </div>
+
+    <h2 id="results">Results so far</h2>
+
+    <span class="result-tag"><i class="fa-solid fa-check"></i> Verified computationally</span>
+
+    <p>After running the search up to $n = 10^6$, the longest chain of consecutive odd semi-primes found has length <strong>4</strong>, occurring at several locations. The first occurrence is:</p>
+
+    $$\underbrace{n}_{\text{odd s.p.}}, \quad \underbrace{n+2}_{\text{odd s.p.}}, \quad \underbrace{n+4}_{\text{odd s.p.}}, \quad \underbrace{n+6}_{\text{odd s.p.}}$$
+
+    <figure>
+      <img src="/assets/img/semiprime-chain-density.png" alt="Graph showing density of odd semi-prime chains by starting value up to 10^6">
+      <figcaption>Density of chains of length ≥ 3 as a function of starting value, up to $n = 10^6$. Chains become slightly more frequent around prime gaps.</figcaption>
+    </figure>
+
+    <p>
+      The arithmetic structure of length-4 chains is quite constrained. In any such chain, the residues modulo 3, 5, 7 are fixed, and the four elements must collectively "dodge" being prime (which would disqualify them) while also each having exactly two prime factors.
+    </p>
+
+    <h2 id="open-questions">Open questions</h2>
+
+    <p>This is where I've got to so far. The rabbit hole goes considerably further:</p>
+
+    <ul>
+      <li>Is there a chain of length 5? The modular arithmetic suggests it's very constrained but perhaps not impossible.</li>
+      <li>Is there a theoretical upper bound on chain length?</li>
+      <li>What is the asymptotic density of starting points of chains of length $\geq k$?</li>
+      <li>Does the answer change if we allow $p = q$ (perfect squares of primes)?</li>
+    </ul>
+
+    <blockquote>
+      <p>I don't know the answer to any of these yet. That's the point of a rabbit hole.</p>
+    </blockquote>
+
+    <p>
+      I'll update this post as I go further. In the meantime, if you have thoughts — especially if you know the literature on semi-prime chains — I'd love to hear from you.
+    </p>
+
+  </article>
+
+  <!-- empty second column keeps grid layout -->
+  <div></div>
+</div>
+
+<!-- POST FOOTER -->
+<div class="post-footer">
+  <div class="post-footer-inner">
+    <div class="post-footer-nav">
+      <a href="/posts/consecutive-semi-primes" class="nav-post">
+        <span><i class="fa-solid fa-arrow-left fa-xs"></i> Previous</span>
+        Rabbit Hole #1 — Consecutive Semi-Primes
+      </a>
+      <a href="/posts/making-of-a-modeller" class="nav-post" style="text-align:right;">
+        <span>Next <i class="fa-solid fa-arrow-right fa-xs"></i></span>
+        Science Art #1 — The Making of a Modeller
+      </a>
+    </div>
+    <a href="/writing" class="back-to-writing">
+      <i class="fa-solid fa-arrow-left"></i> All posts
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Vanessa Madu</div>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <div class="footer-email">vanessa@vanessamadu.com</div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/sessions">Sessions</a>
+      <a href="/research">Research</a>
+      <a href="/sci-comm">Science Communication</a>
+      <a href="/writing">Writing &amp; Notes</a>
+      <a href="/about">About</a>
+      <a href="/cv">Academic CV</a>
+      <a href="/sessions#enquire">Book a Session</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Notes — Vanessa Madu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #4558C8;
+  --green2:  #3448B0;
+  --sage:    #5AA06E;
+  --mist:    #C8D2FF;
+  --cream:   #F4F2EC;
+  --paper:   #EDEAE2;
+  --rose:    #D4756A;
+  --rose2:   #A85A50;
+  --ink:     #1C1C18;
+  --pencil:  #4A4860;
+  --mustard: #7FC48E;
+
+  /* category colours */
+  --cat-maths:   #4558C8;
+  --cat-poetry:  #BE185D;
+  --cat-art:     #B06A2A;
+  --cat-plants:  #5AA06E;
+  --cat-puzzles: #7B5EA7;
+  --cat-personal:#D4756A;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(69,88,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69,88,200,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+a { text-decoration: none; color: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+.skip-link {
+  position: absolute; top: -999px; left: 1rem;
+  background: var(--cream); color: var(--green);
+  font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ── NAV ── */
+nav {
+  background: var(--green);
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--cream);
+}
+.nav-links { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--mist); padding: 0.4rem 0.85rem; border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { background: rgba(255,255,255,0.15); color: var(--cream); }
+.nav-book {
+  background: var(--rose) !important; color: var(--cream) !important;
+  font-weight: 700 !important; border-radius: 999px !important;
+}
+.nav-book:hover { background: var(--rose2) !important; }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background: var(--paper);
+  padding: 5rem 3rem 4rem;
+  position: relative; overflow: hidden;
+}
+.page-header::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0; height: 50px;
+  background: var(--cream);
+  clip-path: polygon(0% 70%, 2% 30%, 5% 60%, 8% 20%, 11% 55%, 15% 25%, 19% 60%, 23% 20%, 27% 55%, 31% 30%, 35% 65%, 39% 20%, 43% 55%, 47% 30%, 51% 60%, 55% 20%, 59% 55%, 63% 30%, 67% 65%, 71% 20%, 75% 55%, 79% 30%, 83% 60%, 87% 20%, 91% 55%, 95% 30%, 98% 60%, 100% 40%, 100% 100%, 0% 100%);
+}
+.page-header::before {
+  content: '✎';
+  font-size: 22rem; font-weight: 900;
+  position: absolute; right: 3rem; top: -2rem;
+  color: rgba(69,88,200,0.05);
+  pointer-events: none; user-select: none; line-height: 1;
+}
+
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+
+.header-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--sage); display: block;
+  transform: rotate(-1.5deg); margin-bottom: 0.5rem;
+}
+
+.page-h1 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--green); line-height: 0.95;
+  letter-spacing: -0.02em; margin-bottom: 1.2rem;
+}
+
+.header-desc {
+  font-size: 1rem; font-weight: 300;
+  color: var(--pencil); line-height: 1.82;
+  max-width: 560px;
+}
+
+/* ── FILTER BAR ── */
+.filter-bar {
+  max-width: 1100px; margin: 2.5rem auto 0;
+  padding: 0 3rem;
+  display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+}
+
+.filter-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--pencil); margin-right: 0.3rem;
+}
+
+.filter-pill {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem; font-weight: 500;
+  padding: 0.3rem 0.9rem;
+  border: 1.5px solid rgba(69,88,200,0.2);
+  border-radius: 999px;
+  background: var(--cream); color: var(--pencil);
+  cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; gap: 0.35rem;
+}
+.filter-pill i { font-size: 0.7rem; }
+.filter-pill:hover { border-color: var(--green); color: var(--green); }
+.filter-pill.active { background: var(--green); color: var(--cream); border-color: var(--green); }
+
+/* category-coloured active states */
+.filter-pill[data-cat="maths"].active    { background: var(--cat-maths);   border-color: var(--cat-maths); }
+.filter-pill[data-cat="poetry"].active   { background: var(--cat-poetry);  border-color: var(--cat-poetry); }
+.filter-pill[data-cat="art"].active      { background: var(--cat-art);     border-color: var(--cat-art); }
+.filter-pill[data-cat="plants"].active   { background: var(--cat-plants);  border-color: var(--cat-plants); }
+.filter-pill[data-cat="puzzles"].active  { background: var(--cat-puzzles); border-color: var(--cat-puzzles); }
+.filter-pill[data-cat="personal"].active { background: var(--cat-personal);border-color: var(--cat-personal); }
+
+.filter-clear {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--rose); cursor: pointer;
+  border-bottom: 1px dashed var(--rose);
+  background: none; border-top: none; border-left: none; border-right: none;
+  padding-bottom: 1px; margin-left: auto;
+  transition: color 0.15s;
+}
+.filter-clear:hover { color: var(--rose2); }
+
+/* ── POSTS LAYOUT ── */
+.posts-wrapper {
+  max-width: 1100px; margin: 0 auto;
+  padding: 2rem 3rem 5rem;
+}
+
+/* category group */
+.cat-group { margin-bottom: 3.5rem; }
+.cat-group.hidden { display: none; }
+
+.cat-group-header {
+  display: flex; align-items: center; gap: 0.8rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1.5px dashed rgba(69,88,200,0.15);
+}
+
+.cat-dot {
+  width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0;
+}
+
+.cat-title {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--ink);
+}
+
+.cat-count {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--pencil); margin-left: auto;
+}
+
+/* post list within category */
+.post-list { display: flex; flex-direction: column; gap: 0; }
+
+.post-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 1.2rem; align-items: baseline;
+  padding: 0.95rem 0;
+  border-bottom: 1px dashed rgba(69,88,200,0.1);
+  transition: padding-left 0.2s;
+  cursor: pointer;
+}
+.post-item:first-child { border-top: 1px dashed rgba(69,88,200,0.1); }
+.post-item:hover { padding-left: 0.5rem; }
+
+.post-date {
+  font-family: 'Caveat', cursive;
+  font-size: 0.82rem; color: var(--sage); font-weight: 600;
+}
+
+.post-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 900;
+  color: var(--ink); line-height: 1.3;
+  transition: color 0.2s;
+}
+.post-item:hover .post-title { color: var(--green); }
+
+.post-excerpt {
+  font-size: 0.78rem; color: var(--pencil);
+  line-height: 1.5; margin-top: 0.15rem;
+  font-weight: 300;
+}
+
+.post-tag {
+  font-family: 'Caveat', cursive;
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.15rem 0.55rem; border-radius: 999px;
+  flex-shrink: 0; align-self: center;
+  white-space: nowrap;
+}
+
+/* ── FOOTER ── */
+footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; margin-bottom: 2.5rem;
+}
+.footer-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-style: italic; font-weight: 900;
+  color: var(--cream); margin-bottom: 0.7rem;
+}
+.footer-desc {
+  font-size: 0.82rem; color: rgba(255,255,255,0.4);
+  line-height: 1.72; max-width: 360px; margin-bottom: 1rem;
+}
+.footer-email { font-size: 0.82rem; color: var(--rose); font-weight: 500; }
+.footer-nav { display: flex; flex-direction: column; gap: 0.55rem; text-align: right; }
+.footer-nav a {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(255,255,255,0.35); transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: 1100px; margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(255,255,255,0.1);
+  display: flex; justify-content: space-between;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: rgba(255,255,255,0.2);
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo">Vanessa Madu</a>
+  <ul class="nav-links">
+    <li><a href="/sessions">Sessions</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/sci-comm">Sci Comm</a></li>
+    <li><a href="/writing" class="active">Writing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="header-inner">
+    <span class="header-eyebrow">rabbit holes · poetry · plants · puzzles · and everything in between</span>
+    <h1 class="page-h1">Writing &amp; notes</h1>
+    <p class="header-desc">
+      This is my corner of the internet where I write about whatever I'm currently obsessed with — which might be a number theory problem, a spider plant, a cryptic crossword, or a poem about Bayes' theorem. No theme, no schedule, no apologies.
+    </p>
+  </div>
+</header>
+
+<!-- FILTERS -->
+<div class="filter-bar" role="group" aria-label="Filter by category">
+  <span class="filter-label">Show:</span>
+  <button class="filter-pill active" data-cat="all">All</button>
+  <button class="filter-pill" data-cat="maths"><i class="fa-solid fa-infinity"></i> Recreational Maths</button>
+  <button class="filter-pill" data-cat="poetry"><i class="fa-solid fa-pen-nib"></i> Poetry &amp; Creative Writing</button>
+  <button class="filter-pill" data-cat="art"><i class="fa-solid fa-palette"></i> Science Art</button>
+  <button class="filter-pill" data-cat="plants"><i class="fa-solid fa-seedling"></i> Plant Archives</button>
+  <button class="filter-pill" data-cat="puzzles"><i class="fa-solid fa-puzzle-piece"></i> Puzzles</button>
+  <button class="filter-pill" data-cat="personal"><i class="fa-solid fa-book-open"></i> Personal Logs</button>
+  <button class="filter-clear" id="clearFilter">Clear</button>
+</div>
+
+<!-- POSTS -->
+<main class="posts-wrapper">
+
+  <!-- Recreational Maths -->
+  <div class="cat-group" data-cat="maths">
+    <div class="cat-group-header">
+      <div class="cat-dot" style="background: var(--cat-maths);"></div>
+      <h2 class="cat-title">Recreational Maths</h2>
+      <span class="cat-count">2 posts</span>
+    </div>
+    <div class="post-list" role="list">
+
+      <a href="/posts/consecutive-odd-semi-primes" class="post-item" role="listitem">
+        <span class="post-date">Aug 2024</span>
+        <div>
+          <div class="post-title">Rabbit Hole #2 — Consecutive Odd Semi-Primes</div>
+          <div class="post-excerpt">What is the longest possible chain of consecutive odd semi-primes? A follow-up to the original rabbit hole, with substantially more interesting arithmetic structure.</div>
+        </div>
+        <span class="post-tag" style="background:#EEF0FF; color:var(--cat-maths);">Rabbit hole</span>
+      </a>
+
+      <a href="/posts/consecutive-semi-primes" class="post-item" role="listitem">
+        <span class="post-date">Jul 2024</span>
+        <div>
+          <div class="post-title">Rabbit Hole #1 — Consecutive Semi-Primes</div>
+          <div class="post-excerpt">The original question: what is the longest possible chain of consecutive semi-primes? Where it all started.</div>
+        </div>
+        <span class="post-tag" style="background:#EEF0FF; color:var(--cat-maths);">Rabbit hole</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Science Art -->
+  <div class="cat-group" data-cat="art">
+    <div class="cat-group-header">
+      <div class="cat-dot" style="background: var(--cat-art);"></div>
+      <h2 class="cat-title">Science Art</h2>
+      <span class="cat-count">1 post</span>
+    </div>
+    <div class="post-list" role="list">
+
+      <a href="/posts/making-of-a-modeller" class="post-item" role="listitem">
+        <span class="post-date">Sep 2024</span>
+        <div>
+          <div class="post-title">Science Art #1 — The Making of a Modeller</div>
+          <div class="post-excerpt">First Runner-Up in the Challenger Society for Marine Science Art and Photography Competition 2024. The piece and the thinking behind it.</div>
+        </div>
+        <span class="post-tag" style="background:#FBF0E4; color:var(--cat-art);">Competition</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Plant Archives -->
+  <div class="cat-group" data-cat="plants">
+    <div class="cat-group-header">
+      <div class="cat-dot" style="background: var(--cat-plants);"></div>
+      <h2 class="cat-title">Plant Archives</h2>
+      <span class="cat-count">4 posts</span>
+    </div>
+    <div class="post-list" role="list">
+
+      <a href="/posts/plant-archive-spider-plants" class="post-item" role="listitem">
+        <span class="post-date">Jun 2025</span>
+        <div>
+          <div class="post-title">Spider Plant Research Log #2 — Light Experiment</div>
+          <div class="post-excerpt">Scientists are going to science. An experiment begins.</div>
+        </div>
+        <span class="post-tag" style="background:#D1FAE5; color:#065F46;">Spider plants</span>
+      </a>
+
+      <a href="/posts/spider-plant-species-notes" class="post-item" role="listitem">
+        <span class="post-date">Jun 2025</span>
+        <div>
+          <div class="post-title">Spider Plant Research Log #1 — Species &amp; Care Notes</div>
+          <div class="post-excerpt">Collating what I learn about Chlorophytum comosum care and biology. Work in progress.</div>
+        </div>
+        <span class="post-tag" style="background:#D1FAE5; color:#065F46;">Spider plants</span>
+      </a>
+
+      <a href="/posts/plant-archives" class="post-item" role="listitem">
+        <span class="post-date">Jun 2025</span>
+        <div>
+          <div class="post-title">The Plant Archive</div>
+          <div class="post-excerpt">The plants under my care. An index.</div>
+        </div>
+        <span class="post-tag" style="background:#D1FAE5; color:#065F46;">Archive</span>
+      </a>
+
+      <a href="/posts/plant-hospital-1" class="post-item" role="listitem">
+        <span class="post-date">Oct 2024</span>
+        <div>
+          <div class="post-title">Calathea Research Log #1 — The Office Calathea</div>
+          <div class="post-excerpt">ICU. There are so many things wrong with this plant. A running log of attempts to save it.</div>
+        </div>
+        <span class="post-tag" style="background:#D1FAE5; color:#065F46;">Calatheas</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Puzzles -->
+  <div class="cat-group" data-cat="puzzles">
+    <div class="cat-group-header">
+      <div class="cat-dot" style="background: var(--cat-puzzles);"></div>
+      <h2 class="cat-title">Puzzles</h2>
+      <span class="cat-count">1 post</span>
+    </div>
+    <div class="post-list" role="list">
+
+      <a href="/posts/es-cryptic-crossword-1" class="post-item" role="listitem">
+        <span class="post-date">Jun 2025</span>
+        <div>
+          <div class="post-title">Evening Standard Cryptic Crossword #1</div>
+          <div class="post-excerpt">My attempts at the Thursday 12th June 2025 crossword. With annotations.</div>
+        </div>
+        <span class="post-tag" style="background:#EDE8F8; color:var(--cat-puzzles);">Cryptic crossword</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Personal Logs -->
+  <div class="cat-group" data-cat="personal">
+    <div class="cat-group-header">
+      <div class="cat-dot" style="background: var(--cat-personal);"></div>
+      <h2 class="cat-title">Personal Logs</h2>
+      <span class="cat-count">1 post</span>
+    </div>
+    <div class="post-list" role="list">
+
+      <a href="/posts/coin-reference-information" class="post-item" role="listitem">
+        <span class="post-date">Jul 2025</span>
+        <div>
+          <div class="post-title">Coin Collecting Reference Information</div>
+          <div class="post-excerpt">Reference information for the collections that Laurence and I are working on.</div>
+        </div>
+        <span class="post-tag" style="background:#FFF0EB; color:var(--cat-personal);">Collections</span>
+      </a>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Vanessa Madu</div>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <div class="footer-email">vanessa@vanessamadu.com</div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/sessions">Sessions</a>
+      <a href="/research">Research</a>
+      <a href="/sci-comm">Science Communication</a>
+      <a href="/writing">Writing &amp; Notes</a>
+      <a href="/about">About</a>
+      <a href="/cv">Academic CV</a>
+      <a href="/sessions#enquire">Book a Session</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
+  </div>
+</footer>
+
+<script>
+  const pills = document.querySelectorAll('.filter-pill');
+  const groups = document.querySelectorAll('.cat-group');
+
+  function applyFilter(cat) {
+    groups.forEach(g => {
+      g.classList.toggle('hidden', cat !== 'all' && g.dataset.cat !== cat);
+    });
+    pills.forEach(p => p.classList.toggle('active', p.dataset.cat === cat));
+  }
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => applyFilter(pill.dataset.cat));
+  });
+
+  document.getElementById('clearFilter').addEventListener('click', () => applyFilter('all'));
+</script>
+
+</body>
+</html>

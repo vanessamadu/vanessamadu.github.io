@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sessions — Vanessa Madu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #4558C8;
+  --green2:  #3448B0;
+  --sage:    #5AA06E;
+  --mist:    #C8D2FF;
+  --cream:   #F4F2EC;
+  --paper:   #EDEAE2;
+  --rose:    #D4756A;
+  --rose2:   #A85A50;
+  --ink:     #1C1C18;
+  --pencil:  #4A4860;
+  --mustard: #7FC48E;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(69,88,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69,88,200,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+a { text-decoration: none; color: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+.skip-link {
+  position: absolute; top: -999px; left: 1rem;
+  background: var(--cream); color: var(--green);
+  font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ── NAV ── */
+nav {
+  background: var(--green);
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--cream);
+}
+.nav-links { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--mist); padding: 0.4rem 0.85rem; border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { background: rgba(255,255,255,0.15); color: var(--cream); }
+.nav-book {
+  background: var(--rose) !important; color: var(--cream) !important;
+  font-weight: 700 !important; border-radius: 999px !important;
+}
+.nav-book:hover { background: var(--rose2) !important; }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background: var(--paper);
+  padding: 4rem 3rem 3rem;
+  border-bottom: 1px dashed rgba(69,88,200,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 40px;
+  background: var(--cream);
+  clip-path: polygon(0% 70%, 2% 30%, 5% 60%, 8% 20%, 11% 55%, 15% 25%, 19% 60%, 23% 20%, 27% 55%, 31% 30%, 35% 65%, 39% 20%, 43% 55%, 47% 30%, 51% 60%, 55% 20%, 59% 55%, 63% 30%, 67% 65%, 71% 20%, 75% 55%, 79% 30%, 83% 60%, 87% 20%, 91% 55%, 95% 30%, 98% 60%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+.page-header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 2rem; align-items: end;
+}
+
+.header-scribble {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--sage); display: block;
+  transform: rotate(-1.5deg);
+  margin-bottom: 0.4rem;
+}
+
+.page-h1 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--green); line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.header-note {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 500;
+  color: var(--pencil); line-height: 1.6;
+  max-width: 320px; text-align: right;
+  transform: rotate(0.8deg); display: block;
+  border: 1.5px dashed rgba(69,88,200,0.2);
+  border-radius: 8px; padding: 0.7rem 1rem;
+  background: var(--cream);
+}
+
+/* ── FILTERS ── */
+.filters-bar {
+  max-width: 1100px; margin: 2.5rem auto 0;
+  padding: 0 3rem;
+  display: flex; flex-direction: column; gap: 0.8rem;
+}
+
+.filter-group {
+  display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
+}
+
+.filter-group-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--pencil); min-width: 90px;
+}
+
+.filter-pill {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem; font-weight: 500;
+  padding: 0.3rem 0.9rem;
+  border: 1.5px solid rgba(69,88,200,0.2);
+  border-radius: 999px;
+  background: var(--cream); color: var(--pencil);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-pill:hover { border-color: var(--green); color: var(--green); }
+.filter-pill.active { background: var(--green); color: var(--cream); border-color: var(--green); }
+
+.filter-clear {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--rose); cursor: pointer;
+  border-bottom: 1px dashed var(--rose);
+  padding-bottom: 1px; margin-left: auto;
+  background: none; border-top: none; border-left: none; border-right: none;
+  transition: color 0.15s;
+}
+.filter-clear:hover { color: var(--rose2); }
+
+.results-count {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; color: var(--pencil);
+  padding: 0 3rem;
+  max-width: 1100px; margin: 1rem auto 0;
+}
+
+/* ── SESSIONS GRID ── */
+.sessions-wrapper {
+  max-width: 1100px; margin: 0 auto;
+  padding: 1.5rem 3rem 5rem;
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+/* ── SESSION CARD ── */
+.s-card {
+  background: var(--paper);
+  border: 1.5px solid rgba(69,88,200,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.s-card:nth-child(3n+1) { transform: rotate(-0.5deg); }
+.s-card:nth-child(3n+2) { transform: rotate(0.3deg); margin-top: 0.6rem; }
+.s-card:nth-child(3n+3) { transform: rotate(-0.8deg); }
+
+.s-card:hover {
+  transform: rotate(0deg) translateY(-4px) !important;
+  box-shadow: 0 12px 32px rgba(69,88,200,0.12);
+  border-color: rgba(69,88,200,0.3);
+}
+.s-card.expanded {
+  transform: rotate(0deg) !important;
+  border-color: var(--green);
+  box-shadow: 0 8px 32px rgba(69,88,200,0.15);
+  grid-column: span 2;
+}
+.s-card.hidden { display: none; }
+
+.card-tab { height: 5px; flex-shrink: 0; }
+.tab-ocean    { background: #3BA8A8; }
+.tab-pure     { background: var(--green); }
+.tab-stats    { background: var(--rose); }
+.tab-career   { background: var(--mustard); }
+.tab-workshop { background: var(--sage); }
+.tab-fluid    { background: #9B6FD0; }
+
+.card-overview { padding: 1.3rem 1.4rem; flex: 1; }
+
+.card-cat {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--sage); display: flex;
+  align-items: center; gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.card-cat i { font-size: 0.85rem; }
+
+.card-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem; font-weight: 900;
+  color: var(--ink); line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+.card-desc {
+  font-size: 0.8rem; color: var(--pencil);
+  line-height: 1.7; margin-bottom: 0;
+}
+
+.card-foot {
+  padding: 0.8rem 1.4rem;
+  border-top: 1px dashed rgba(69,88,200,0.12);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-shrink: 0;
+}
+
+.card-meta {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: var(--pencil); font-weight: 600;
+}
+
+.card-toggle {
+  font-family: 'Caveat', cursive;
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--green);
+  display: flex; align-items: center; gap: 0.3rem;
+  transition: color 0.15s;
+}
+.card-toggle i { font-size: 0.75rem; transition: transform 0.2s; }
+.s-card.expanded .card-toggle i { transform: rotate(180deg); }
+
+.status-pill {
+  font-family: 'Caveat', cursive;
+  font-size: 0.78rem; font-weight: 700;
+  padding: 0.15rem 0.6rem; border-radius: 999px;
+}
+.s-ready { background: #D1FAE5; color: #064E3B; border: 1px solid #6EE7B7; }
+.s-soon  { background: #FEF9C3; color: #713F12; border: 1px solid #FCD34D; }
+
+/* ── EXPANDED DETAIL ── */
+.card-detail {
+  display: none;
+  padding: 0 1.4rem 1.4rem;
+  border-top: 1px dashed rgba(69,88,200,0.12);
+  animation: fadeIn 0.2s ease;
+}
+.s-card.expanded .card-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+.detail-block h4 {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--green); margin-bottom: 0.5rem;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.detail-block h4 i { font-size: 0.8rem; }
+
+.detail-block ul {
+  list-style: none; display: flex; flex-direction: column; gap: 0.3rem;
+}
+.detail-block ul li {
+  font-size: 0.8rem; color: var(--pencil); line-height: 1.55;
+  padding-left: 1rem; position: relative;
+}
+.detail-block ul li::before {
+  content: '—';
+  position: absolute; left: 0;
+  color: var(--sage); font-size: 0.75rem;
+}
+
+.detail-block p {
+  font-size: 0.8rem; color: var(--pencil); line-height: 1.65;
+}
+
+.enquire-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  margin-top: 1.2rem;
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 0.9rem;
+  background: var(--green); color: var(--cream);
+  padding: 0.6rem 1.4rem; border-radius: 999px;
+  transition: background 0.2s;
+  border: none; cursor: pointer;
+}
+.enquire-btn:hover { background: var(--green2); }
+
+/* ── ENQUIRY FORM ── */
+.form-section {
+  background: var(--green);
+  position: relative; overflow: hidden;
+  clip-path: polygon(0 30px, 1% 10px, 2% 24px, 4% 6px, 6% 22px, 8% 8px, 10% 26px, 13% 4px, 16% 20px, 19% 6px, 22% 24px, 25% 5px, 28% 22px, 31% 8px, 34% 26px, 37% 4px, 40% 22px, 43% 6px, 46% 24px, 49% 5px, 52% 22px, 55% 8px, 58% 26px, 61% 4px, 64% 22px, 67% 6px, 70% 24px, 73% 5px, 76% 22px, 79% 8px, 82% 26px, 85% 4px, 88% 22px, 91% 6px, 94% 24px, 97% 8px, 100% 20px, 100% 100%, 0 100%);
+  margin-top: -20px;
+}
+
+.form-inner {
+  max-width: 760px; margin: 0 auto;
+  padding: 5rem 3rem 5rem;
+}
+
+.form-heading {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--cream); line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+
+.form-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 500;
+  color: var(--mist); display: block;
+  transform: rotate(-1deg); margin-bottom: 2.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex; flex-direction: column; gap: 0.4rem;
+}
+.form-field.full { grid-column: span 2; }
+
+.form-field label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.95rem; font-weight: 700;
+  color: var(--mist);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+  color: var(--cream);
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.form-field select option { background: var(--green2); color: var(--cream); }
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.15);
+}
+
+.form-field textarea { resize: vertical; min-height: 110px; }
+
+.form-checkbox-group {
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.form-checkbox {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-size: 0.82rem; color: var(--mist); cursor: pointer;
+}
+.form-checkbox input { width: auto; margin: 0; accent-color: var(--rose); }
+
+.form-submit {
+  margin-top: 1.5rem;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+
+.btn-submit {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1rem;
+  background: var(--rose); color: var(--cream);
+  padding: 0.85rem 2.2rem; border-radius: 999px;
+  border: none; cursor: pointer;
+  box-shadow: 3px 3px 0 var(--rose2);
+  transition: background 0.2s, transform 0.15s;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.btn-submit:hover { background: var(--rose2); transform: translate(-1px,-1px); }
+
+.form-note {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: rgba(255,255,255,0.5);
+}
+
+/* ── FOOTER ── */
+footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; margin-bottom: 2.5rem;
+}
+.footer-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-style: italic; font-weight: 900;
+  color: var(--cream); margin-bottom: 0.7rem;
+}
+.footer-desc {
+  font-size: 0.82rem; color: rgba(255,255,255,0.4);
+  line-height: 1.72; max-width: 360px; margin-bottom: 1rem;
+}
+.footer-email { font-size: 0.82rem; color: var(--rose); font-weight: 500; }
+.footer-nav { display: flex; flex-direction: column; gap: 0.55rem; text-align: right; }
+.footer-nav a {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(255,255,255,0.35); transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: 1100px; margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(255,255,255,0.1);
+  display: flex; justify-content: space-between;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: rgba(255,255,255,0.2);
+}
+.footer-quote { font-style: italic; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo">Vanessa Madu</a>
+  <ul class="nav-links">
+    <li><a href="/sessions" class="active">Sessions</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/sci-comm">Sci Comm</a></li>
+    <li><a href="/writing">Writing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header" id="main-content">
+  <div class="page-header-inner">
+    <div>
+      <span class="header-scribble">talks, workshops, assemblies &amp; more</span>
+      <h1 class="page-h1">Talks &amp; workshops<br>for curious schools</h1>
+    </div>
+    <span class="header-note">
+      Year 3 through Sixth Form<br>
+      Schools, universities &amp; public events<br>
+      London &amp; surrounding areas<br>
+      Bespoke sessions always welcome
+    </span>
+  </div>
+</header>
+
+<!-- FILTERS -->
+<div class="filters-bar" role="region" aria-label="Filter sessions">
+  <div class="filter-group">
+    <span class="filter-group-label">Topic</span>
+    <button class="filter-pill active" data-filter="topic" data-value="all">All</button>
+    <button class="filter-pill" data-filter="topic" data-value="ocean">Ocean &amp; Climate</button>
+    <button class="filter-pill" data-filter="topic" data-value="pure">Pure Maths</button>
+    <button class="filter-pill" data-filter="topic" data-value="stats">Stats &amp; Data</button>
+    <button class="filter-pill" data-filter="topic" data-value="fluid">Fluid Dynamics</button>
+    <button class="filter-pill" data-filter="topic" data-value="career">Careers</button>
+    <button class="filter-pill" data-filter="topic" data-value="coding">Computing</button>
+    <button class="filter-clear" id="clearFilters">Clear all filters</button>
+  </div>
+  <div class="filter-group">
+    <span class="filter-group-label">Year group</span>
+    <button class="filter-pill active" data-filter="year" data-value="all">All</button>
+    <button class="filter-pill" data-filter="year" data-value="ks2">KS2 (Yr 3–6)</button>
+    <button class="filter-pill" data-filter="year" data-value="ks3">KS3 (Yr 7–9)</button>
+    <button class="filter-pill" data-filter="year" data-value="ks4">KS4 (Yr 10–11)</button>
+    <button class="filter-pill" data-filter="year" data-value="ks5">KS5 / Sixth Form</button>
+  </div>
+  <div class="filter-group">
+    <span class="filter-group-label">Type</span>
+    <button class="filter-pill active" data-filter="type" data-value="all">All</button>
+    <button class="filter-pill" data-filter="type" data-value="talk">Talk</button>
+    <button class="filter-pill" data-filter="type" data-value="workshop">Workshop</button>
+    <button class="filter-pill" data-filter="type" data-value="assembly">Assembly</button>
+    <button class="filter-pill" data-filter="type" data-value="series">Series</button>
+  </div>
+</div>
+
+<p class="results-count" id="resultsCount" aria-live="polite"></p>
+
+<!-- SESSIONS -->
+<div class="sessions-wrapper">
+  <div class="sessions-grid" id="sessionsGrid">
+    <!-- OCEAN & CLIMATE TALKS -->
+
+    <article class="s-card" data-topic="ocean" data-year="ks2 ks3 ks4 ks5" data-type="talk" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-ocean"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-water"></i> Ocean &amp; Climate · Talk</div>
+        <h2 class="card-title">Rubber Ducks, Oceans &amp; Ridiculous Hypotheticals</h2>
+        <p class="card-desc">What can 29,000 lost rubber ducks teach us about ocean currents? An introduction to fluid dynamics — no prior knowledge required. Delivered at the Royal Institution and Young Scientists Journal Conference.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 7–13 · 45–60 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Understand what ocean surface currents are and why they matter</li>
+            <li>Encounter real-world applications of fluid dynamics</li>
+            <li>See how mathematics is used to model physical phenomena</li>
+            <li>Appreciate the role of unexpected events in scientific discovery</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Fully self-contained — no preparation required from school</li>
+            <li>Q&amp;A time built in · Suitable for mixed-ability groups</li>
+            <li>Curriculum links: Mathematics, Physics, Geography, Environmental Science</li>
+            <li>Adaptable for Yrs 5–6 on request</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="ocean" data-year="ks1 ks2" data-type="talk" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-ocean"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-water"></i> Ocean &amp; Climate · Talk</div>
+        <h2 class="card-title">Exploring Mathematical Ocean Sciences</h2>
+        <p class="card-desc">Delivered in the main lecture theatre at the Royal Institution to 300+ Year 5 and 6 students. Links mathematics to real-world ocean science in an accessible and exciting way.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 5–6 · 45–60 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Discover how ocean currents work and why we study them</li>
+            <li>Understand that mathematics is the language of science</li>
+            <li>Feel that science is exciting and accessible</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Designed for general audiences — no prior knowledge needed</li>
+            <li>Lots of audience participation</li>
+            <li>Curriculum links: Mathematics, Science, Geography</li>
+            <li>Works as an assembly or classroom talk</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="ocean" data-year="ks4 ks5" data-type="talk" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-ocean"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-water"></i> Ocean &amp; Climate · Talk</div>
+        <h2 class="card-title">How Do We Know Humans Are Causing Climate Change?</h2>
+        <p class="card-desc">A data-driven talk exploring the mathematical and statistical evidence behind climate science. Designed to build scientific literacy and critical thinking alongside curriculum knowledge.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 9–13 · 45–60 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>How scientists use data to draw conclusions</li>
+            <li>The statistics behind climate attribution</li>
+            <li>How to read scientific evidence critically</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Science, Geography, Environmental Studies</li>
+            <li>Get in touch to discuss development timeline</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- PURE MATHS TALKS -->
+
+    <article class="s-card" data-topic="pure" data-year="ks3 ks4 ks5" data-type="talk" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-pure"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-infinity"></i> Pure Mathematics · Talk</div>
+        <h2 class="card-title">Around the Mathematical World</h2>
+        <p class="card-desc">A fast-paced whistle-stop tour of mathematics: its major branches and the connections between them — from number theory to topology, from abstract algebra to applied statistics.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 9–13 · 45–60 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Understand the major branches of mathematics and their connections</li>
+            <li>Get a vivid sense of the breadth of what mathematics is and can be</li>
+            <li>Understand what mathematicians actually do</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Further Mathematics</li>
+            <li>Great as an enrichment talk for high-attaining groups</li>
+            <li>Excellent for sixth form STEM days</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="pure" data-year="ks4 ks5" data-type="talk" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-pure"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-infinity"></i> Pure Mathematics · Talk</div>
+        <h2 class="card-title">When Infinity Becomes Infinities</h2>
+        <p class="card-desc">There are multiple types of infinity and they're not all the same size. From counting to Cantor's diagonal argument — one of the most mind-bending results in all of mathematics.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 9–13 · 45 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Understand countable and uncountable infinity</li>
+            <li>Follow Cantor's diagonal argument step by step</li>
+            <li>Appreciate why proof matters in mathematics</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Accessible without A-level content</li>
+            <li>Curriculum links: Mathematics, Further Mathematics, Philosophy</li>
+            <li>Pairs well with the proof talk</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="pure" data-year="ks4 ks5" data-type="talk" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-pure"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-hashtag"></i> Pure Mathematics · Talk</div>
+        <h2 class="card-title">On Sequences of Semi-Primes</h2>
+        <p class="card-desc">An exploration of semi-primes — numbers that are the product of exactly two primes — and the surprising patterns that emerge when you study their sequences. A glimpse of genuine mathematical research questions.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 11–13 · 45 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Understand prime and semi-prime numbers</li>
+            <li>Encounter open questions in number theory</li>
+            <li>See what recreational mathematics research looks like</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Curriculum links: A-level Mathematics, Further Mathematics</li>
+            <li>Best suited to students who enjoy number theory</li>
+            <li>Based on original research presented at MathsJam &amp; G4G</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="pure" data-year="ks3 ks4 ks5" data-type="talk" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-pure"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-globe"></i> Pure Mathematics · Talk</div>
+        <h2 class="card-title">Tomorrow: It's Not a Question of When, But Where!</h2>
+        <p class="card-desc">Why does the International Date Line look like it was drawn by a toddler? Spherical polar coordinates, geopolitics, and calendar chaos.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 9–13 · 45–60 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Understand spherical polar coordinates intuitively</li>
+            <li>See how mathematical conventions shape real-world decisions</li>
+            <li>Appreciate the intersection of maths, geography, and history</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Geography, History, Physics</li>
+            <li>Great for geography and maths crossover days</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="pure" data-year="ks3 ks4 ks5" data-type="talk" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-pure"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-infinity"></i> Pure Mathematics · Talk</div>
+        <h2 class="card-title">Why Do We Need to Prove 1+1=2?</h2>
+        <p class="card-desc">A thought-provoking exploration of the foundations of mathematics. Why do we need proof? What does it mean to truly know something in mathematics?</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 9–13 · 30–45 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>What is mathematical proof, and why does it matter?</li>
+            <li>How proof in mathematics differs from the rest of science</li>
+            <li>A glimpse into logic and the foundations of maths</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Philosophy</li>
+            <li>Get in touch to discuss development timeline</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="pure" data-year="ks3 ks4 ks5" data-type="talk" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-pure"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-paw"></i> Pure Mathematics · Talk</div>
+        <h2 class="card-title">Why Does a Zebra Have Stripes? The Mathematics of Natural Patterns</h2>
+        <p class="card-desc">In 1952, Alan Turing published a paper explaining how the spots on a leopard, stripes on a zebra, and spirals on a seashell all arise from the same underlying mathematics.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">All years · 45–60 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>How simple mathematical rules produce complex biological patterns</li>
+            <li>Reaction-diffusion equations, introduced accessibly</li>
+            <li>Turing's scientific legacy beyond computing</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Biology, Physics, Chemistry</li>
+            <li>Adaptable for all year groups</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="pure" data-year="ks4 ks5" data-type="talk" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-pure"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-chart-line"></i> Pure Mathematics · Talk</div>
+        <h2 class="card-title">Population Dynamics: Matters of Life and Death</h2>
+        <p class="card-desc">How do populations grow, shrink, and stabilise? From rabbits to pandemics, this talk explores the mathematical models that underpin our understanding of life on Earth.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 10–13 · 45–60 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>Exponential and logistic growth</li>
+            <li>Predator–prey models and feedback loops</li>
+            <li>Real-world applications in ecology and epidemiology</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Biology, Geography, Environmental Science</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- STATS & DATA TALKS -->
+
+    <article class="s-card" data-topic="stats" data-year="ks4 ks5" data-type="talk" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-stats"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-chart-bar"></i> Statistics &amp; Data · Talk</div>
+        <h2 class="card-title">Nonsense Inference and How to Avoid It</h2>
+        <p class="card-desc">Statistics are everywhere, but it is easy to misuse them. This talk explores how to think critically about data, why our intuitions mislead us, and how to spot nonsense when you see it.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 10–13 · 45 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>Common statistical misconceptions and how they arise</li>
+            <li>How to read data critically</li>
+            <li>Real-world examples from science and media</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Statistics, Science</li>
+            <li>Extended from a FameLab short talk — get in touch to discuss timeline</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="stats" data-year="ks4 ks5" data-type="talk" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-stats"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-database"></i> Statistics &amp; Data · Talk</div>
+        <h2 class="card-title">Data, Data Everywhere, but Not an Insight in Sight</h2>
+        <p class="card-desc">We live in a world drowning in data, but having data is not the same as understanding it. Key ideas in data science and statistical thinking through accessible examples and vivid analogies.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 10–13 · 45 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>What is data science and why does it matter?</li>
+            <li>How we extract meaning from numbers</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Computer Science, Statistics</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="stats" data-year="ks4 ks5" data-type="talk" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-stats"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-chart-bar"></i> Statistics &amp; Data · Talk</div>
+        <h2 class="card-title">Statistical Fallacies: When Maths Meets Human Decision-Making</h2>
+        <p class="card-desc">From the lottery to legal trials — the most important ways statistical reasoning goes wrong, and what we can do about it.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 10–13 · 45–60 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>Classic statistical fallacies and why they happen</li>
+            <li>Real-world consequences of getting it wrong</li>
+            <li>How to think more clearly with numbers</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: Mathematics, Statistics, PSHE, Politics</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CAREERS TALKS -->
+
+    <article class="s-card" data-topic="career" data-year="ks4 ks5" data-type="talk" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-career"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-rocket"></i> Careers &amp; Inspiration · Talk</div>
+        <h2 class="card-title">Meet a Researcher</h2>
+        <p class="card-desc">An honest, personal talk about a non-linear path into research — being a young carer, managing chronic illness, and attending a school that didn't offer Further Mathematics. Still here.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 9–13 · 30–45 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>See what a career in mathematical research actually looks like</li>
+            <li>Understand that non-linear paths into STEM are valid and common</li>
+            <li>Feel encouraged to pursue mathematics regardless of background</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Personal talk with generous Q&amp;A time</li>
+            <li>Particularly impactful for students from underrepresented backgrounds</li>
+            <li>Works well combined with a mathematical talk</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="career" data-year="ks4 ks5" data-type="talk" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-career"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-rocket"></i> Careers &amp; Inspiration · Talk</div>
+        <h2 class="card-title">Meet an Oceanographically-Enabled Mathematical Statistician</h2>
+        <p class="card-desc">A warm and engaging careers talk about what it means to be a mathematician and scientist — where the journey started, what research actually looks like, and why science is for everyone.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 10–13 · 30–45 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>From school mathematics to cutting-edge ocean science</li>
+            <li>What different careers in mathematics look like</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: STEM careers, widening participation</li>
+            <li>Great for careers fairs and STEM inspiration events</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- MATHS WORKSHOPS -->
+
+    <article class="s-card" data-topic="stats" data-year="ks3 ks4" data-type="workshop" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-workshop"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-dice"></i> Mathematics · Workshop</div>
+        <h2 class="card-title">What Are the Odds?!</h2>
+        <p class="card-desc">A mystery-story workshop where students use probability to crack a whodunit — applying increasingly sophisticated tools as the plot unfolds.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 7–10 · 2 hours</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Calculate probabilities by counting outcomes</li>
+            <li>Explore equal and unequal likelihood</li>
+            <li>Apply conditional probability reasoning</li>
+            <li>Use logical and mathematical thinking in context</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>All materials provided · Works best in groups of 4–6</li>
+            <li>Can run as a half-day enrichment session</li>
+            <li>Curriculum links: GCSE Mathematics, Statistics and Probability</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="stats" data-year="ks3 ks4 ks5" data-type="workshop" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-workshop"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-dice"></i> Mathematics · Workshop</div>
+        <h2 class="card-title">Probability: Play to Win</h2>
+        <p class="card-desc">Classic and conditional probability used to determine the optimal strategy for gameplay. Hands-on activities exploring chance, risk, and uncertainty. 90% of students rated ideas as clearly explained.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 9–11 · 60–120 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Apply probability to real gameplay decisions</li>
+            <li>Explore common statistical fallacies around games of chance</li>
+            <li>Develop intuition for risk and uncertainty</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Originally developed for STEM Futures at Imperial College London</li>
+            <li>85% of students reported increased confidence in probability</li>
+            <li>Curriculum links: GCSE Mathematics, Statistics and Probability</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="pure" data-year="ks3 ks4" data-type="workshop" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-workshop"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-pencil"></i> Mathematics · Workshop</div>
+        <h2 class="card-title">Curve Stitching: Where Art Meets Algebra</h2>
+        <p class="card-desc">Curve stitching uses straight lines to create beautiful curves. Students create their own designs while exploring the underlying algebraic and geometric ideas.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 7–11 · 60–90 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>Creating mathematical art with straight lines</li>
+            <li>The geometry and algebra of envelopes of lines</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: KS3–KS4 Mathematics, Art</li>
+            <li>Adaptable for all abilities</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="pure" data-year="ks4 ks5" data-type="workshop" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-pure"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-flask"></i> Pure Mathematics · Workshop Series</div>
+        <h2 class="card-title">Exploring Mathematical Secrets</h2>
+        <p class="card-desc">A series of exploratory workshops that model what it actually feels like to do mathematics — the false starts, the "wait, that can't be right" moments, and the delight of stumbling onto something beautiful.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 10–13 · 60–90 min each</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Sessions include</h4>
+          <ul>
+            <li>But What If We Did It Anyway? (breaking mathematical rules)</li>
+            <li>Experimenting with Infinity</li>
+            <li>Set Theory and the Foundations of Everything</li>
+            <li>Humour Me This: Conjectures</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Bookable as individual sessions or a full series</li>
+            <li>Curriculum links: A-level Mathematics, Further Mathematics, Philosophy</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- FLUID DYNAMICS WORKSHOPS -->
+
+    <article class="s-card" data-topic="fluid" data-year="ks5" data-type="workshop" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-fluid"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-wind"></i> Fluid Dynamics · Workshop</div>
+        <h2 class="card-title">How Things Get Carried Away: Fluid Dynamics</h2>
+        <p class="card-desc">A hands-on workshop with four live demonstrations exploring how Newton's second law extends to fluids. Developed for the Sutton Trust Summer School.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Year 12 · 90–120 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Extend Newton's second law from particles to fluids</li>
+            <li>Develop an intuitive understanding of the Navier-Stokes equation</li>
+            <li>Connect fluid dynamics to real phenomena: weather, sport, oceans</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Four live demonstrations with audience participation</li>
+            <li>Assumes A-level Mechanics knowledge</li>
+            <li>Curriculum links: A-level Mathematics, Physics, Further Mathematics</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="s-card" data-topic="fluid" data-year="ks4 ks5" data-type="workshop" data-status="ready" data-audience="schools">
+      <div class="card-tab tab-fluid"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-wind"></i> Fluid Dynamics · Workshop</div>
+        <h2 class="card-title">Go With the Flow: Fluid Dynamics</h2>
+        <p class="card-desc">A lighter-touch version of the fluid dynamics workshop, suitable for GCSE and lower-sixth students. Uses accessible analogies and hands-on activities to make university-level concepts approachable.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 10–12 · 60–90 min</span>
+        <span class="card-toggle">more info <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> Learning outcomes</h4>
+          <ul>
+            <li>Understand what a fluid is and what flow means</li>
+            <li>See how mathematicians model the physical world</li>
+            <li>Engage with university-level ideas in an accessible way</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> What's included</h4>
+          <ul>
+            <li>Hands-on activities and demonstrations</li>
+            <li>Curriculum links: GCSE/A-level Mathematics, Physics</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Enquire about this session
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CODING WORKSHOP -->
+
+    <article class="s-card" data-topic="coding" data-year="ks1 ks2" data-type="workshop" data-status="soon" data-audience="schools">
+      <div class="card-tab" style="height:5px; background:#E879A0;"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-laptop-code"></i> Computing · Workshop</div>
+        <h2 class="card-title">Hello World: Introduction to Coding for Girls</h2>
+        <p class="card-desc">An inclusive, hands-on coding workshop. Co-designed and delivered as part of the Hello World Hack, funded by the Imperial College Societal Engagement Seed Fund. Previously delivered to 60+ children in person and 30 virtually.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">Yrs 3–6 · 60–120 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>Introduction to programming concepts through interactive activities</li>
+            <li>No prior coding experience required</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Curriculum links: KS2 Computing</li>
+            <li>Designed specifically to be inclusive and welcoming</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- ASSEMBLY -->
+
+    <article class="s-card" data-topic="career" data-year="ks1 ks2 ks3 ks4 ks5" data-type="assembly" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-career"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-users"></i> Assembly</div>
+        <h2 class="card-title">Science is for Everyone: A STEM Inspiration Assembly</h2>
+        <p class="card-desc">A motivational assembly exploring what scientists and mathematicians really do, and why science is for everyone regardless of background. Especially impactful for schools with high proportions of students from underrepresented groups.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">All years · 20–40 min</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> What it covers</h4>
+          <ul>
+            <li>Accessible, warm, and inspiring</li>
+            <li>Strong diversity and inclusion message</li>
+            <li>Can be followed up with a workshop or talk</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Suitable for whole-school or year-group assemblies</li>
+            <li>Get in touch to discuss development timeline</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- TALK SERIES -->
+
+    <article class="s-card" data-topic="stats ocean" data-year="ks3 ks4 ks5" data-type="series" data-status="soon" data-audience="schools">
+      <div class="card-tab tab-stats"></div>
+      <div class="card-overview">
+        <div class="card-cat"><i class="fa-solid fa-book-open"></i> Talk Series · Half Day</div>
+        <h2 class="card-title">Wisdom from Wonderland</h2>
+        <p class="card-desc">Four short, self-contained talks (15–20 min each) using Alice in Wonderland as a jumping-off point for genuine mathematical and statistical ideas. Bookable as a full series or individual standalone sessions.</p>
+      </div>
+      <div class="card-foot">
+        <span class="card-meta">All years · Half day</span>
+        <span class="status-pill s-soon"><i class="fa-solid fa-clock"></i> In development</span>
+      </div>
+      <div class="card-detail">
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-star"></i> The four talks</h4>
+          <ul>
+            <li>Data, Data Everywhere, but Not an Insight in Sight</li>
+            <li>Nonsense Inference and How to Avoid It</li>
+            <li>How Rubber Ducks Taught Us About the North Pacific</li>
+            <li>How Do We Know Humans Are Causing Climate Change?</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+          <ul>
+            <li>Each talk is 15–20 min, extendable to 30–45 min on request</li>
+            <li>Bookable as a half-day enrichment event</li>
+            <li>Preview videos available on YouTube</li>
+          </ul>
+          <button class="enquire-btn" onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-envelope"></i> Register your interest
+          </button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- ENQUIRY FORM -->
+<section class="form-section" id="enquire" aria-labelledby="form-heading">
+  <div class="form-inner">
+    <h2 class="form-heading" id="form-heading">Let's make something<br>happen.</h2>
+    <span class="form-sub">Fill in the form and I'll get back to you within a few days</span>
+
+    <form class="form-grid" novalidate>
+
+      <div class="form-field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" placeholder="Jane Smith" autocomplete="name">
+      </div>
+
+      <div class="form-field">
+        <label for="role">Your role</label>
+        <input type="text" id="role" placeholder="Head of Maths, STEM Coordinator...">
+      </div>
+
+      <div class="form-field">
+        <label for="school">School name</label>
+        <input type="text" id="school" placeholder="School or institution">
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="you@school.ac.uk" autocomplete="email">
+      </div>
+
+      <div class="form-field">
+        <label for="year-group">Year group(s)</label>
+        <select id="year-group">
+          <option value="" disabled selected>Select year group</option>
+          <option>KS2 (Year 3–6)</option>
+          <option>KS3 (Year 7–9)</option>
+          <option>KS4 (Year 10–11)</option>
+          <option>KS5 / Sixth Form (Year 12–13)</option>
+          <option>Mixed year groups</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="date">Preferred date(s)</label>
+        <input type="text" id="date" placeholder="e.g. any Tuesday in March">
+      </div>
+
+      <div class="form-field full">
+        <label>Sessions interested in</label>
+        <div class="form-checkbox-group">
+          <label class="form-checkbox"><input type="checkbox"> Rubber Ducks, Oceans &amp; Ridiculous Hypotheticals</label>
+          <label class="form-checkbox"><input type="checkbox"> Exploring Mathematical Ocean Sciences (Yrs 5–6)</label>
+          <label class="form-checkbox"><input type="checkbox"> How Do We Know Humans Are Causing Climate Change?</label>
+          <label class="form-checkbox"><input type="checkbox"> Around the Mathematical World</label>
+          <label class="form-checkbox"><input type="checkbox"> When Infinity Becomes Infinities</label>
+          <label class="form-checkbox"><input type="checkbox"> On Sequences of Semi-Primes</label>
+          <label class="form-checkbox"><input type="checkbox"> Tomorrow: Not a Question of When, But Where!</label>
+          <label class="form-checkbox"><input type="checkbox"> Why Does a Zebra Have Stripes?</label>
+          <label class="form-checkbox"><input type="checkbox"> Population Dynamics: Matters of Life and Death</label>
+          <label class="form-checkbox"><input type="checkbox"> Nonsense Inference and How to Avoid It</label>
+          <label class="form-checkbox"><input type="checkbox"> Data, Data Everywhere, but Not an Insight in Sight</label>
+          <label class="form-checkbox"><input type="checkbox"> Statistical Fallacies</label>
+          <label class="form-checkbox"><input type="checkbox"> What Are the Odds?! (workshop)</label>
+          <label class="form-checkbox"><input type="checkbox"> Probability: Play to Win (workshop)</label>
+          <label class="form-checkbox"><input type="checkbox"> How Things Get Carried Away: Fluid Dynamics (Yr 12)</label>
+          <label class="form-checkbox"><input type="checkbox"> Go With the Flow: Fluid Dynamics (Yrs 10–12)</label>
+          <label class="form-checkbox"><input type="checkbox"> Curve Stitching: Where Art Meets Algebra</label>
+          <label class="form-checkbox"><input type="checkbox"> Exploring Mathematical Secrets (series)</label>
+          <label class="form-checkbox"><input type="checkbox"> Meet a Researcher</label>
+          <label class="form-checkbox"><input type="checkbox"> Meet an Oceanographically-Enabled Mathematical Statistician</label>
+          <label class="form-checkbox"><input type="checkbox"> Wisdom from Wonderland (talk series)</label>
+          <label class="form-checkbox"><input type="checkbox"> Hello World: Introduction to Coding for Girls</label>
+          <label class="form-checkbox"><input type="checkbox"> Science is for Everyone (assembly)</label>
+          <label class="form-checkbox"><input type="checkbox"> Not sure yet — happy to chat!</label>
+        </div>
+      </div>
+
+      <div class="form-field full">
+        <label for="message">Anything else I should know?</label>
+        <textarea id="message" placeholder="Group size, any context about your students, access requirements, budget questions — anything that would help me plan..."></textarea>
+      </div>
+
+      <div class="form-submit full">
+        <button type="submit" class="btn-submit">
+          <i class="fa-solid fa-paper-plane"></i> Send enquiry
+        </button>
+        <span class="form-note">I aim to reply within 2–3 working days</span>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Vanessa Madu</div>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <div class="footer-email">vanessa@vanessamadu.com</div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/sessions">Sessions</a>
+      <a href="/research">Research</a>
+      <a href="/sci-comm">Science Communication</a>
+      <a href="/writing">Writing &amp; Notes</a>
+      <a href="/about">About</a>
+      <a href="/cv">Academic CV</a>
+      <a href="#enquire">Book a Session</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span class="footer-quote">"Science is my Wonderland and Mathematics makes it tick."</span>
+  </div>
+</footer>
+
+<script>
+  // ── Filter logic ──
+  const cards = document.querySelectorAll('.s-card');
+  const filters = { topic: 'all', year: 'all', type: 'all' };
+  const count = document.getElementById('resultsCount');
+
+  function applyFilters() {
+    let visible = 0;
+    cards.forEach(card => {
+      const topic  = filters.topic === 'all' || card.dataset.topic === filters.topic;
+      const year   = filters.year  === 'all' || card.dataset.year.includes(filters.year);
+      const type   = filters.type  === 'all' || card.dataset.type === filters.type;
+      const show = topic && year && type;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    count.textContent = visible === cards.length
+      ? '' : `Showing ${visible} of ${cards.length} sessions`;
+  }
+
+  document.querySelectorAll('.filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.filter;
+      document.querySelectorAll(`[data-filter="${group}"]`).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filters[group] = btn.dataset.value;
+      applyFilters();
+    });
+  });
+
+  document.getElementById('clearFilters').addEventListener('click', () => {
+    document.querySelectorAll('.filter-pill').forEach(b => {
+      b.classList.toggle('active', b.dataset.value === 'all');
+    });
+    filters.topic = 'all'; filters.year = 'all'; filters.type = 'all';
+    applyFilters();
+  });
+
+  // ── Expand / collapse cards ──
+  cards.forEach(card => {
+    const foot = card.querySelector('.card-foot');
+    if (!foot) return;
+    foot.addEventListener('click', () => {
+      const wasExpanded = card.classList.contains('expanded');
+      cards.forEach(c => c.classList.remove('expanded'));
+      if (!wasExpanded) card.classList.add('expanded');
+    });
+  });
+</script>
+
+</body>
+</html>

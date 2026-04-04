@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Vanessa Madu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #4558C8;
+  --green2:  #3448B0;
+  --sage:    #5AA06E;
+  --mist:    #C8D2FF;
+  --cream:   #F4F2EC;
+  --paper:   #EDEAE2;
+  --rose:    #D4756A;
+  --rose2:   #A85A50;
+  --ink:     #1C1C18;
+  --pencil:  #4A4860;
+  --mustard: #7FC48E;
+  --ocean:   #1A6E8A;
+  --ocean-pale: #E0F2F8;
+  --rec:     #7B5EA7;
+  --rec-pale:#EDE8F8;
+  --ped:     #B06A2A;
+  --ped-pale:#FBF0E4;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(69,88,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69,88,200,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+a { text-decoration: none; color: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+.skip-link {
+  position: absolute; top: -999px; left: 1rem;
+  background: var(--cream); color: var(--green);
+  font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ── NAV ── */
+nav {
+  background: var(--green);
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--cream);
+}
+.nav-links { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--mist); padding: 0.4rem 0.85rem; border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { background: rgba(255,255,255,0.15); color: var(--cream); }
+.nav-book {
+  background: var(--rose) !important; color: var(--cream) !important;
+  font-weight: 700 !important; border-radius: 999px !important;
+}
+.nav-book:hover { background: var(--rose2) !important; }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background: var(--green);
+  padding: 5rem 3rem 4rem;
+  position: relative; overflow: hidden;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 50px;
+  background: var(--cream);
+  clip-path: polygon(0% 70%, 2% 30%, 5% 60%, 8% 20%, 11% 55%, 15% 25%, 19% 60%, 23% 20%, 27% 55%, 31% 30%, 35% 65%, 39% 20%, 43% 55%, 47% 30%, 51% 60%, 55% 20%, 59% 55%, 63% 30%, 67% 65%, 71% 20%, 75% 55%, 79% 30%, 83% 60%, 87% 20%, 91% 55%, 95% 30%, 98% 60%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+/* big decorative ∑ */
+.page-header::before {
+  content: '∑';
+  font-family: 'Fraunces', serif;
+  font-size: 24rem; font-weight: 900;
+  position: absolute; right: 3rem; top: -3rem;
+  color: rgba(255,255,255,0.04);
+  pointer-events: none; user-select: none;
+  line-height: 1;
+}
+
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 3rem; align-items: end;
+}
+
+.header-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--mist); opacity: 0.7;
+  display: block; margin-bottom: 0.5rem;
+}
+
+.page-h1 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--cream); line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.header-summary {
+  font-size: 0.9rem; font-weight: 300;
+  color: rgba(200,210,255,0.72); line-height: 1.8;
+  max-width: 480px; margin-top: 1.2rem;
+}
+.header-summary strong { color: var(--cream); font-weight: 500; }
+
+/* area nav pills */
+.area-nav {
+  display: flex; flex-direction: column;
+  gap: 0.5rem; align-items: flex-end;
+}
+.area-pill {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px; padding: 0.35rem 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.area-pill:hover { background: rgba(255,255,255,0.18); color: var(--cream); }
+.area-pill i { font-size: 0.8rem; }
+
+/* ── SHARED SECTION STYLES ── */
+.research-section {
+  max-width: 1200px; margin: 0 auto;
+  padding: 5rem 3rem;
+}
+
+.section-header {
+  display: flex; align-items: flex-start;
+  gap: 1.2rem; margin-bottom: 3rem;
+}
+
+.section-icon {
+  width: 52px; height: 52px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.section-heading-group {}
+
+.section-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 700;
+  display: block; margin-bottom: 0.2rem;
+}
+
+.section-h {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.05; letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.section-intro {
+  font-size: 0.9rem; font-weight: 300;
+  color: var(--pencil); line-height: 1.85;
+  max-width: 700px; margin-top: 0.8rem;
+}
+.section-intro strong { color: var(--ink); font-weight: 500; }
+
+/* ── DIVIDER between sections ── */
+.section-divider {
+  border: none;
+  border-top: 1px dashed rgba(69,88,200,0.15);
+  max-width: 1200px; margin: 0 auto;
+}
+
+/* ── PROJECT CARDS ── */
+.project-layout {
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--paper);
+  border: 1.5px solid rgba(69,88,200,0.12);
+  border-radius: 8px; overflow: hidden;
+  display: grid; grid-template-columns: 6px 1fr;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 8px 28px rgba(69,88,200,0.1);
+  transform: translateY(-2px);
+}
+.project-card:nth-child(odd)  { transform: rotate(-0.3deg); }
+.project-card:nth-child(even) { transform: rotate(0.3deg); }
+.project-card:hover { transform: rotate(0deg) translateY(-2px) !important; }
+
+.project-stripe { }
+
+.project-body { padding: 1.8rem 2rem; }
+
+.project-meta {
+  display: flex; align-items: center; gap: 0.8rem;
+  margin-bottom: 0.8rem; flex-wrap: wrap;
+}
+
+.project-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.2rem 0.6rem; border-radius: 4px;
+}
+
+.tag-current { background: #D1FAE5; color: #065F46; }
+.tag-complete { background: var(--mist); color: var(--green2); }
+.tag-soon    { background: #FEF9C3; color: #713F12; }
+
+.project-date {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--pencil);
+}
+
+.project-supervisor {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 500;
+  color: var(--sage);
+}
+
+.project-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem; font-weight: 900;
+  color: var(--ink); line-height: 1.25;
+  margin-bottom: 0.7rem;
+}
+
+.project-desc {
+  font-size: 0.85rem; color: var(--pencil);
+  line-height: 1.82; margin-bottom: 1rem;
+  font-weight: 300;
+}
+.project-desc strong { color: var(--ink); font-weight: 500; }
+
+.project-details {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.2rem; margin-top: 1rem;
+}
+
+.detail-block h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--pencil); opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.detail-block ul {
+  list-style: none; display: flex; flex-direction: column; gap: 0.3rem;
+}
+
+.detail-block li {
+  font-size: 0.82rem; color: var(--pencil);
+  line-height: 1.55; padding-left: 1rem; position: relative;
+}
+.detail-block li::before {
+  content: '—'; position: absolute; left: 0;
+  color: var(--sage); font-size: 0.75rem;
+}
+
+.keyword-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+.keyword {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; font-weight: 500;
+  background: rgba(69,88,200,0.07);
+  border: 1px solid rgba(69,88,200,0.15);
+  border-radius: 4px; padding: 0.2rem 0.5rem;
+  color: var(--green);
+}
+
+/* coming soon project */
+.project-card.coming-soon {
+  opacity: 0.7; background: var(--cream);
+  border-style: dashed;
+}
+.project-card.coming-soon .project-title { color: var(--pencil); }
+
+/* ── RECREATIONAL SECTION bg ── */
+.rec-bg { background: var(--rec-pale); }
+.rec-divider { background: var(--rec); }
+
+/* ── PEDAGOGY SECTION bg ── */
+.ped-bg { background: var(--ped-pale); border-top: 1px dashed rgba(176,106,42,0.2); border-bottom: 1px dashed rgba(176,106,42,0.2); }
+
+/* ── COLLABORATORS / CONTACT ── */
+.collab-bg {
+  background: var(--green);
+  clip-path: polygon(0 28px, 1% 8px, 2% 22px, 4% 5px, 6% 20px, 8% 6px, 10% 24px, 13% 4px, 16% 18px, 19% 5px, 22% 22px, 25% 4px, 28% 20px, 31% 6px, 34% 24px, 37% 4px, 40% 20px, 43% 5px, 46% 22px, 49% 4px, 52% 20px, 55% 6px, 58% 24px, 61% 4px, 64% 20px, 67% 5px, 70% 22px, 73% 4px, 76% 20px, 79% 6px, 82% 24px, 85% 4px, 88% 20px, 91% 5px, 94% 22px, 97% 6px, 100% 18px, 100% 100%, 0 100%);
+  margin-top: -20px; padding-top: 3rem;
+}
+
+.collab-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 3rem 3rem 5rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: start;
+}
+
+.collab-heading {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--cream); line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+
+.collab-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--mist); opacity: 0.7;
+  display: block; margin-bottom: 1.5rem;
+}
+
+.supervisor-list { display: flex; flex-direction: column; gap: 1rem; }
+
+.supervisor-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; padding: 1.2rem 1.4rem;
+  transition: border-color 0.2s;
+}
+.supervisor-card:hover { border-color: rgba(255,255,255,0.25); }
+
+.sup-name {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 900;
+  color: var(--cream); margin-bottom: 0.2rem;
+}
+.sup-role {
+  font-size: 0.8rem; color: rgba(200,210,255,0.65);
+  line-height: 1.5;
+}
+
+.contact-block {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; padding: 2rem;
+}
+
+.contact-heading {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--cream);
+  margin-bottom: 0.8rem;
+}
+
+.contact-body {
+  font-size: 0.85rem; color: rgba(200,210,255,0.72);
+  line-height: 1.8; font-weight: 300; margin-bottom: 1.5rem;
+}
+
+.contact-email {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 0.95rem;
+  background: var(--rose); color: var(--cream);
+  padding: 0.7rem 1.8rem; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  transition: background 0.2s;
+}
+.contact-email:hover { background: var(--rose2); }
+
+/* ── FOOTER ── */
+footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; margin-bottom: 2.5rem;
+}
+.footer-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-style: italic; font-weight: 900;
+  color: var(--cream); margin-bottom: 0.7rem;
+}
+.footer-desc {
+  font-size: 0.82rem; color: rgba(255,255,255,0.4);
+  line-height: 1.72; max-width: 360px; margin-bottom: 1rem;
+}
+.footer-email { font-size: 0.82rem; color: var(--rose); font-weight: 500; }
+.footer-nav { display: flex; flex-direction: column; gap: 0.55rem; text-align: right; }
+.footer-nav a {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(255,255,255,0.35); transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(255,255,255,0.1);
+  display: flex; justify-content: space-between;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: rgba(255,255,255,0.2);
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo">Vanessa Madu</a>
+  <ul class="nav-links">
+    <li><a href="/sessions">Sessions</a></li>
+    <li><a href="/research" class="active">Research</a></li>
+    <li><a href="/sci-comm">Sci Comm</a></li>
+    <li><a href="/writing">Writing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header" id="main-content">
+  <div class="header-inner">
+    <div>
+      <span class="header-eyebrow">PhD Researcher · Imperial College London · EPSRC CDT StatML</span>
+      <h1 class="page-h1">Research</h1>
+      <p class="header-summary">
+        My research sits at the intersection of <strong>Statistical Machine Learning</strong>, <strong>physical oceanography</strong>, and <strong>uncertainty quantification</strong> — developing probabilistic methods for predicting ocean surface currents from sparse, noisy drifter data. Alongside my PhD I pursue recreational mathematics and am beginning to write about pedagogy in university mathematics.
+      </p>
+    </div>
+    <nav class="area-nav" aria-label="Jump to research area">
+      <a href="#phd" class="area-pill"><i class="fa-solid fa-water"></i> PhD Research</a>
+      <a href="#projects" class="area-pill"><i class="fa-solid fa-flask"></i> Short Projects</a>
+      <a href="#recreational" class="area-pill"><i class="fa-solid fa-dice"></i> Recreational Maths</a>
+      <a href="#pedagogy" class="area-pill"><i class="fa-solid fa-chalkboard-user"></i> Pedagogy</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ PhD RESEARCH ══ -->
+<section id="phd" aria-labelledby="phd-h">
+  <div class="research-section">
+    <div class="section-header">
+      <div class="section-icon" style="background: var(--ocean-pale); color: var(--ocean);">
+        <i class="fa-solid fa-water"></i>
+      </div>
+      <div class="section-heading-group">
+        <span class="section-label" style="color: var(--ocean);">PhD Research · Oct 2023 – Present</span>
+        <h2 class="section-h" id="phd-h">Statistical Machine Learning<br>for ocean surface current prediction</h2>
+        <p class="section-intro">
+          Supervised by <strong>Dr Adam Sykulski</strong> and <strong>Dr Marina Evangelou</strong> at Imperial College London.
+          Funded by the EPSRC Centre for Doctoral Training in Modern Statistics and Statistical Machine Learning (StatML).
+        </p>
+      </div>
+    </div>
+
+    <div class="project-layout">
+
+      <div class="project-card">
+        <div class="project-stripe" style="background: var(--ocean);"></div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-tag tag-current">Current</span>
+            <span class="project-date">Jun 2024 – Present</span>
+            <span class="project-supervisor"><i class="fa-solid fa-user-tie fa-xs"></i> Sykulski &amp; Evangelou</span>
+          </div>
+          <h3 class="project-title">Multivariate probabilistic prediction of ocean surface currents via NGBoost</h3>
+          <p class="project-desc">
+            Developing <strong>multivariate extensions of Natural Gradient Boosting (NGBoost)</strong> for probabilistic signal extraction in high-dimensional spatiotemporal systems. The core challenge is learning structured uncertainty over correlated velocity components — eastward and northward — from surface drifter observations that are sparse, irregularly sampled, and contaminated by inertial oscillations.
+          </p>
+          <div class="project-details">
+            <div class="detail-block">
+              <h4>Methodological contributions</h4>
+              <ul>
+                <li>Multivariate NGBoost with correlated output distributions</li>
+                <li>Robust pipelines for structured missingness in drifter data</li>
+                <li>Spatial interpolation via inverse distance weighting with haversine metrics</li>
+                <li>Extension of O'Malley et al. (2023) by incorporating SST gradients as covariates</li>
+                <li>Rigorous uncertainty quantification, calibration, and out-of-sample diagnostics</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <h4>Context &amp; motivation</h4>
+              <ul>
+                <li>Ocean surface currents drive heat and carbon transport — accurate prediction matters for climate modelling</li>
+                <li>GDP-scale surface drifter array provides rich but irregular data</li>
+                <li>Probabilistic forecasts are essential for assimilation into ocean circulation models</li>
+                <li>Presented work-in-progress at Changing the Face of Science Symposium 2025</li>
+              </ul>
+            </div>
+          </div>
+          <div class="keyword-tags">
+            <span class="keyword">NGBoost</span>
+            <span class="keyword">Probabilistic regression</span>
+            <span class="keyword">Spatiotemporal modelling</span>
+            <span class="keyword">Uncertainty quantification</span>
+            <span class="keyword">Ocean drifters</span>
+            <span class="keyword">Multivariate output</span>
+            <span class="keyword">Sea surface temperature</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══ SHORT PROJECTS ══ -->
+<section id="projects" aria-labelledby="projects-h">
+  <div class="research-section">
+    <div class="section-header">
+      <div class="section-icon" style="background: var(--mist); color: var(--green);">
+        <i class="fa-solid fa-flask"></i>
+      </div>
+      <div class="section-heading-group">
+        <span class="section-label" style="color: var(--green);">Short Projects · 2023–2024</span>
+        <h2 class="section-h" id="projects-h">Statistical theory<br>&amp; ocean model evaluation</h2>
+        <p class="section-intro">
+          Two 2.5-month research projects completed during the first year of the CDT, each resulting in novel theoretical or methodological contributions.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-layout">
+
+      <div class="project-card">
+        <div class="project-stripe" style="background: var(--green);"></div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-tag tag-complete">Complete</span>
+            <span class="project-date">Mar – Jun 2024</span>
+            <span class="project-supervisor"><i class="fa-solid fa-user-tie fa-xs"></i> Professor Alessandra Luati</span>
+          </div>
+          <h3 class="project-title">Robust models for time-varying signals: PDF derivation for complex random variables</h3>
+          <p class="project-desc">
+            Working alongside the paper <em>Robust Filtering of a Location Parameter</em> (Catania, Harvey &amp; Luati, 2024), this project derived a <strong>novel general form of the probability density function</strong> for complex random variables under symmetry and regularity conditions. I produced a new and thorough proof validating the PDF for a weighted infinite sum of i.i.d. uniform random variables, providing additional proof details absent from the working paper, and derived a novel general PDF for an infinite sum of i.i.d. symmetrically distributed random variables, establishing conditions on distributions and weights for existence.
+          </p>
+          <div class="project-details">
+            <div class="detail-block">
+              <h4>Key results</h4>
+              <ul>
+                <li>Novel general PDF under symmetry conditions for complex random variables</li>
+                <li>New proof of PDF for weighted infinite sum of i.i.d. uniform variables</li>
+                <li>General PDF for infinite sums of i.i.d. symmetrically distributed variables with existence conditions</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <h4>Related work</h4>
+              <ul>
+                <li>Catania, Harvey &amp; Luati (2024) — Robust Filtering of a Location Parameter</li>
+                <li>Score-driven models for time-varying parameters</li>
+              </ul>
+            </div>
+          </div>
+          <div class="keyword-tags">
+            <span class="keyword">Complex random variables</span>
+            <span class="keyword">Probability density functions</span>
+            <span class="keyword">Score-driven models</span>
+            <span class="keyword">Robust statistics</span>
+            <span class="keyword">Infinite sums</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-stripe" style="background: var(--sage);"></div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-tag tag-complete">Complete</span>
+            <span class="project-date">Oct 2023 – Mar 2024</span>
+            <span class="project-supervisor"><i class="fa-solid fa-user-tie fa-xs"></i> Dr Adam Sykulski</span>
+          </div>
+          <h3 class="project-title">Physically interpretable error metrics for ocean surface current models</h3>
+          <p class="project-desc">
+            Proposed a system of <strong>model evaluation and uncertainty metrics</strong> for a phenomena-centred approach to ocean surface modelling, aimed at maximising information gain from observational ocean data. The framework was designed to connect statistical model diagnostics to physically meaningful quantities — a gap in existing evaluation methodology for data-driven ocean models.
+          </p>
+          <div class="project-details">
+            <div class="detail-block">
+              <h4>Contributions</h4>
+              <ul>
+                <li>Proposed evaluation metrics grounded in oceanographic phenomena</li>
+                <li>Demonstrated practical application using drifter velocity model examples</li>
+                <li>Showed added value of physically interpretable metrics over standard statistical measures</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <h4>Dissemination</h4>
+              <ul>
+                <li>Poster and presentation at SIAM UKIE Annual Meeting 2024, University of Manchester</li>
+                <li>Awarded SIAM UKIE Student Travel Award</li>
+                <li>Invited to Uncertainty Quantification Workshop, National Physical Laboratory (2024)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="keyword-tags">
+            <span class="keyword">Model evaluation</span>
+            <span class="keyword">Ocean drifters</span>
+            <span class="keyword">Uncertainty quantification</span>
+            <span class="keyword">Lagrangian oceanography</span>
+            <span class="keyword">Error metrics</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══ RECREATIONAL MATHS ══ -->
+<section id="recreational" aria-labelledby="rec-h" class="rec-bg" style="padding: 1px 0;">
+  <div class="research-section">
+    <div class="section-header">
+      <div class="section-icon" style="background: var(--rec-pale); color: var(--rec); border: 1.5px solid rgba(123,94,167,0.2);">
+        <i class="fa-solid fa-dice"></i>
+      </div>
+      <div class="section-heading-group">
+        <span class="section-label" style="color: var(--rec);">Recreational Mathematics</span>
+        <h2 class="section-h" id="rec-h">Original research<br>for the joy of it</h2>
+        <p class="section-intro">
+          Alongside my formal PhD work I pursue original questions in recreational mathematics — the kind that start with "I wonder what happens if…" and end with a conference talk. I keep a notebook of ideas I'm too excited about to leave alone, and occasionally one of them turns into something worth presenting.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-layout">
+
+      <div class="project-card">
+        <div class="project-stripe" style="background: var(--rec);"></div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-tag" style="background: var(--rec-pale); color: var(--rec);">Presented</span>
+            <span class="project-date">2024 – 2025</span>
+          </div>
+          <h3 class="project-title">On sequences of consecutive odd semi-primes</h3>
+          <p class="project-desc">
+            A semi-prime is a positive integer that is the product of exactly two primes (not necessarily distinct). This project investigates <strong>sequences of consecutive odd semi-primes</strong> — characterising their structure, identifying patterns, and exploring upper bounds on their length. The question arose from a prior investigation into consecutive semi-primes (including even ones), and the restriction to odd numbers introduces substantially richer arithmetic structure.
+          </p>
+          <div class="project-details">
+            <div class="detail-block">
+              <h4>Questions investigated</h4>
+              <ul>
+                <li>What is the longest possible chain of consecutive odd semi-primes?</li>
+                <li>What arithmetic conditions determine where such chains can and cannot occur?</li>
+                <li>How does the density of odd semi-primes relate to chain length?</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <h4>Dissemination</h4>
+              <ul>
+                <li>MathsJam Annual Gathering 2025</li>
+                <li>Gathering for Gardner (G4G15), Atlanta, Georgia, 2024</li>
+                <li>Awarded full G4G scholarship + £900 Dean's Fund Travel Grant</li>
+                <li>Reviewer for The Mathematical Gazette (2024–present)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="keyword-tags">
+            <span class="keyword">Semi-primes</span>
+            <span class="keyword">Number theory</span>
+            <span class="keyword">Consecutive integers</span>
+            <span class="keyword">Recreational mathematics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card coming-soon">
+        <div class="project-stripe" style="background: rgba(123,94,167,0.3);"></div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-tag tag-soon">Coming soon</span>
+            <span class="project-date">In the notebook</span>
+          </div>
+          <h3 class="project-title">Further recreational work in progress</h3>
+          <p class="project-desc">
+            More investigations are underway — including extensions of the semi-prime work and a few other rabbit holes. Watch this space, or get in touch if you'd like to hear more.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══ PEDAGOGY ══ -->
+<section id="pedagogy" aria-labelledby="ped-h" class="ped-bg" style="padding: 1px 0;">
+  <div class="research-section">
+    <div class="section-header">
+      <div class="section-icon" style="background: var(--ped-pale); color: var(--ped); border: 1.5px solid rgba(176,106,42,0.2);">
+        <i class="fa-solid fa-chalkboard-user"></i>
+      </div>
+      <div class="section-heading-group">
+        <span class="section-label" style="color: var(--ped);">Pedagogical Research · In development</span>
+        <h2 class="section-h" id="ped-h">Mathematics education<br>&amp; university pedagogy</h2>
+        <p class="section-intro">
+          My experience teaching mathematics at Imperial College London and the London School of Economics — across analysis, linear algebra, probability, fluid dynamics, and more — has raised questions I want to investigate formally. This is a nascent but growing part of my research identity.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-layout">
+
+      <div class="project-card coming-soon">
+        <div class="project-stripe" style="background: var(--ped);"></div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-tag tag-soon">In preparation</span>
+            <span class="project-date">2025 – 2026</span>
+          </div>
+          <h3 class="project-title">Article submission to <em>Postgraduate Pedagogies</em></h3>
+          <p class="project-desc">
+            An article currently in preparation for submission to <em>Postgraduate Pedagogies</em>, the journal of the Higher Education Academy. The piece draws on my experience as a graduate teaching assistant and guest teacher, and engages with questions around inclusion, mathematical identity, and the culture of university mathematics teaching.
+          </p>
+          <div class="project-details">
+            <div class="detail-block">
+              <h4>Themes</h4>
+              <ul>
+                <li>Mathematical identity and belonging in higher education</li>
+                <li>Inclusive pedagogy in quantitative disciplines</li>
+                <li>The GTA experience: positionality and teaching practice</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <h4>Context</h4>
+              <ul>
+                <li>Drawing on teaching at Imperial College London and the LSE</li>
+                <li>Informed by EDI advocacy and widening participation work</li>
+                <li>Get in touch if you work in this area — I'd love to connect</li>
+              </ul>
+            </div>
+          </div>
+          <div class="keyword-tags">
+            <span class="keyword">University pedagogy</span>
+            <span class="keyword">Mathematical identity</span>
+            <span class="keyword">Inclusive teaching</span>
+            <span class="keyword">Graduate teaching</span>
+            <span class="keyword">Postgraduate Pedagogies</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card coming-soon">
+        <div class="project-stripe" style="background: rgba(176,106,42,0.3);"></div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-tag tag-soon">Coming soon</span>
+            <span class="project-date">Watch this space</span>
+          </div>
+          <h3 class="project-title">Further pedagogical work</h3>
+          <p class="project-desc">
+            More projects in development. If you work in mathematics education research or are interested in collaborating on questions around undergraduate or postgraduate pedagogy, I'd be very glad to hear from you.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SUPERVISORS + CONTACT ══ -->
+<section class="collab-bg" aria-labelledby="collab-h">
+  <div class="collab-inner">
+    <div>
+      <h2 class="collab-heading" id="collab-h">Supervisors &amp;<br>collaborators</h2>
+      <span class="collab-sub">Imperial College London · EPSRC CDT StatML</span>
+      <div class="supervisor-list">
+        <div class="supervisor-card">
+          <div class="sup-name">Dr Adam Sykulski</div>
+          <div class="sup-role">PhD Supervisor · Department of Mathematics, Imperial College London<br>Specialisms: Time series analysis, ocean statistics, spectral methods</div>
+        </div>
+        <div class="supervisor-card">
+          <div class="sup-name">Dr Marina Evangelou</div>
+          <div class="sup-role">PhD Supervisor · Department of Mathematics, Imperial College London<br>Specialisms: Statistical machine learning, biostatistics</div>
+        </div>
+        <div class="supervisor-card">
+          <div class="sup-name">Professor Alessandra Luati</div>
+          <div class="sup-role">Short Project Supervisor · Department of Statistics, LSE<br>Specialisms: Score-driven models, robust statistics, time series</div>
+        </div>
+        <div class="supervisor-card">
+          <div class="sup-name">Professor Pavel Berloff</div>
+          <div class="sup-role">MSci Project Supervisor · Department of Mathematics, Imperial College London<br>Specialisms: Geophysical fluid dynamics, ocean modelling</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-block">
+      <h3 class="contact-heading">Get in touch</h3>
+      <p class="contact-body">
+        I'm always happy to talk about my research, potential collaborations, or questions at the intersection of statistics, oceanography, and mathematics education. I'm particularly interested in connecting with others working on probabilistic machine learning for physical systems, recreational mathematics, or university pedagogy.
+      </p>
+      <a href="mailto:vanessa@vanessamadu.com" class="contact-email">
+        <i class="fa-solid fa-envelope"></i> vanessa@vanessamadu.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Vanessa Madu</div>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <div class="footer-email">vanessa@vanessamadu.com</div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/sessions">Sessions</a>
+      <a href="/research">Research</a>
+      <a href="/sci-comm">Science Communication</a>
+      <a href="/writing">Writing &amp; Notes</a>
+      <a href="/about">About</a>
+      <a href="/cv">Academic CV</a>
+      <a href="/sessions#enquire">Book a Session</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
+  </div>
+</footer>
+
+</body>
+</html>

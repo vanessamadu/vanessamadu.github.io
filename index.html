@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanessa Madu — Mathematician & Science Communicator</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #3D4F9E;
+  --green2:  #2E3F8A;
+  --sage:    #4A8C5C;
+  --mist:    #D4DAFF;
+  --cream:   #F4F2EC;
+  --paper:   #EDEAE2;
+  --rose:    #D4756A;
+  --rose2:   #A85A50;
+  --ink:     #1C1C18;
+  --pencil:  #4A4860;
+  --mustard: #8FC49A;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  /* subtle grid paper texture */
+  background-image:
+    linear-gradient(rgba(61,79,158,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61,79,158,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+a { text-decoration: none; color: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ── SKIP ── */
+.skip-link {
+  position: absolute; top: -999px; left: 1rem;
+  background: var(--cream); color: var(--green);
+  font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ══════════════════════════════
+   NAV — feels like a pinboard header
+══════════════════════════════ */
+nav {
+  background: var(--green);
+  padding: 0 2.5rem;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+  /* slight skew on bottom edge via border trick */
+}
+
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--cream);
+  letter-spacing: -0.01em;
+}
+
+.nav-links { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+.nav-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--mist); padding: 0.4rem 0.85rem; border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover { background: rgba(255,255,255,0.12); color: var(--cream); }
+.nav-book {
+  background: var(--rose) !important; color: var(--cream) !important;
+  font-weight: 700 !important; border-radius: 999px !important;
+  transition: background 0.2s !important;
+}
+.nav-book:hover { background: var(--rose2) !important; }
+
+/* ══════════════════════════════
+   HERO — scrapbook, not a layout
+══════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url('vanessa-hero.jpg');
+  background-size: cover;
+  background-position: 65% top;
+}
+
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(69,88,200,0.96) 0%,
+    rgba(69,88,200,0.90) 35%,
+    rgba(69,88,200,0.60) 58%,
+    rgba(69,88,200,0.15) 78%,
+    transparent 100%
+  );
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 60px;
+  background: var(--cream);
+  clip-path: polygon(0% 80%, 2% 40%, 5% 70%, 8% 30%, 11% 60%, 14% 20%, 17% 55%, 20% 35%, 23% 65%, 26% 25%, 29% 70%, 32% 40%, 35% 75%, 38% 30%, 41% 60%, 44% 20%, 47% 55%, 50% 38%, 53% 65%, 56% 28%, 59% 70%, 62% 35%, 65% 58%, 68% 22%, 71% 60%, 74% 42%, 77% 68%, 80% 28%, 83% 55%, 86% 35%, 89% 62%, 92% 30%, 95% 58%, 98% 40%, 100% 75%, 100% 100%, 0% 100%);
+  z-index: 3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 3rem 7rem 4rem;
+  max-width: 600px;
+}
+
+.scribble-above {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem; font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  transform: rotate(-2deg);
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+.hero-h1 {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+}
+
+.hero-h1 .wonderland {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 900;
+  color: #F5A09A;
+}
+
+.hero-h1 .aside {
+  display: block;
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  transform: rotate(-1.5deg);
+  margin-top: 0.5rem;
+}
+
+.hero-note {
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
+  max-width: 420px;
+}
+
+.hero-note p {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem; font-weight: 500;
+  color: rgba(255,255,255,0.88); line-height: 1.7;
+}
+.hero-note p strong { color: var(--cream); font-weight: 700; }
+
+.hero-actions {
+  margin-top: 1.4rem;
+  display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
+}
+
+.btn-main {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 900; font-style: italic;
+  background: var(--rose); color: var(--cream);
+  padding: 0.85rem 2rem; border-radius: 999px;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 3px 3px 0 var(--rose2);
+}
+.btn-main:hover { background: var(--rose2); transform: translate(-1px,-1px); }
+
+.btn-squiggle {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem; font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  border-bottom: 2px dashed rgba(255,255,255,0.4);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.btn-squiggle:hover { color: var(--cream); }
+
+.hero-badges { display: none; }
+.cred-doodle { display: none; }
+
+/* ══════════════════════════════
+   ABOUT — conversational, not corporate
+══════════════════════════════ */
+.about-section {
+  padding: 6rem 3rem 5rem;
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 5rem;
+  align-items: start;
+  position: relative;
+}
+
+/* big quote mark doodle */
+.about-section::before {
+  content: '"';
+  font-family: 'Fraunces', serif;
+  font-size: 18rem; font-weight: 900; font-style: italic;
+  color: rgba(61,79,158,0.05);
+  position: absolute;
+  top: 2rem; left: 1rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.about-left {}
+
+.about-h {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900; font-style: italic;
+  color: var(--green); line-height: 1.1;
+  margin-bottom: 1.8rem;
+  position: relative; z-index: 1;
+}
+
+.about-body {
+  font-size: 1.02rem; line-height: 1.85;
+  color: var(--pencil); font-weight: 300;
+}
+.about-body strong { color: var(--ink); font-weight: 500; }
+.about-body p + p { margin-top: 1.1rem; }
+
+/* handwritten margin note */
+.margin-note {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 500;
+  color: var(--rose);
+  transform: rotate(-1.5deg);
+  display: block;
+  margin-top: 1.2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--rose);
+}
+
+/* fact cards — like little index cards pinned at angles */
+.fact-cards {
+  display: flex; flex-direction: column; gap: 1.2rem;
+  padding-top: 1rem;
+}
+
+.fact-card {
+  background: var(--cream);
+  border: 1.5px solid rgba(61,79,158,0.15);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  box-shadow: 3px 3px 0 rgba(61,79,158,0.08);
+  position: relative;
+}
+.fact-card:nth-child(odd)  { transform: rotate(-0.8deg); }
+.fact-card:nth-child(even) { transform: rotate(0.6deg); }
+.fact-card:hover { transform: rotate(0deg) translateY(-2px); box-shadow: 4px 4px 0 rgba(61,79,158,0.12); }
+
+/* tape strip on each card */
+.fact-card::before {
+  content: '';
+  position: absolute; top: -8px; left: 50%; transform: translateX(-50%);
+  width: 40px; height: 16px;
+  background: rgba(200,146,42,0.3);
+  border-radius: 2px;
+}
+
+.fact-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--sage); display: block; margin-bottom: 0.2rem;
+}
+.fact-value {
+  font-size: 0.85rem; font-weight: 500; color: var(--ink); line-height: 1.45;
+}
+
+/* ══════════════════════════════
+   SESSIONS — not a grid, feels alive
+══════════════════════════════ */
+.sessions-section {
+  background: var(--green);
+  padding: 5rem 3rem;
+  position: relative; overflow: hidden;
+  /* wavy top edge */
+  clip-path: polygon(0 30px, 1% 10px, 2% 25px, 3% 8px, 4% 22px, 5% 5px, 6% 20px, 8% 8px, 10% 24px, 12% 6px, 15% 28px, 18% 5px, 21% 22px, 24% 8px, 27% 26px, 30% 4px, 33% 20px, 36% 6px, 39% 24px, 42% 8px, 45% 26px, 48% 5px, 51% 22px, 54% 7px, 57% 25px, 60% 6px, 63% 22px, 66% 8px, 69% 26px, 72% 5px, 75% 24px, 78% 8px, 81% 22px, 84% 6px, 87% 28px, 90% 5px, 93% 22px, 96% 8px, 98% 26px, 100% 10px, 100% 100%, 0 100%);
+  margin-top: -30px;
+}
+
+.sessions-inner {
+  max-width: 1200px; margin: 0 auto; padding-top: 2rem;
+}
+
+.sessions-heading-row {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.sessions-h {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900; font-style: italic;
+  color: var(--cream); line-height: 1.05;
+}
+.sessions-h span {
+  font-weight: 300;
+  color: var(--mist);
+  display: block;
+}
+
+/* scribble annotation */
+.sessions-scribble {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--mist); opacity: 0.7;
+  transform: rotate(-2deg); display: block; text-align: right;
+}
+.sessions-see-all {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--mist);
+  border-bottom: 1px dashed var(--sage);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.sessions-see-all:hover { color: var(--cream); }
+
+/* sessions laid out like cards spread on a table */
+.sessions-scatter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.s-card {
+  background: var(--cream);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+.s-card:nth-child(1) { transform: rotate(-0.8deg); }
+.s-card:nth-child(2) { transform: rotate(0.5deg); margin-top: 0.8rem; }
+.s-card:nth-child(3) { transform: rotate(-1.2deg); }
+.s-card:nth-child(4) { transform: rotate(0.7deg); margin-top: -0.5rem; }
+.s-card:nth-child(5) { transform: rotate(-0.4deg); margin-top: 0.5rem; }
+.s-card:nth-child(6) { transform: rotate(1deg); }
+
+.s-card:hover {
+  transform: rotate(0deg) translateY(-5px) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+.s-card-top {
+  height: 6px;
+}
+.top-green   { background: var(--sage); }
+.top-rose    { background: var(--rose); }
+.top-mustard { background: var(--mustard); }
+
+.s-card-body { padding: 1.3rem; }
+
+.s-cat {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; font-weight: 600;
+  color: var(--sage); display: block; margin-bottom: 0.4rem;
+}
+
+.s-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem; font-weight: 900;
+  color: var(--green); line-height: 1.2; margin-bottom: 0.6rem;
+}
+
+.s-desc {
+  font-size: 0.8rem; color: var(--pencil); line-height: 1.7;
+}
+
+.s-card-foot {
+  padding: 0.8rem 1.3rem;
+  border-top: 1px dashed rgba(61,79,158,0.15);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.s-meta { font-family: 'Caveat', cursive; font-size: 0.9rem; color: var(--pencil); }
+.s-status {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  padding: 0.1rem 0.6rem; border-radius: 999px;
+}
+.ss-ready { background: #D1FAE5; color: #065F46; }
+.ss-soon  { background: #FEF9C3; color: #713F12; }
+
+/* ══════════════════════════════
+   STATS — big scrawled numbers
+══════════════════════════════ */
+.stats-section {
+  padding: 5rem 3rem 4rem;
+  background: var(--paper);
+  position: relative; overflow: hidden;
+  /* jagged bottom from green section transition */
+}
+
+.stats-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat-item { text-align: center; position: relative; }
+
+.stat-n {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 900; font-style: italic;
+  color: var(--green); line-height: 1;
+  display: block;
+}
+
+/* hand-drawn circle around the number */
+.stat-circle {
+  position: relative; display: inline-block;
+}
+.stat-circle::after {
+  content: '';
+  position: absolute;
+  inset: -12px -16px;
+  border: 2.5px solid var(--sage);
+  border-radius: 50%;
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
+.stat-label {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 500;
+  color: var(--pencil); margin-top: 1rem;
+  line-height: 1.4; display: block;
+}
+
+/* ══════════════════════════════
+   SCI COMM — pinned cards
+══════════════════════════════ */
+.scicomm-section {
+  padding: 4rem 3rem 6rem;
+  max-width: 1200px; margin: 0 auto;
+  position: relative;
+}
+
+.scicomm-heading {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 900; font-style: italic;
+  color: var(--green); margin-bottom: 0.5rem;
+}
+
+.scicomm-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem; font-weight: 500;
+  color: var(--sage); margin-bottom: 2.5rem;
+  display: block; transform: rotate(-1deg);
+}
+
+.scicomm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.sc-card {
+  background: var(--cream);
+  border: 1.5px solid rgba(61,79,158,0.12);
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sc-card:nth-child(1) { transform: rotate(-0.5deg); }
+.sc-card:nth-child(2) { transform: rotate(0.3deg); }
+.sc-card:nth-child(3) { transform: rotate(-0.8deg); }
+.sc-card:hover { transform: rotate(0deg) translateY(-4px); box-shadow: 0 12px 32px rgba(61,79,158,0.1); }
+
+/* drawing-pin dot */
+.sc-card::before {
+  content: '';
+  position: absolute; top: -6px; left: 50%;
+  transform: translateX(-50%);
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--rose);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.sc-icon { font-size: 2rem; display: block; margin-bottom: 1rem; }
+
+.sc-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem; font-weight: 900;
+  color: var(--green); margin-bottom: 0.6rem;
+}
+
+.sc-body { font-size: 0.82rem; color: var(--pencil); line-height: 1.75; }
+
+.sc-link {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 700;
+  color: var(--green); display: inline-block;
+  margin-top: 1rem; border-bottom: 1.5px dashed var(--sage);
+  padding-bottom: 1px; transition: color 0.2s;
+}
+.sc-link:hover { color: var(--rose); }
+
+/* ══════════════════════════════
+   WRITING — notebook list
+══════════════════════════════ */
+.writing-section {
+  background: var(--paper);
+  padding: 4rem 3rem;
+  border-top: 1px solid rgba(61,79,158,0.1);
+  border-bottom: 1px solid rgba(61,79,158,0.1);
+}
+
+.writing-inner { max-width: 1200px; margin: 0 auto; }
+
+.writing-h {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2rem; font-weight: 900; font-style: italic;
+  color: var(--green); margin-bottom: 0.3rem;
+}
+.writing-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 500;
+  color: var(--sage); display: block;
+  margin-bottom: 2rem; transform: rotate(-0.8deg);
+}
+
+.writing-list {}
+
+.w-item {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 1.2rem; align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px dashed rgba(61,79,158,0.15);
+  transition: padding-left 0.2s;
+}
+.w-item:first-child { border-top: 1px dashed rgba(61,79,158,0.15); }
+.w-item:hover { padding-left: 0.5rem; }
+
+.w-date {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; color: var(--sage); font-weight: 500;
+}
+.w-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 900;
+  color: var(--green); transition: color 0.2s;
+}
+.w-item:hover .w-title { color: var(--rose); }
+.w-tag {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--pencil);
+}
+
+/* ══════════════════════════════
+   CTA — big and warm
+══════════════════════════════ */
+.cta-section {
+  background: var(--rose);
+  padding: 6rem 3rem;
+  text-align: center;
+  position: relative; overflow: hidden;
+  /* wavy top */
+  clip-path: polygon(0 40px, 1% 15px, 2% 35px, 4% 8px, 6% 30px, 8% 10px, 10% 38px, 13% 6px, 16% 32px, 19% 8px, 22% 36px, 25% 5px, 28% 28px, 31% 10px, 34% 38px, 37% 6px, 40% 30px, 43% 8px, 46% 36px, 49% 5px, 52% 28px, 55% 10px, 58% 38px, 61% 6px, 64% 30px, 67% 8px, 70% 36px, 73% 5px, 76% 28px, 79% 10px, 82% 38px, 85% 6px, 88% 30px, 91% 8px, 94% 36px, 97% 12px, 100% 32px, 100% 100%, 0 100%);
+  margin-top: -30px;
+}
+
+.cta-scribble {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem; font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  display: block; margin-bottom: 0.5rem;
+  transform: rotate(-1.5deg);
+}
+
+.cta-h {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900; font-style: italic;
+  color: var(--cream); line-height: 1;
+  margin-bottom: 1.2rem;
+}
+
+.cta-p {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem; font-weight: 500;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 2.5rem; line-height: 1.6;
+}
+
+.cta-btn {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem; font-weight: 900; font-style: italic;
+  background: var(--cream); color: var(--rose2);
+  padding: 0.9rem 2.8rem; border-radius: 999px;
+  display: inline-block;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.12);
+  transition: background 0.2s, transform 0.15s;
+}
+.cta-btn:hover { background: var(--paper); transform: translateY(-2px); }
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+footer {
+  background: var(--green);
+  padding: 3.5rem 3rem 2rem;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; margin-bottom: 2.5rem;
+}
+.footer-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-style: italic; font-weight: 900;
+  color: var(--cream); margin-bottom: 0.7rem;
+}
+.footer-desc {
+  font-size: 0.82rem; color: rgba(196,217,197,0.55);
+  line-height: 1.72; max-width: 360px; margin-bottom: 1rem;
+}
+.footer-email {
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--rose);
+}
+.footer-nav { display: flex; flex-direction: column; gap: 0.55rem; text-align: right; }
+.footer-nav a {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(196,217,197,0.45); transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(196,217,197,0.2);
+  display: flex; justify-content: space-between;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: rgba(196,217,197,0.3);
+}
+
+/* Font Awesome inline sizing */
+.s-cat i, .fact-label i, .scicomm-icon i,
+.sc-icon i, .cta-scribble i, .nav-book i,
+.scribble-above i, .s-status i {
+  font-size: inherit;
+  vertical-align: middle;
+  margin: 0 0.15em;
+}
+.sc-icon { font-size: 1.8rem; display: block; margin-bottom: 1rem; }
+.scicomm-icon { font-size: 1.8rem; display: block; margin-bottom: 1rem; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo">Vanessa Madu</a>
+  <ul class="nav-links">
+    <li><a href="/sessions">Sessions</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/sci-comm">Sci Comm</a></li>
+    <li><a href="/writing">Writing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/book" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero" aria-label="Introduction">
+  <div class="hero-content" id="main-content">
+
+    <span class="scribble-above" aria-hidden="true">hi! I'm Vanessa <i class="fa-solid fa-hand-wave" aria-hidden="true"></i></span>
+
+    <h1 class="hero-h1">
+      Maths is<br>
+      my <span class="wonderland">Wonderland</span>
+      <span class="aside">(and yours too, if you'll let me show you)</span>
+    </h1>
+
+    <div class="hero-note" role="region" aria-label="Introduction">
+      <p>I'm a <strong>Statistical Machine Learning researcher</strong> (ocean currents, rubber ducks, the works) and I design talks &amp; workshops for schools that are <strong>rigorous, ridiculous, and genuinely unforgettable.</strong></p>
+    </div>
+
+    <div class="hero-actions">
+      <a href="/sessions" class="btn-main">See my sessions</a>
+      <a href="/about" class="btn-squiggle">wait, who are you? →</a>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ══════ ABOUT ══════ -->
+<section aria-labelledby="about-h">
+  <div class="about-section">
+    <div class="about-left">
+      <h2 class="about-h" id="about-h">"Science is my Wonderland and Mathematics makes it tick."</h2>
+      <div class="about-body">
+        <p>I'm a <strong>PhD researcher in Statistical Machine Learning</strong> at Imperial College London and a Guest Teacher in Mathematics at the LSE. My research develops new methods for predicting ocean surface currents — involving an embarrassing amount of thinking about rubber ducks.</p>
+        <p>I've spoken at the Royal Institution, won FameLab, presented at the Gathering for Gardner in Atlanta, and reviewed for The Mathematical Gazette. I also keep a notebook of mathematical ideas I'm too excited about to leave alone.</p>
+        <p>I attended a school that didn't offer Further Mathematics, came to Imperial via a non-linear path, and care deeply about making mathematics feel possible for <em>everyone</em> — not just the people who were always told they were good at it.</p>
+        <span class="margin-note">← this bit matters a lot to me</span>
+      </div>
+    </div>
+
+    <div class="fact-cards" role="list">
+      <div class="fact-card" role="listitem">
+        <span class="fact-label">currently <i class="fa-solid fa-flask" aria-hidden="true"></i></span>
+        <span class="fact-value">PhD in Statistical Machine Learning · EPSRC CDT StatML · Imperial College London</span>
+      </div>
+      <div class="fact-card" role="listitem">
+        <span class="fact-label">also <i class="fa-solid fa-landmark" aria-hidden="true"></i></span>
+        <span class="fact-value">Guest Teacher in Mathematics · London School of Economics</span>
+      </div>
+      <div class="fact-card" role="listitem">
+        <span class="fact-label">trained as <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+        <span class="fact-value">MSci Mathematics, First Class Honours · Imperial College London</span>
+      </div>
+      <div class="fact-card" role="listitem">
+        <span class="fact-label">proud of <i class="fa-solid fa-trophy" aria-hidden="true"></i></span>
+        <span class="fact-value">FameLab Regional Winner · Women of the Future Award · President's Award × 2</span>
+      </div>
+      <div class="fact-card" role="listitem">
+        <span class="fact-label">I talk to <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i></span>
+        <span class="fact-value">Year 3 through Sixth Form · mixed-ability & specialist groups · London & surrounding areas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ SESSIONS ══════ -->
+<section class="sessions-section" aria-labelledby="sessions-h">
+  <div class="sessions-inner">
+
+    <div class="sessions-heading-row">
+      <div>
+        <h2 class="sessions-h" id="sessions-h">
+          Talks & workshops
+          <span>for curious schools</span>
+        </h2>
+      </div>
+      <div style="text-align:right;">
+        <span class="sessions-scribble">all tried & tested ✓</span>
+        <a href="/sessions" class="sessions-see-all">see everything →</a>
+      </div>
+    </div>
+
+    <div class="sessions-scatter">
+
+      <article class="s-card">
+        <div class="s-card-top top-green"></div>
+        <div class="s-card-body">
+          <span class="s-cat"><i class="fa-solid fa-water" aria-hidden="true"></i> Ocean & Climate · Talk</span>
+          <h3 class="s-title">Rubber Ducks, Oceans & Ridiculous Hypotheticals</h3>
+          <p class="s-desc">What can 29,000 lost rubber ducks teach us about ocean currents? An introduction to fluid dynamics — no prior knowledge required.</p>
+        </div>
+        <div class="s-card-foot">
+          <span class="s-meta">Yrs 7–13 · 45–60 min</span>
+          <span class="s-status ss-ready">ready <i class="fa-solid fa-check" aria-hidden="true"></i></span>
+        </div>
+      </article>
+
+      <article class="s-card">
+        <div class="s-card-top top-rose"></div>
+        <div class="s-card-body">
+          <span class="s-cat"><i class="fa-solid fa-infinity" aria-hidden="true"></i> Pure Maths · Talk</span>
+          <h3 class="s-title">When Infinity Becomes Infinities</h3>
+          <p class="s-desc">There are multiple types of infinity and they're not the same size. From counting to Cantor — genuinely mind-bending.</p>
+        </div>
+        <div class="s-card-foot">
+          <span class="s-meta">Yrs 9–13 · 45 min</span>
+          <span class="s-status ss-ready">ready <i class="fa-solid fa-check" aria-hidden="true"></i></span>
+        </div>
+      </article>
+
+      <article class="s-card">
+        <div class="s-card-top top-mustard"></div>
+        <div class="s-card-body">
+          <span class="s-cat"><i class="fa-solid fa-dice" aria-hidden="true"></i> Maths · Workshop</span>
+          <h3 class="s-title">What Are the Odds?!</h3>
+          <p class="s-desc">A mystery-story workshop where students use probability to crack a whodunit. Increasingly sophisticated, consistently chaotic (in a good way).</p>
+        </div>
+        <div class="s-card-foot">
+          <span class="s-meta">Yrs 7–10 · 2 hrs</span>
+          <span class="s-status ss-ready">ready <i class="fa-solid fa-check" aria-hidden="true"></i></span>
+        </div>
+      </article>
+
+      <article class="s-card">
+        <div class="s-card-top top-rose"></div>
+        <div class="s-card-body">
+          <span class="s-cat"><i class="fa-solid fa-globe" aria-hidden="true"></i> Pure Maths · Talk</span>
+          <h3 class="s-title">Tomorrow: Not a Question of When, But Where!</h3>
+          <p class="s-desc">Why does the International Date Line look like it was drawn by a toddler? Spherical coordinates + geopolitical chaos.</p>
+        </div>
+        <div class="s-card-foot">
+          <span class="s-meta">Yrs 9–13 · 45–60 min</span>
+          <span class="s-status ss-ready">ready <i class="fa-solid fa-check" aria-hidden="true"></i></span>
+        </div>
+      </article>
+
+      <article class="s-card">
+        <div class="s-card-top top-green"></div>
+        <div class="s-card-body">
+          <span class="s-cat"><i class="fa-solid fa-chart-bar" aria-hidden="true"></i> Stats & Data · Talk</span>
+          <h3 class="s-title">Statistical Fallacies: When Maths Meets Human Decision-Making</h3>
+          <p class="s-desc">From the lottery to legal trials — the most important ways statistical reasoning goes wrong and what we can do about it.</p>
+        </div>
+        <div class="s-card-foot">
+          <span class="s-meta">Yrs 10–13 · 45–60 min</span>
+          <span class="s-status ss-soon">coming soon</span>
+        </div>
+      </article>
+
+      <article class="s-card">
+        <div class="s-card-top top-mustard"></div>
+        <div class="s-card-body">
+          <span class="s-cat"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Careers · Talk</span>
+          <h3 class="s-title">Meet a Researcher</h3>
+          <p class="s-desc">An honest, personal talk about a non-linear path into research. Young carer. Chronic illness. School without Further Maths. Still here.</p>
+        </div>
+        <div class="s-card-foot">
+          <span class="s-meta">Yrs 9–13 · 30–45 min</span>
+          <span class="s-status ss-ready">ready <i class="fa-solid fa-check" aria-hidden="true"></i></span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════ STATS ══════ -->
+<section class="stats-section" aria-label="Key statistics">
+  <div class="stats-inner" role="list">
+    <div class="stat-item" role="listitem">
+      <span class="stat-circle"><span class="stat-n">300+</span></span>
+      <span class="stat-label">students in one<br>Royal Institution lecture</span>
+    </div>
+    <div class="stat-item" role="listitem">
+      <span class="stat-circle"><span class="stat-n">90%</span></span>
+      <span class="stat-label">said ideas were<br>clearly explained</span>
+    </div>
+    <div class="stat-item" role="listitem">
+      <span class="stat-circle"><span class="stat-n">20+</span></span>
+      <span class="stat-label">sessions from<br>Year 3 to Sixth Form</span>
+    </div>
+    <div class="stat-item" role="listitem">
+      <span class="stat-circle"><span class="stat-n">5★</span></span>
+      <span class="stat-label">major awards<br>including FameLab</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ SCI COMM ══════ -->
+<section class="scicomm-section" aria-labelledby="scicomm-h">
+  <h2 class="scicomm-heading" id="scicomm-h">Making maths feel alive</h2>
+  <span class="scicomm-sub">...out in the wild, not just in schools</span>
+  <div class="scicomm-grid">
+    <div class="sc-card">
+      <span class="sc-icon" role="img" aria-label="Rabbit"><i class="fa-solid fa-hat-wizard" aria-hidden="true"></i></span>
+      <h3 class="sc-title">Wisdom from Wonderland</h3>
+      <p class="sc-body">Four FameLab-style short talks using Alice in Wonderland as a jumping-off point for data science, inference, ocean science, and climate. On YouTube.</p>
+      <a href="https://youtu.be/ASeRrt7XYJk" class="sc-link">watch the series →</a>
+    </div>
+    <div class="sc-card">
+      <span class="sc-icon" role="img" aria-label="Microphone"><i class="fa-solid fa-microphone" aria-hidden="true"></i></span>
+      <h3 class="sc-title">Talks & Conferences</h3>
+      <p class="sc-body">Royal Institution · Gathering for Gardner (Atlanta) · MathsJam · FameLab Regional Winner & National Finalist · Young Scientists Journal Conference.</p>
+      <a href="/sci-comm" class="sc-link">full list →</a>
+    </div>
+    <div class="sc-card">
+      <span class="sc-icon" role="img" aria-label="Pen"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+      <h3 class="sc-title">Science Writing</h3>
+      <p class="sc-body">Science poetry, mathematical essays, accessible explainers. Womanthology · Imperial College Faculty of Natural Sciences Blog · Carnival of Mathematics.</p>
+      <a href="/writing" class="sc-link">read my writing →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ WRITING ══════ -->
+<section class="writing-section" aria-labelledby="writing-h">
+  <div class="writing-inner">
+    <h2 class="writing-h" id="writing-h">From the notebook</h2>
+    <span class="writing-sub">rabbit holes I went down (you've been warned)</span>
+    <div class="writing-list" role="list">
+      <a href="/posts/consecutive-odd-semi-primes" class="w-item" role="listitem">
+        <span class="w-date">Aug 2024</span>
+        <span class="w-title">Rabbit Hole #2 — Consecutive Odd Semi-Primes</span>
+        <span class="w-tag">Recreational Maths</span>
+      </a>
+      <a href="/posts/making-of-a-modeller" class="w-item" role="listitem">
+        <span class="w-date">Sep 2024</span>
+        <span class="w-title">Science Art #1 — The Making of a Modeller</span>
+        <span class="w-tag">Science Art</span>
+      </a>
+      <a href="/posts/consecutive-semi-primes" class="w-item" role="listitem">
+        <span class="w-date">Jul 2024</span>
+        <span class="w-title">Rabbit Hole #1 — Consecutive Semi-Primes</span>
+        <span class="w-tag">Recreational Maths</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="cta-section" aria-labelledby="cta-h">
+  <span class="cta-scribble">psst — schools, this bit is for you <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span>
+  <h2 class="cta-h" id="cta-h">Let's make maths<br>unforgettable.</h2>
+  <p class="cta-p">
+    Sessions for Year 3 through Sixth Form<br>
+    London & surrounding areas · weekdays & some weekends<br>
+    bespoke content very welcome
+  </p>
+  <a href="/cdn-cgi/l/email-protection#3046515e554343517046515e554343515d5154451e535f5d" class="cta-btn">get in touch →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Vanessa Madu</div>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <div class="footer-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0573646b607676644573646b60767664686461702b666a68">[email&#160;protected]</a></div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/sessions">Sessions</a>
+      <a href="/research">Research</a>
+      <a href="/sci-comm">Science Communication</a>
+      <a href="/writing">Writing & Notes</a>
+      <a href="/about">About</a>
+      <a href="/cv">Academic CV</a>
+      <a href="/cdn-cgi/l/email-protection#2c5a4d42495f5f4d6c5a4d42495f5f4d414d4859024f4341">Book a Session

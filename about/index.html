@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Vanessa Madu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #4558C8;
+  --green2:  #3448B0;
+  --sage:    #5AA06E;
+  --mist:    #C8D2FF;
+  --cream:   #F4F2EC;
+  --paper:   #EDEAE2;
+  --rose:    #D4756A;
+  --rose2:   #A85A50;
+  --ink:     #1C1C18;
+  --pencil:  #4A4860;
+  --mustard: #7FC48E;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(69,88,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69,88,200,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+a { text-decoration: none; color: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+.skip-link {
+  position: absolute; top: -999px; left: 1rem;
+  background: var(--cream); color: var(--green);
+  font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ── NAV ── */
+nav {
+  background: var(--green);
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--cream);
+}
+.nav-links { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--mist); padding: 0.4rem 0.85rem; border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { background: rgba(255,255,255,0.15); color: var(--cream); }
+.nav-book {
+  background: var(--rose) !important; color: var(--cream) !important;
+  font-weight: 700 !important; border-radius: 999px !important;
+}
+.nav-book:hover { background: var(--rose2) !important; }
+
+/* ── HERO / INTRO ── */
+.about-hero {
+  background: var(--paper);
+  position: relative; overflow: hidden;
+  padding: 0;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 50px;
+  background: var(--cream);
+  clip-path: polygon(0% 70%, 2% 30%, 5% 60%, 8% 20%, 11% 55%, 15% 25%, 19% 60%, 23% 20%, 27% 55%, 31% 30%, 35% 65%, 39% 20%, 43% 55%, 47% 30%, 51% 60%, 55% 20%, 59% 55%, 63% 30%, 67% 65%, 71% 20%, 75% 55%, 79% 30%, 83% 60%, 87% 20%, 91% 55%, 95% 30%, 98% 60%, 100% 40%, 100% 100%, 0% 100%);
+  z-index: 2;
+}
+
+.about-hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 380px 1fr;
+  min-height: 85vh;
+}
+
+/* photo column */
+.about-photo-col {
+  position: relative; overflow: hidden;
+  background: var(--green);
+}
+
+.about-photo-col img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 55% top;
+  display: block;
+  mix-blend-mode: normal;
+}
+
+.about-photo-col::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(69,88,200,0.4) 100%
+  );
+  pointer-events: none;
+}
+
+/* text column */
+.about-text-col {
+  padding: 5rem 4rem 6rem 4rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.about-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--sage); transform: rotate(-1.5deg);
+  display: inline-block; margin-bottom: 0.8rem;
+}
+
+.about-h1 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--green); line-height: 0.95;
+  letter-spacing: -0.02em; margin-bottom: 1.8rem;
+}
+
+.about-intro {
+  font-size: 1rem; font-weight: 300;
+  color: var(--pencil); line-height: 1.9;
+  max-width: 520px;
+}
+.about-intro p + p { margin-top: 1rem; }
+.about-intro strong { color: var(--ink); font-weight: 500; }
+
+/* handwritten aside */
+.about-aside {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--rose); transform: rotate(-1deg);
+  display: inline-block; margin-top: 1.2rem;
+  border-left: 2px solid var(--rose);
+  padding-left: 0.8rem;
+}
+
+/* role chips */
+.role-chips {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-top: 2rem;
+}
+.role-chip {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--pencil);
+  background: var(--cream);
+  border: 1.5px dashed rgba(69,88,200,0.25);
+  border-radius: 8px; padding: 0.35rem 0.8rem;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.role-chip i { font-size: 0.8rem; color: var(--sage); }
+
+/* ── SECTION SHARED ── */
+.section {
+  max-width: 1200px; margin: 0 auto;
+  padding: 5rem 3rem;
+}
+
+.section-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--sage); display: block;
+  margin-bottom: 0.4rem; transform: rotate(-1deg);
+}
+
+.section-h {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--green); line-height: 1.05;
+  letter-spacing: -0.02em; margin-bottom: 3rem;
+}
+
+/* ── RESEARCH SECTION ── */
+.research-bg {
+  background: var(--green);
+  position: relative; overflow: hidden;
+  clip-path: polygon(0 28px, 1% 8px, 2% 22px, 4% 5px, 6% 20px, 8% 6px, 10% 24px, 13% 4px, 16% 18px, 19% 5px, 22% 22px, 25% 4px, 28% 20px, 31% 6px, 34% 24px, 37% 4px, 40% 20px, 43% 5px, 46% 22px, 49% 4px, 52% 20px, 55% 6px, 58% 24px, 61% 4px, 64% 20px, 67% 5px, 70% 22px, 73% 4px, 76% 20px, 79% 6px, 82% 24px, 85% 4px, 88% 20px, 91% 5px, 94% 22px, 97% 6px, 100% 18px, 100% 100%, 0 100%);
+  margin-top: -20px; padding-top: 3rem;
+}
+
+.research-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 3rem 3rem 5rem;
+}
+
+.research-inner .section-eyebrow { color: rgba(200,210,255,0.7); transform: none; }
+.research-inner .section-h { color: var(--cream); }
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.research-card {
+  background: rgba(255,255,255,0.08);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 8px; padding: 1.8rem;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+}
+.research-card:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-3px); }
+.research-card:nth-child(odd) { transform: rotate(-0.3deg); }
+.research-card:nth-child(even) { transform: rotate(0.4deg); margin-top: 0.5rem; }
+.research-card:hover { transform: rotate(0deg) translateY(-3px) !important; }
+
+.rc-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--mist); opacity: 0.7;
+  display: block; margin-bottom: 0.5rem;
+}
+.rc-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem; font-weight: 900;
+  color: var(--cream); line-height: 1.25; margin-bottom: 0.7rem;
+}
+.rc-body {
+  font-size: 0.82rem; color: rgba(200,210,255,0.7); line-height: 1.75;
+}
+
+/* ── SCI COMM SECTION ── */
+.scicomm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem; margin-top: 0;
+}
+
+.sc-card {
+  background: var(--paper);
+  border: 1.5px solid rgba(69,88,200,0.12);
+  border-radius: 8px; padding: 1.8rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sc-card:nth-child(odd)  { transform: rotate(-0.5deg); }
+.sc-card:nth-child(even) { transform: rotate(0.4deg); margin-top: 0.5rem; }
+.sc-card:hover { transform: rotate(0deg) translateY(-4px) !important; box-shadow: 0 10px 28px rgba(69,88,200,0.1); }
+
+.sc-icon {
+  width: 40px; height: 40px;
+  background: var(--mist);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--green); font-size: 1.1rem;
+}
+
+.sc-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem; font-weight: 900;
+  color: var(--ink); margin-bottom: 0.5rem;
+}
+.sc-card p { font-size: 0.82rem; color: var(--pencil); line-height: 1.75; }
+.sc-link {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--green); display: inline-block;
+  margin-top: 0.8rem; border-bottom: 1.5px dashed rgba(69,88,200,0.3);
+  padding-bottom: 1px; transition: color 0.15s;
+}
+.sc-link:hover { color: var(--green2); }
+
+/* ── AWARDS SECTION ── */
+.awards-bg {
+  background: var(--paper);
+  border-top: 1px dashed rgba(69,88,200,0.15);
+  border-bottom: 1px dashed rgba(69,88,200,0.15);
+}
+
+.awards-list {
+  display: flex; flex-direction: column; gap: 0;
+}
+
+.award-item {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 1.2rem; align-items: center;
+  padding: 1.1rem 0;
+  border-bottom: 1px dashed rgba(69,88,200,0.12);
+  transition: padding-left 0.2s;
+}
+.award-item:first-child { border-top: 1px dashed rgba(69,88,200,0.12); }
+.award-item:hover { padding-left: 0.5rem; }
+
+.award-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.award-icon.gold   { background: #FEF9C3; color: #854D0E; }
+.award-icon.purple { background: var(--mist); color: var(--green); }
+.award-icon.rose   { background: #FCE7F3; color: #9D174D; }
+.award-icon.green  { background: #D1FAE5; color: #065F46; }
+
+.award-name {
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem; font-weight: 900;
+  color: var(--ink); line-height: 1.3;
+}
+.award-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; color: var(--pencil); font-weight: 500;
+}
+.award-year {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 700;
+  color: var(--sage); flex-shrink: 0;
+}
+
+/* ── CV SECTION ── */
+.cv-bg {
+  background: var(--cream);
+}
+
+.cv-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+}
+
+.cv-sidebar {
+  padding-right: 2rem;
+  border-right: 1px dashed rgba(69,88,200,0.15);
+  position: sticky; top: 80px;
+  align-self: start;
+}
+
+.cv-nav { display: flex; flex-direction: column; gap: 0.3rem; list-style: none; }
+.cv-nav a {
+  font-family: 'Caveat', cursive;
+  font-size: 0.95rem; font-weight: 600;
+  color: var(--pencil); padding: 0.4rem 0.6rem;
+  border-radius: 6px; display: flex;
+  align-items: center; gap: 0.5rem;
+  transition: background 0.15s, color 0.15s;
+}
+.cv-nav a:hover { background: var(--paper); color: var(--green); }
+.cv-nav a i { font-size: 0.8rem; color: var(--sage); width: 16px; }
+
+.cv-download {
+  margin-top: 1.5rem;
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 0.88rem;
+  background: var(--green); color: var(--cream);
+  padding: 0.6rem 1.2rem; border-radius: 999px;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: background 0.2s;
+  border: none; cursor: pointer; width: fit-content;
+}
+.cv-download:hover { background: var(--green2); }
+
+.cv-content { padding-left: 3rem; }
+
+.cv-section { margin-bottom: 3.5rem; }
+
+.cv-section-h {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--green);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.cv-section-h i { font-size: 1.1rem; color: var(--sage); }
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed rgba(69,88,200,0.1);
+}
+.cv-entry:last-child { border-bottom: none; }
+
+.cv-date {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--sage); line-height: 1.5;
+  padding-top: 0.15rem;
+}
+
+.cv-entry-title {
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem; font-weight: 900;
+  color: var(--ink); margin-bottom: 0.2rem;
+}
+.cv-entry-place {
+  font-size: 0.82rem; font-weight: 500;
+  color: var(--pencil); margin-bottom: 0.4rem;
+}
+.cv-entry-detail {
+  font-size: 0.8rem; color: var(--pencil);
+  line-height: 1.7; font-weight: 300;
+}
+.cv-entry-detail ul { list-style: none; display: flex; flex-direction: column; gap: 0.2rem; }
+.cv-entry-detail li { padding-left: 1rem; position: relative; }
+.cv-entry-detail li::before { content: '—'; position: absolute; left: 0; color: var(--sage); }
+
+/* skills tags */
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+.skill-tag {
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--paper);
+  border: 1px solid rgba(69,88,200,0.15);
+  border-radius: 4px; padding: 0.15rem 0.5rem;
+  color: var(--pencil);
+}
+
+/* ── FOOTER ── */
+footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; margin-bottom: 2.5rem;
+}
+.footer-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-style: italic; font-weight: 900;
+  color: var(--cream); margin-bottom: 0.7rem;
+}
+.footer-desc {
+  font-size: 0.82rem; color: rgba(255,255,255,0.4);
+  line-height: 1.72; max-width: 360px; margin-bottom: 1rem;
+}
+.footer-email { font-size: 0.82rem; color: var(--rose); font-weight: 500; }
+.footer-nav { display: flex; flex-direction: column; gap: 0.55rem; text-align: right; }
+.footer-nav a {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(255,255,255,0.35); transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(255,255,255,0.1);
+  display: flex; justify-content: space-between;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: rgba(255,255,255,0.2);
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo">Vanessa Madu</a>
+  <ul class="nav-links">
+    <li><a href="/sessions">Sessions</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/sci-comm">Sci Comm</a></li>
+    <li><a href="/writing">Writing</a></li>
+    <li><a href="/about" class="active">About</a></li>
+    <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- HERO INTRO -->
+<section class="about-hero" aria-label="Introduction" id="main-content">
+  <div class="about-hero-inner">
+
+    <div class="about-photo-col" aria-hidden="true">
+      <img src="vanessa-hero.jpg" alt="Vanessa Madu holding giant playing cards, wearing a red coat and maths-patterned dress">
+    </div>
+
+    <div class="about-text-col">
+      <span class="about-eyebrow">hi, I'm Vanessa <i class="fa-solid fa-hand-wave" aria-hidden="true"></i></span>
+
+      <h1 class="about-h1">Mathematician.<br>Ocean scientist.<br>Science communicator.</h1>
+
+      <div class="about-intro">
+        <p>I'm a <strong>PhD researcher in Statistical Machine Learning</strong> at Imperial College London, where I develop new methods for predicting ocean surface currents. I'm also a Guest Teacher in Mathematics at the LSE — which means on any given week I might be teaching linear algebra to economics students, running a fluid dynamics demo for a Year 12 class, or going down a rabbit hole about semi-primes at midnight.</p>
+        <p>I came to mathematics via a non-linear path: a school that didn't offer Further Mathematics, a young carer, chronic illness, and plenty of moments of doubt. I'm still here, and I think that matters — not just for me, but for every student who doesn't see themselves in the usual STEM story.</p>
+        <p>I believe mathematics is for everyone. Not as a platitude, but as something I've spent my career trying to actually make true.</p>
+      </div>
+
+      <span class="about-aside">"Science is my Wonderland and Mathematics makes it tick."</span>
+
+      <div class="role-chips" aria-label="Current roles">
+        <span class="role-chip"><i class="fa-solid fa-flask"></i> PhD Researcher · Imperial College London</span>
+        <span class="role-chip"><i class="fa-solid fa-chalkboard-user"></i> Guest Teacher · LSE</span>
+        <span class="role-chip"><i class="fa-solid fa-microphone"></i> Science Communicator</span>
+        <span class="role-chip"><i class="fa-solid fa-book-open"></i> Mathematical Gazette Reviewer</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="research-bg" aria-labelledby="research-h">
+  <div class="research-inner">
+    <span class="section-eyebrow">What I spend my days thinking about</span>
+    <h2 class="section-h" id="research-h">Research &amp; academic work</h2>
+
+    <div class="research-grid">
+
+      <div class="research-card">
+        <span class="rc-label"><i class="fa-solid fa-flask"></i> PhD Research · Current</span>
+        <h3 class="rc-title">Statistical Machine Learning for ocean surface current prediction</h3>
+        <p class="rc-body">Developing multivariate extensions of Natural Gradient Boosting (NGBoost) for probabilistic signal extraction in high-dimensional spatiotemporal systems. Includes robust pipelines for sparse, irregularly sampled ocean drifter data — and a genuinely embarrassing amount of thinking about rubber ducks.</p>
+      </div>
+
+      <div class="research-card">
+        <span class="rc-label"><i class="fa-solid fa-wave-square"></i> Short Project · 2024</span>
+        <h3 class="rc-title">Robust models for time-varying signals</h3>
+        <p class="rc-body">Derived a novel general form of the probability density function for complex random variables under symmetry conditions. Produced a new proof validating the PDF for a weighted infinite sum of i.i.d. uniform variables, adding proof details to a paper by Catania, Harvey, and Luati (2024).</p>
+      </div>
+
+      <div class="research-card">
+        <span class="rc-label"><i class="fa-solid fa-water"></i> Short Project · 2024</span>
+        <h3 class="rc-title">Physically interpretable error metrics for ocean surface models</h3>
+        <p class="rc-body">Proposed a system of model evaluation and uncertainty metrics for a phenomena-centred ocean surface modelling approach. Presented at SIAM UKIE Annual Meeting 2024. Awarded SIAM UKIE Student Travel Award.</p>
+      </div>
+
+      <div class="research-card">
+        <span class="rc-label"><i class="fa-solid fa-hashtag"></i> Recreational Mathematics</span>
+        <h3 class="rc-title">On sequences of consecutive odd semi-primes</h3>
+        <p class="rc-body">Original recreational mathematics research presented at MathsJam Annual Gathering 2025 and the Gathering for Gardner (G4G15) in Atlanta, 2024. Awarded full G4G scholarship and £900 Dean's Fund Travel Grant.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCI COMM -->
+<section aria-labelledby="scicomm-h">
+  <div class="section">
+    <span class="section-eyebrow">Getting maths out into the world</span>
+    <h2 class="section-h" id="scicomm-h">Science communication &amp; outreach</h2>
+
+    <div class="scicomm-grid">
+
+      <div class="sc-card">
+        <div class="sc-icon"><i class="fa-solid fa-hat-wizard"></i></div>
+        <h3>Wisdom from Wonderland</h3>
+        <p>A series of FameLab-style short talks using Alice in Wonderland as a jumping-off point for data science, statistical inference, ocean science, and climate attribution. Available on YouTube.</p>
+        <a href="https://youtu.be/ASeRrt7XYJk" class="sc-link">Watch the series →</a>
+      </div>
+
+      <div class="sc-card">
+        <div class="sc-icon"><i class="fa-solid fa-microphone"></i></div>
+        <h3>Talks &amp; conferences</h3>
+        <p>Royal Institution Main Lecture Theatre (300+ students) · Gathering for Gardner, Atlanta · MathsJam Annual Gathering · Young Scientists Journal Conference · FameLab Regional Winner &amp; National Finalist 2023.</p>
+        <a href="/sci-comm" class="sc-link">Full talk list →</a>
+      </div>
+
+      <div class="sc-card">
+        <div class="sc-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h3>Science writing</h3>
+        <p>Science poetry, mathematical essays, and accessible explainers. Published in Womanthology and the Imperial College Faculty of Natural Sciences Blog. Nursery Rhymes for Curious Minds featured in the Carnival of Mathematics.</p>
+        <a href="/writing" class="sc-link">Read my writing →</a>
+      </div>
+
+      <div class="sc-card">
+        <div class="sc-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Hello World Hack</h3>
+        <p>Co-founded a coding workshop for girls aged 7–10, awarded £2,000 from the Imperial Societal Engagement Seed Fund. Delivered to 60+ children in person and 30 virtually, now offered annually.</p>
+      </div>
+
+      <div class="sc-card">
+        <div class="sc-icon"><i class="fa-solid fa-users"></i></div>
+        <h3>RCSU Science Challenge</h3>
+        <p>Chaired the annual science communication competition 2022–23, increasing participation by 80% to ~180 school-division participants worldwide. Introduced Science Shorts video series. Overall Winner 2022.</p>
+      </div>
+
+      <div class="sc-card">
+        <div class="sc-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3>Science art</h3>
+        <p>First Runner-Up, Challenger Society for Marine Science Art &amp; Photography Competition 2024. Designed the History of Mathematics window display in the Huxley Building at Imperial College London, displayed until at least 2034.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="awards-bg" aria-labelledby="awards-h">
+  <div class="section">
+    <span class="section-eyebrow">Things I'm quietly proud of</span>
+    <h2 class="section-h" id="awards-h">Awards &amp; recognition</h2>
+
+    <div class="awards-list" role="list">
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon gold"><i class="fa-solid fa-trophy"></i></div>
+        <div>
+          <div class="award-name">President's Award for Excellence in Societal Engagement</div>
+          <div class="award-sub">Imperial College London</div>
+        </div>
+        <div class="award-year">2020 &amp; 2024</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon purple"><i class="fa-solid fa-star"></i></div>
+        <div>
+          <div class="award-name">RCSA Prize — Academic Excellence &amp; Contribution to the College</div>
+          <div class="award-sub">Royal College of Science Association · Awarded at Commemoration Day with £300</div>
+        </div>
+        <div class="award-year">2023</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon rose"><i class="fa-solid fa-microphone"></i></div>
+        <div>
+          <div class="award-name">FameLab Regional Winner &amp; National Finalist</div>
+          <div class="award-sub">Cheltenham Science Festival / KMTV</div>
+        </div>
+        <div class="award-year">2023</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon gold"><i class="fa-solid fa-award"></i></div>
+        <div>
+          <div class="award-name">Women of the Future — Young Star Award</div>
+          <div class="award-sub">Women of the Future Programme</div>
+        </div>
+        <div class="award-year">2019</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon purple"><i class="fa-solid fa-medal"></i></div>
+        <div>
+          <div class="award-name">Outstanding Achievement Medal</div>
+          <div class="award-sub">Imperial College London</div>
+        </div>
+        <div class="award-year">2020</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon green"><i class="fa-solid fa-ranking-star"></i></div>
+        <div>
+          <div class="award-name">Rare Rising Star — Top 10 Black Students in the UK</div>
+          <div class="award-sub">4th and youngest on the list</div>
+        </div>
+        <div class="award-year">2020</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon gold"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <div class="award-name">Dean's List — Top 10% of MSci Mathematics Year 3</div>
+          <div class="award-sub">Imperial College London</div>
+        </div>
+        <div class="award-year">2022</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon purple"><i class="fa-solid fa-lightbulb"></i></div>
+        <div>
+          <div class="award-name">Imperial College Mathematics Society — Inspiration Award</div>
+          <div class="award-sub">Imperial College London</div>
+        </div>
+        <div class="award-year">2020</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon rose"><i class="fa-solid fa-code"></i></div>
+        <div>
+          <div class="award-name">HSBC Generating Genius Inclusive Innovation Hack — 2nd Place</div>
+          <div class="award-sub">One of two "most outstanding student" distinctions</div>
+        </div>
+        <div class="award-year">2020</div>
+      </div>
+
+      <div class="award-item" role="listitem">
+        <div class="award-icon green"><i class="fa-solid fa-flask"></i></div>
+        <div>
+          <div class="award-name">EPSRC PhD Studentship — Full Funding</div>
+          <div class="award-sub">Statistical Machine Learning, Imperial College London &amp; University of Oxford</div>
+        </div>
+        <div class="award-year">2023–2027</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CV SECTION -->
+<section class="cv-bg" aria-labelledby="cv-h" id="cv">
+  <div class="section">
+    <span class="section-eyebrow">The full picture</span>
+    <h2 class="section-h" id="cv-h">Academic CV</h2>
+
+    <div class="cv-layout">
+
+      <!-- sidebar nav -->
+      <div class="cv-sidebar">
+        <ul class="cv-nav" aria-label="CV sections">
+          <li><a href="#cv-education"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+          <li><a href="#cv-research"><i class="fa-solid fa-flask"></i> Research</a></li>
+          <li><a href="#cv-teaching"><i class="fa-solid fa-chalkboard-user"></i> Teaching</a></li>
+          <li><a href="#cv-scicomm"><i class="fa-solid fa-microphone"></i> Sci Comm</a></li>
+          <li><a href="#cv-conferences"><i class="fa-solid fa-location-dot"></i> Conferences</a></li>
+          <li><a href="#cv-skills"><i class="fa-solid fa-laptop-code"></i> Skills</a></li>
+          <li><a href="#cv-memberships"><i class="fa-solid fa-id-card"></i> Memberships</a></li>
+        </ul>
+        <button class="cv-download" onclick="window.print()">
+          <i class="fa-solid fa-download"></i> Download CV
+        </button>
+      </div>
+
+      <div class="cv-content">
+
+        <!-- Education -->
+        <div class="cv-section" id="cv-education">
+          <h3 class="cv-section-h"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+
+          <div class="cv-entry">
+            <div class="cv-date">Oct 2023<br>– Present</div>
+            <div>
+              <div class="cv-entry-title">PhD in Modern Statistics and Statistical Machine Learning</div>
+              <div class="cv-entry-place">Imperial College London &amp; University of Oxford · EPSRC Centre for Doctoral Training (StatML)</div>
+              <div class="cv-entry-detail">
+                Research: developing Statistical Machine Learning methods for predicting ocean surface currents.
+                Awarded EPSRC PhD Studentship (full funding, 2023–2027).
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Oct 2018<br>– Jun 2023</div>
+            <div>
+              <div class="cv-entry-title">MSci Mathematics, First Class Honours</div>
+              <div class="cv-entry-place">Imperial College London</div>
+              <div class="cv-entry-detail">
+                Awards: RCSA Prize, Dean's List (Year 3), First Year Poster Project Prize.
+                Final year research project in Mathematical Computational Oceanography.
+                Relevant modules: Mathematical Foundations of Machine Learning (93%), Fluid Dynamics 1 (96%), Geophysical Fluid Dynamics (95%), Applied Complex Analysis (90%).
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Sep 2011<br>– Jun 2018</div>
+            <div>
+              <div class="cv-entry-title">A-Levels &amp; GCSEs</div>
+              <div class="cv-entry-place">Ursuline Academy Ilford, London</div>
+              <div class="cv-entry-detail">
+                A-Levels: A*A*A*A* in Mathematics, Further Mathematics, Physics, and Chemistry.
+                GCSEs: 1 A* with distinction, 9 A*s and 1 A.
+                UK Senior Mathematics Challenge 2017: Gold, Top 5% in the UK.
+                UK Chemistry Olympiad 2018: Silver.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research -->
+        <div class="cv-section" id="cv-research">
+          <h3 class="cv-section-h"><i class="fa-solid fa-flask"></i> Research Experience</h3>
+
+          <div class="cv-entry">
+            <div class="cv-date">Jun 2024<br>– Present</div>
+            <div>
+              <div class="cv-entry-title">PhD Research: Statistical Machine Learning for Ocean Surface Current Prediction</div>
+              <div class="cv-entry-place">Supervisors: Dr Adam Sykulski &amp; Dr Marina Evangelou · Imperial College London</div>
+              <div class="cv-entry-detail"><ul>
+                <li>Developing multivariate extensions of Natural Gradient Boosting (NGBoost) for probabilistic signal extraction</li>
+                <li>Engineering end-to-end modelling pipelines for sparse, irregularly sampled data</li>
+                <li>Implementing advanced spatial interpolation methods with haversine metrics</li>
+                <li>Extending probabilistic prediction models by incorporating sea surface temperature gradients</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Mar – Jun 2024</div>
+            <div>
+              <div class="cv-entry-title">Robust Models for Time-Varying Signals</div>
+              <div class="cv-entry-place">Supervisor: Professor Alessandra Luati · PhD Short Project, Imperial College London</div>
+              <div class="cv-entry-detail"><ul>
+                <li>Derived a novel general form of the PDF under symmetry and regularity conditions for complex random variables</li>
+                <li>Produced a new proof validating the PDF for a weighted infinite sum of i.i.d. uniform variables</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Oct 2023<br>– Mar 2024</div>
+            <div>
+              <div class="cv-entry-title">Physically Interpretable Error Metrics for Ocean Surface Models</div>
+              <div class="cv-entry-place">Supervisor: Dr Adam Sykulski · PhD Short Project, Imperial College London</div>
+              <div class="cv-entry-detail"><ul>
+                <li>Proposed a system of model evaluation and uncertainty metrics for phenomena-centred ocean surface modelling</li>
+                <li>Presented at SIAM UKIE Annual Meeting 2024 · Awarded SIAM UKIE Student Travel Award</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2022 – 2023</div>
+            <div>
+              <div class="cv-entry-title">Computational Modelling of the Clustering of Floating Drifters on the Ocean Surface</div>
+              <div class="cv-entry-place">Supervisor: Professor Pavel Berloff · Final Year MSci Project, Imperial College London</div>
+              <div class="cv-entry-detail"><ul>
+                <li>Constructed a dynamically inspired velocity field from a spectral density function — a novel approach in the field</li>
+                <li>Produced simulations using Fortran on Imperial's HPC facilities</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Aug 2020</div>
+            <div>
+              <div class="cv-entry-title">UROP Data Analyst</div>
+              <div class="cv-entry-place">Supervisor: Professor Emma McCoy · Department of Mathematics, Imperial College London</div>
+              <div class="cv-entry-detail">One of two students accepted onto this competitive, fully funded placement. Visualised and analysed student attainment data for minority groups using R and pandas.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaching -->
+        <div class="cv-section" id="cv-teaching">
+          <h3 class="cv-section-h"><i class="fa-solid fa-chalkboard-user"></i> Teaching &amp; Education</h3>
+
+          <div class="cv-entry">
+            <div class="cv-date">2025<br>– Present</div>
+            <div>
+              <div class="cv-entry-title">Guest Teacher in Mathematics</div>
+              <div class="cv-entry-place">London School of Economics</div>
+              <div class="cv-entry-detail">Teaching modules in analysis, linear algebra, mathematical methods for finance, quantitative methods for finance, abstract mathematics, and further mathematical methods.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Oct 2024<br>– Jan 2025</div>
+            <div>
+              <div class="cv-entry-title">Senior Graduate Teaching Assistant</div>
+              <div class="cv-entry-place">Imperial College London · Mathematical Mysteries (I-Explore module)</div>
+              <div class="cv-entry-detail">Described by the lead academic as "absolutely the best GTA I have ever worked with". Guided non-mathematician students through infinity, symmetry, prime numbers, logic, and fractals.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2023 – 2025</div>
+            <div>
+              <div class="cv-entry-title">Academic Leader (Mathematics)</div>
+              <div class="cv-entry-place">Imperial College London Outreach · Sutton Trust, STEM Futures, STEM Potential, Insights Summer Schools</div>
+              <div class="cv-entry-detail"><ul>
+                <li>Developed and taught fluid dynamics, probability, fractals, number theory, and infinity to Year 10–12 students from underrepresented backgrounds</li>
+                <li>Created content for the Primary Maths Transition Programme</li>
+                <li>Co-led Primary Science Club at Colville Primary School (Spring 2024)</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Jun – Sep 2022</div>
+            <div>
+              <div class="cv-entry-title">Academic Mentor (MAT Preparation Programme)</div>
+              <div class="cv-entry-place">Mathematics in Education and Industry (MEI)</div>
+              <div class="cv-entry-detail">Designed extension problems for highly capable students preparing for the Mathematics Admissions Test. Provided detailed written feedback throughout the summer.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Jul – Sep 2019</div>
+            <div>
+              <div class="cv-entry-title">Mathematics Admissions Test Mentor</div>
+              <div class="cv-entry-place">Problem Solving MATters, MEI</div>
+              <div class="cv-entry-detail">Mentored 8 Year 12 students preparing for the MAT (Oxford, Imperial, Warwick). Commended by colleagues for clarity of explanation.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Jul – Sep 2018</div>
+            <div>
+              <div class="cv-entry-title">Resource Author</div>
+              <div class="cv-entry-place">Physics and Maths Tutor</div>
+              <div class="cv-entry-detail">Created over 50 model solutions for the Sixth Term Examination Papers (STEP), used for admissions to Cambridge and other universities.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sci Comm -->
+        <div class="cv-section" id="cv-scicomm">
+          <h3 class="cv-section-h"><i class="fa-solid fa-microphone"></i> Science Communication (selected)</h3>
+
+          <div class="cv-entry">
+            <div class="cv-date">2024</div>
+            <div>
+              <div class="cv-entry-title">Guest Lecturer, Climate Innovation Day</div>
+              <div class="cv-entry-place">Royal Institution Main Lecture Theatre</div>
+              <div class="cv-entry-detail">Delivered a lecture on fluid dynamics to 300+ Year 5/6 students. Teacher feedback: "The best explanation of fluid dynamics I have ever heard, and I did a mechanical engineering degree!"</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2023</div>
+            <div>
+              <div class="cv-entry-title">FameLab Regional Winner &amp; National Finalist</div>
+              <div class="cv-entry-place">Cheltenham Science Festival / KMTV</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2024</div>
+            <div>
+              <div class="cv-entry-title">Speaker — Gathering for Gardner (G4G15)</div>
+              <div class="cv-entry-place">Atlanta, Georgia · Talk: "A Chaotic Series of Mathematical Accidents"</div>
+              <div class="cv-entry-detail">Awarded full G4G scholarship and £900 Dean's Fund Travel Grant.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2025</div>
+            <div>
+              <div class="cv-entry-title">Speaker — MathsJam Annual Gathering</div>
+              <div class="cv-entry-place">Talk: "On Sequences of Consecutive Odd Semi-Primes"</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2022 – 2023</div>
+            <div>
+              <div class="cv-entry-title">Chair — RCSU Science Challenge</div>
+              <div class="cv-entry-place">Royal College of Science Union, Imperial College London</div>
+              <div class="cv-entry-detail">Increased participation by 80%; managed £7,000 budget; recruited judges including Kathy Sykes (BBC) and Tom Crawford (Numberphile); secured £1,000 pledge from Professor Lord Robert Winston.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2024<br>– Present</div>
+            <div>
+              <div class="cv-entry-title">Reviewer</div>
+              <div class="cv-entry-place">The Mathematical Gazette</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conferences -->
+        <div class="cv-section" id="cv-conferences">
+          <h3 class="cv-section-h"><i class="fa-solid fa-location-dot"></i> Conferences &amp; Workshops (selected)</h3>
+
+          <div class="cv-entry">
+            <div class="cv-date">2024</div>
+            <div>
+              <div class="cv-entry-title">US CLIVAR Ocean Uncertainty Quantification Summer School</div>
+              <div class="cv-entry-place">Rosenstiel School of Marine and Atmospheric Sciences, Miami, Florida</div>
+              <div class="cv-entry-detail">Awarded a highly competitive, fully funded place.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2024</div>
+            <div>
+              <div class="cv-entry-title">SIAM UKIE Annual Meeting</div>
+              <div class="cv-entry-place">University of Manchester · Poster and presentation · Awarded SIAM UKIE Student Travel Award</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2024</div>
+            <div>
+              <div class="cv-entry-title">CLASS Ocean Modelling Workshop</div>
+              <div class="cv-entry-place">National Oceanography Centre, Southampton · Fully funded · Awarded prize for Lagrangian particle tracking results</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2024</div>
+            <div>
+              <div class="cv-entry-title">Uncertainty Quantification Workshop</div>
+              <div class="cv-entry-place">National Physical Laboratory · Invited by Dr Emma Wooliams</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2025</div>
+            <div>
+              <div class="cv-entry-title">Changing the Face of Science Symposium</div>
+              <div class="cv-entry-place">Talk: MVN NGBoost for Ocean Surface Current Prediction</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="cv-section" id="cv-skills">
+          <h3 class="cv-section-h"><i class="fa-solid fa-laptop-code"></i> Skills</h3>
+
+          <div class="cv-entry">
+            <div class="cv-date">Programming</div>
+            <div>
+              <div class="skill-tags">
+                <span class="skill-tag">Python (Advanced)</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">SciPy</span>
+                <span class="skill-tag">Matplotlib</span>
+                <span class="skill-tag">Fortran</span>
+                <span class="skill-tag">Mathematica</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Scala</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">ML &amp; Statistics</div>
+            <div>
+              <div class="skill-tags">
+                <span class="skill-tag">Probabilistic regression</span>
+                <span class="skill-tag">Natural Gradient Boosting</span>
+                <span class="skill-tag">Gaussian processes</span>
+                <span class="skill-tag">Bayesian inference</span>
+                <span class="skill-tag">Time-series analysis</span>
+                <span class="skill-tag">Neural networks</span>
+                <span class="skill-tag">Model calibration</span>
+                <span class="skill-tag">Spatiotemporal interpolation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Communication</div>
+            <div>
+              <div class="skill-tags">
+                <span class="skill-tag">Public speaking (300+)</span>
+                <span class="skill-tag">Science writing</span>
+                <span class="skill-tag">Science poetry</span>
+                <span class="skill-tag">LaTeX</span>
+                <span class="skill-tag">Graphic design</span>
+                <span class="skill-tag">Video production</span>
+                <span class="skill-tag">Font design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Computing</div>
+            <div>
+              <div class="skill-tags">
+                <span class="skill-tag">HPC (Archer2)</span>
+                <span class="skill-tag">Parallel programming</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Unit testing</span>
+                <span class="skill-tag">Tableau</span>
+                <span class="skill-tag">Jupyter</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Languages</div>
+            <div>
+              <div class="skill-tags">
+                <span class="skill-tag">English (native)</span>
+                <span class="skill-tag">German (A2)</span>
+                <span class="skill-tag">Greek (learning)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memberships -->
+        <div class="cv-section" id="cv-memberships">
+          <h3 class="cv-section-h"><i class="fa-solid fa-id-card"></i> Professional Memberships</h3>
+          <div class="cv-entry">
+            <div class="cv-date"></div>
+            <div>
+              <div class="skill-tags">
+                <span class="skill-tag">Royal Statistical Society (RSS)</span>
+                <span class="skill-tag">Association of British Science Writers (ABSW)</span>
+                <span class="skill-tag">Challenger Society for Marine Science</span>
+                <span class="skill-tag">Royal Institution</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Vanessa Madu</div>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <div class="footer-email">vanessa@vanessamadu.com</div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/sessions">Sessions</a>
+      <a href="/research">Research</a>
+      <a href="/sci-comm">Science Communication</a>
+      <a href="/writing">Writing &amp; Notes</a>
+      <a href="/about">About</a>
+      <a href="/cv">Academic CV</a>
+      <a href="/sessions#enquire">Book a Session</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
+  </div>
+</footer>
+
+</body>
+</html>

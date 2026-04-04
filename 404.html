@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Vanessa Madu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green: #4558C8; --green2: #3448B0; --sage: #5AA06E;
+  --mist: #C8D2FF; --cream: #F4F2EC; --paper: #EDEAE2;
+  --rose: #D4756A; --rose2: #A85A50; --ink: #1C1C18; --pencil: #4A4860;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream); color: var(--ink);
+  min-height: 100vh; display: flex; flex-direction: column;
+  background-image:
+    linear-gradient(rgba(69,88,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69,88,200,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+nav {
+  background: var(--green); padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-weight: 900; font-size: 1.4rem; color: var(--cream);
+  text-decoration: none;
+}
+.main {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 4rem 2rem;
+}
+.inner { max-width: 500px; }
+.big-num {
+  font-family: 'Fraunces', serif; font-style: italic; font-weight: 900;
+  font-size: 9rem; color: var(--green); line-height: 1;
+  letter-spacing: -0.04em; display: block;
+}
+.oops {
+  font-family: 'Caveat', cursive; font-size: 1.2rem; font-weight: 600;
+  color: var(--sage); transform: rotate(-2deg); display: inline-block;
+  margin-bottom: 0.5rem;
+}
+h1 {
+  font-family: 'Fraunces', serif; font-style: italic; font-weight: 900;
+  font-size: 2rem; color: var(--ink); margin-bottom: 1rem;
+  line-height: 1.1;
+}
+p {
+  font-size: 1rem; font-weight: 300; color: var(--pencil);
+  line-height: 1.75; margin-bottom: 2rem;
+}
+.home-btn {
+  font-family: 'Fraunces', serif; font-style: italic; font-weight: 900;
+  font-size: 1rem; background: var(--green); color: var(--cream);
+  padding: 0.85rem 2rem; border-radius: 999px; display: inline-flex;
+  align-items: center; gap: 0.6rem; text-decoration: none;
+  transition: background 0.2s; box-shadow: 3px 3px 0 var(--green2);
+}
+.home-btn:hover { background: var(--green2); }
+.margin-note {
+  font-family: 'Caveat', cursive; font-size: 0.95rem; font-weight: 600;
+  color: var(--rose); display: block; margin-top: 1.5rem;
+  transform: rotate(-1deg);
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Vanessa Madu</a>
+</nav>
+<main class="main">
+  <div class="inner">
+    <span class="big-num">404</span>
+    <span class="oops">hmm, that's not right</span>
+    <h1>Page not found.</h1>
+    <p>This page seems to have gone down a rabbit hole and not come back. Try heading home — there's plenty to explore there.</p>
+    <a href="/" class="home-btn"><i class="fa-solid fa-house"></i> Back to home</a>
+    <span class="margin-note">← (the rubber ducks probably took it)</span>
+  </div>
+</main>
+</body>
+</html>

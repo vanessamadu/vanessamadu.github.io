@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Communication — Vanessa Madu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #4558C8;
+  --green2:  #3448B0;
+  --sage:    #5AA06E;
+  --mist:    #C8D2FF;
+  --cream:   #F4F2EC;
+  --paper:   #EDEAE2;
+  --rose:    #D4756A;
+  --rose2:   #A85A50;
+  --ink:     #1C1C18;
+  --pencil:  #4A4860;
+  --mustard: #7FC48E;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(69,88,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69,88,200,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+a { text-decoration: none; color: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+.skip-link {
+  position: absolute; top: -999px; left: 1rem;
+  background: var(--cream); color: var(--green);
+  font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ── NAV ── */
+nav {
+  background: var(--green);
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.4rem; color: var(--cream);
+}
+.nav-links { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--mist); padding: 0.4rem 0.85rem; border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { background: rgba(255,255,255,0.15); color: var(--cream); }
+.nav-book {
+  background: var(--rose) !important; color: var(--cream) !important;
+  font-weight: 700 !important; border-radius: 999px !important;
+}
+.nav-book:hover { background: var(--rose2) !important; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--paper);
+  padding: 5rem 3rem 4rem;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0; height: 50px;
+  background: var(--cream);
+  clip-path: polygon(0% 70%, 2% 30%, 5% 60%, 8% 20%, 11% 55%, 15% 25%, 19% 60%, 23% 20%, 27% 55%, 31% 30%, 35% 65%, 39% 20%, 43% 55%, 47% 30%, 51% 60%, 55% 20%, 59% 55%, 63% 30%, 67% 65%, 71% 20%, 75% 55%, 79% 30%, 83% 60%, 87% 20%, 91% 55%, 95% 30%, 98% 60%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+/* big quote as watermark */
+.hero::before {
+  content: '"';
+  font-family: 'Fraunces', serif;
+  font-size: 28rem; font-weight: 900;
+  color: rgba(69,88,200,0.05);
+  position: absolute; right: 2rem; top: -4rem;
+  line-height: 1; pointer-events: none; user-select: none;
+}
+
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 320px;
+  gap: 4rem; align-items: end;
+  position: relative; z-index: 1;
+}
+
+.hero-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--sage); display: block;
+  transform: rotate(-1.5deg); margin-bottom: 0.5rem;
+}
+
+.hero-h1 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  color: var(--green); line-height: 0.95;
+  letter-spacing: -0.02em; margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+  font-size: 1rem; font-weight: 300;
+  color: var(--pencil); line-height: 1.85;
+  max-width: 560px;
+}
+.hero-desc strong { color: var(--ink); font-weight: 500; }
+
+/* stat stickers */
+.hero-stats {
+  display: flex; flex-direction: column; gap: 0.8rem;
+  align-self: center;
+}
+
+.stat-sticker {
+  background: var(--cream);
+  border: 1.5px dashed rgba(69,88,200,0.2);
+  border-radius: 12px; padding: 1rem 1.2rem;
+  box-shadow: 3px 3px 0 rgba(69,88,200,0.08);
+  text-align: center;
+}
+.stat-sticker:nth-child(1) { transform: rotate(-2deg); }
+.stat-sticker:nth-child(2) { transform: rotate(1.5deg); }
+.stat-sticker:nth-child(3) { transform: rotate(-1deg); }
+
+.stat-n {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 2.2rem; color: var(--green);
+  line-height: 1; display: block;
+}
+.stat-l {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--pencil); line-height: 1.3; display: block;
+  margin-top: 0.2rem;
+}
+
+/* ── SECTION SHARED ── */
+.section {
+  max-width: 1200px; margin: 0 auto;
+  padding: 5rem 3rem;
+}
+
+.section-header { margin-bottom: 2.8rem; }
+
+.section-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: var(--sage); display: block;
+  margin-bottom: 0.3rem; transform: rotate(-1deg);
+}
+
+.section-h {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--green); line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hr { border: none; border-top: 1px dashed rgba(69,88,200,0.15); max-width: 1200px; margin: 0 auto; }
+
+/* ── FEATURED HIGHLIGHT CARD ── */
+.feature-card {
+  background: var(--green);
+  border-radius: 12px; overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: transform 0.2s;
+}
+.feature-card:hover { transform: translateY(-3px); }
+.feature-card:nth-child(even) { transform: rotate(0.3deg); }
+.feature-card:nth-child(even):hover { transform: rotate(0deg) translateY(-3px); }
+.feature-card:nth-child(odd) { transform: rotate(-0.3deg); }
+.feature-card:nth-child(odd):hover { transform: rotate(0deg) translateY(-3px); }
+
+.fc-text { padding: 2.5rem 2.5rem 2rem; }
+
+.fc-tag {
+  font-family: 'Caveat', cursive;
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--mist); opacity: 0.7;
+  display: block; margin-bottom: 0.5rem;
+}
+
+.fc-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem; font-weight: 900;
+  color: var(--cream); line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.fc-desc {
+  font-size: 0.85rem; color: rgba(200,210,255,0.75);
+  line-height: 1.78; font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+.fc-desc strong { color: var(--cream); font-weight: 500; }
+
+.fc-link {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 0.9rem;
+  background: var(--rose); color: var(--cream);
+  padding: 0.55rem 1.4rem; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  transition: background 0.2s;
+}
+.fc-link:hover { background: var(--rose2); }
+
+.fc-visual {
+  background: rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 6rem; color: rgba(255,255,255,0.15);
+  position: relative; overflow: hidden;
+}
+
+.fc-visual-inner {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 1rem;
+  position: relative; z-index: 1;
+}
+
+.fc-visual-title {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 1.1rem; color: rgba(255,255,255,0.6);
+  text-align: center; max-width: 200px; line-height: 1.3;
+}
+
+.ep-list {
+  display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 220px;
+}
+
+.ep-item {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px; padding: 0.5rem 0.8rem;
+  font-size: 0.72rem; color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.ep-item i { font-size: 0.65rem; color: var(--rose); flex-shrink: 0; }
+
+/* ── TALKS GRID ── */
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.talk-card {
+  background: var(--paper);
+  border: 1.5px solid rgba(69,88,200,0.12);
+  border-radius: 8px; overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.talk-card:nth-child(3n+1) { transform: rotate(-0.5deg); }
+.talk-card:nth-child(3n+2) { transform: rotate(0.4deg); margin-top: 0.5rem; }
+.talk-card:nth-child(3n+3) { transform: rotate(-0.3deg); }
+.talk-card:hover { transform: rotate(0deg) translateY(-4px) !important; box-shadow: 0 10px 28px rgba(69,88,200,0.1); }
+
+.talk-stripe { height: 5px; flex-shrink: 0; }
+
+.talk-body { padding: 1.3rem 1.4rem; flex: 1; }
+
+.talk-venue {
+  font-family: 'Caveat', cursive;
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--sage); display: block; margin-bottom: 0.3rem;
+}
+
+.talk-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 900;
+  color: var(--ink); line-height: 1.3; margin-bottom: 0.5rem;
+}
+
+.talk-desc { font-size: 0.78rem; color: var(--pencil); line-height: 1.7; }
+
+.talk-foot {
+  padding: 0.7rem 1.4rem;
+  border-top: 1px dashed rgba(69,88,200,0.1);
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.talk-date {
+  font-family: 'Caveat', cursive;
+  font-size: 0.82rem; color: var(--pencil); font-weight: 600;
+}
+
+.talk-badge {
+  font-family: 'Caveat', cursive;
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.15rem 0.6rem; border-radius: 999px;
+}
+.badge-award { background: #FEF9C3; color: #713F12; }
+.badge-invite { background: var(--mist); color: var(--green2); }
+.badge-keynote { background: #FCE7F3; color: #9D174D; }
+
+/* ── WRITING SECTION ── */
+.writing-bg { background: var(--paper); border-top: 1px dashed rgba(69,88,200,0.12); }
+
+.writing-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.writing-card {
+  background: var(--cream);
+  border: 1.5px solid rgba(69,88,200,0.12);
+  border-radius: 8px; padding: 1.8rem;
+  display: flex; flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.writing-card:nth-child(odd)  { transform: rotate(-0.4deg); }
+.writing-card:nth-child(even) { transform: rotate(0.3deg); margin-top: 0.5rem; }
+.writing-card:hover { transform: rotate(0deg) translateY(-3px) !important; box-shadow: 0 8px 24px rgba(69,88,200,0.1); }
+
+.wc-icon {
+  width: 38px; height: 38px; border-radius: 8px;
+  background: var(--mist); color: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; margin-bottom: 1rem;
+}
+
+.wc-pub {
+  font-family: 'Caveat', cursive;
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--sage); display: block; margin-bottom: 0.3rem;
+}
+
+.wc-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 900;
+  color: var(--ink); line-height: 1.3; margin-bottom: 0.5rem;
+}
+
+.wc-desc { font-size: 0.8rem; color: var(--pencil); line-height: 1.72; flex: 1; }
+
+.wc-link {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 700;
+  color: var(--green); display: inline-flex;
+  align-items: center; gap: 0.3rem;
+  margin-top: 1rem; border-bottom: 1px dashed rgba(69,88,200,0.3);
+  padding-bottom: 1px; transition: color 0.15s;
+  width: fit-content;
+}
+.wc-link:hover { color: var(--green2); }
+
+/* ── ART SECTION ── */
+.art-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.art-card {
+  background: var(--paper);
+  border: 1.5px solid rgba(69,88,200,0.12);
+  border-radius: 8px; overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.art-card:nth-child(odd)  { transform: rotate(-0.6deg); }
+.art-card:nth-child(even) { transform: rotate(0.5deg); margin-top: 0.5rem; }
+.art-card:hover { transform: rotate(0deg) translateY(-4px) !important; box-shadow: 0 10px 28px rgba(69,88,200,0.1); }
+
+.art-preview {
+  height: 140px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem; position: relative;
+}
+
+.art-body { padding: 1.2rem 1.3rem; }
+
+.art-type {
+  font-family: 'Caveat', cursive;
+  font-size: 0.8rem; font-weight: 700;
+  color: var(--sage); display: block; margin-bottom: 0.3rem;
+}
+.art-title {
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem; font-weight: 900;
+  color: var(--ink); line-height: 1.3; margin-bottom: 0.4rem;
+}
+.art-desc { font-size: 0.78rem; color: var(--pencil); line-height: 1.65; }
+
+/* ── OUTREACH ── */
+.outreach-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.outreach-card {
+  background: var(--paper);
+  border: 1.5px solid rgba(69,88,200,0.12);
+  border-radius: 8px; padding: 1.8rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.outreach-card:nth-child(odd)  { transform: rotate(-0.4deg); }
+.outreach-card:nth-child(even) { transform: rotate(0.3deg); margin-top: 0.4rem; }
+.outreach-card:hover { transform: rotate(0deg) translateY(-3px) !important; box-shadow: 0 8px 24px rgba(69,88,200,0.1); }
+
+.oc-icon {
+  width: 38px; height: 38px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; margin-bottom: 1rem;
+}
+
+.oc-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem; font-weight: 900;
+  color: var(--ink); margin-bottom: 0.5rem; line-height: 1.25;
+}
+.oc-desc { font-size: 0.82rem; color: var(--pencil); line-height: 1.75; }
+.oc-stat {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--sage); margin-top: 0.8rem; display: block;
+}
+
+/* ── PRESS ── */
+.press-bg {
+  background: var(--green);
+  clip-path: polygon(0 28px, 1% 8px, 2% 22px, 4% 5px, 6% 20px, 8% 6px, 10% 24px, 13% 4px, 16% 18px, 19% 5px, 22% 22px, 25% 4px, 28% 20px, 31% 6px, 34% 24px, 37% 4px, 40% 20px, 43% 5px, 46% 22px, 49% 4px, 52% 20px, 55% 6px, 58% 24px, 61% 4px, 64% 20px, 67% 5px, 70% 22px, 73% 4px, 76% 20px, 79% 6px, 82% 24px, 85% 4px, 88% 20px, 91% 5px, 94% 22px, 97% 6px, 100% 18px, 100% 100%, 0 100%);
+  margin-top: -20px; padding-top: 3rem;
+}
+
+.press-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 3rem 3rem 5rem;
+}
+
+.press-inner .section-eyebrow { color: rgba(200,210,255,0.6); transform: none; }
+.press-inner .section-h { color: var(--cream); margin-bottom: 2.5rem; }
+
+.press-list { display: flex; flex-direction: column; gap: 0; }
+
+.press-item {
+  display: grid; grid-template-columns: 120px 1fr auto;
+  gap: 1.5rem; align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+  transition: padding-left 0.2s;
+}
+.press-item:first-child { border-top: 1px dashed rgba(255,255,255,0.1); }
+.press-item:hover { padding-left: 0.5rem; }
+
+.press-outlet {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--mist); opacity: 0.7;
+}
+
+.press-title {
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem; font-weight: 900;
+  color: var(--cream); line-height: 1.3;
+  transition: color 0.15s;
+}
+.press-item:hover .press-title { color: var(--mist); }
+
+.press-year {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem; font-weight: 700;
+  color: rgba(200,210,255,0.5); flex-shrink: 0;
+}
+
+/* ── CONTACT BAND ── */
+.contact-band {
+  background: var(--rose);
+  padding: 4rem 3rem; text-align: center;
+  position: relative; overflow: hidden;
+}
+.contact-band::before {
+  content: '<i class="fa-solid fa-microphone"></i>';
+  position: absolute; font-size: 14rem;
+  left: 4rem; top: 50%; transform: translateY(-50%);
+  color: rgba(255,255,255,0.06); pointer-events: none; user-select: none;
+}
+
+.cb-scribble {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem; font-weight: 600;
+  color: rgba(255,255,255,0.7); display: block;
+  transform: rotate(-1.5deg); margin-bottom: 0.4rem;
+}
+
+.cb-h {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--cream); line-height: 1;
+  margin-bottom: 0.8rem; position: relative;
+}
+
+.cb-p {
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem; font-weight: 500;
+  color: rgba(255,255,255,0.8); margin-bottom: 2rem;
+  line-height: 1.6; position: relative;
+}
+
+.cb-btn {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900; font-size: 1rem;
+  background: var(--cream); color: var(--rose2);
+  padding: 0.85rem 2.5rem; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  transition: background 0.2s, transform 0.15s;
+  position: relative;
+}
+.cb-btn:hover { background: var(--paper); transform: translateY(-2px); }
+
+/* ── FOOTER ── */
+footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; margin-bottom: 2.5rem;
+}
+.footer-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-style: italic; font-weight: 900;
+  color: var(--cream); margin-bottom: 0.7rem;
+}
+.footer-desc {
+  font-size: 0.82rem; color: rgba(255,255,255,0.4);
+  line-height: 1.72; max-width: 360px; margin-bottom: 1rem;
+}
+.footer-email { font-size: 0.82rem; color: var(--rose); font-weight: 500; }
+.footer-nav { display: flex; flex-direction: column; gap: 0.55rem; text-align: right; }
+.footer-nav a {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(255,255,255,0.35); transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(255,255,255,0.1);
+  display: flex; justify-content: space-between;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; color: rgba(255,255,255,0.2);
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo">Vanessa Madu</a>
+  <ul class="nav-links">
+    <li><a href="/sessions">Sessions</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/sci-comm" class="active">Sci Comm</a></li>
+    <li><a href="/writing">Writing</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="main-content">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">FameLab Regional Winner · Royal Institution Speaker · Mathematical Gazette Reviewer</span>
+      <h1 class="hero-h1">Making maths feel<br>as thrilling as it is.</h1>
+      <p class="hero-desc">
+        I believe <strong>mathematics is for everyone</strong> — not as a platitude, but as a commitment I try to act on every time I give a talk, write an article, or hand a child a giant playing card. This page is a highlights reel of what that's looked like so far.
+      </p>
+    </div>
+    <div class="hero-stats" aria-label="Key statistics">
+      <div class="stat-sticker">
+        <span class="stat-n">300+</span>
+        <span class="stat-l">students in one<br>Royal Institution lecture</span>
+      </div>
+      <div class="stat-sticker">
+        <span class="stat-n">80%</span>
+        <span class="stat-l">increase in RCSU Science<br>Challenge participation</span>
+      </div>
+      <div class="stat-sticker">
+        <span class="stat-n">2024</span>
+        <span class="stat-l">Gathering for Gardner,<br>Atlanta — full scholar</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ VIDEO ══ -->
+<section aria-labelledby="video-h">
+  <div class="section">
+    <div class="section-header">
+      <span class="section-eyebrow">YouTube · FameLab-style short talks</span>
+      <h2 class="section-h" id="video-h">Wisdom from Wonderland</h2>
+    </div>
+
+    <div class="feature-card" style="margin-bottom:0;">
+      <div class="fc-text">
+        <span class="fc-tag"><i class="fa-solid fa-circle-play"></i> Video series · All years</span>
+        <h3 class="fc-title">Four short talks. One Wonderland. Actual mathematics.</h3>
+        <p class="fc-desc">
+          Using Lewis Carroll's <em>Alice in Wonderland</em> as a jumping-off point, each talk takes one idea — data science, statistical inference, ocean science, climate attribution — and makes it genuinely exciting in under twenty minutes. Designed for curious people of any background, each episode can be extended to 30–45 minutes for school or university audiences.
+        </p>
+        <a href="https://youtu.be/ASeRrt7XYJk" class="fc-link" target="_blank" rel="noopener">
+          <i class="fa-brands fa-youtube"></i> Watch on YouTube
+        </a>
+      </div>
+      <div class="fc-visual">
+        <div class="fc-visual-inner">
+          <div class="fc-visual-title">Four episodes</div>
+          <div class="ep-list">
+            <div class="ep-item"><i class="fa-solid fa-circle-play"></i> Data, Data Everywhere, but Not an Insight in Sight</div>
+            <div class="ep-item"><i class="fa-solid fa-circle-play"></i> Nonsense Inference and How to Avoid It</div>
+            <div class="ep-item"><i class="fa-solid fa-circle-play"></i> How Rubber Ducks Taught Us About the North Pacific</div>
+            <div class="ep-item"><i class="fa-solid fa-circle-play"></i> How Do We Know Humans Are Causing Climate Change?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ TALKS ══ -->
+<section aria-labelledby="talks-h">
+  <div class="section">
+    <div class="section-header">
+      <span class="section-eyebrow">Live talks · Conferences · Guest lectures</span>
+      <h2 class="section-h" id="talks-h">Selected talks &amp; appearances</h2>
+    </div>
+
+    <div class="talks-grid">
+
+      <div class="talk-card">
+        <div class="talk-stripe" style="background: var(--ocean, #1A6E8A);"></div>
+        <div class="talk-body">
+          <span class="talk-venue"><i class="fa-solid fa-landmark"></i> Royal Institution, London</span>
+          <h3 class="talk-title">Exploring Mathematical Ocean Sciences</h3>
+          <p class="talk-desc">Delivered in the main lecture theatre to 300+ Year 5 and 6 students as part of the Climate Innovation Day. Teacher feedback: <em>"The best explanation of fluid dynamics I've ever heard, and I did a mechanical engineering degree!"</em></p>
+        </div>
+        <div class="talk-foot">
+          <span class="talk-date">2024</span>
+          <span class="talk-badge badge-invite">Guest lecture</span>
+        </div>
+      </div>
+
+      <div class="talk-card">
+        <div class="talk-stripe" style="background: #7B5EA7;"></div>
+        <div class="talk-body">
+          <span class="talk-venue"><i class="fa-solid fa-dice"></i> Gathering for Gardner (G4G15) · Atlanta</span>
+          <h3 class="talk-title">A Chaotic Series of Mathematical Accidents</h3>
+          <p class="talk-desc">Presented original recreational mathematics research at one of the world's most celebrated gatherings of mathematical minds. Awarded full G4G scholarship and £900 Dean's Fund Travel Grant.</p>
+        </div>
+        <div class="talk-foot">
+          <span class="talk-date">2024</span>
+          <span class="talk-badge badge-invite">Scholar</span>
+        </div>
+      </div>
+
+      <div class="talk-card">
+        <div class="talk-stripe" style="background: var(--rose);"></div>
+        <div class="talk-body">
+          <span class="talk-venue"><i class="fa-solid fa-microphone"></i> FameLab · Cheltenham Science Festival</span>
+          <h3 class="talk-title">Regional Winner &amp; National Finalist</h3>
+          <p class="talk-desc">Competed in FameLab — the international science communication competition — winning the regional heat and reaching the national final. Broadcast on KMTV.</p>
+        </div>
+        <div class="talk-foot">
+          <span class="talk-date">2023</span>
+          <span class="talk-badge badge-award">Award winner</span>
+        </div>
+      </div>
+
+      <div class="talk-card">
+        <div class="talk-stripe" style="background: var(--sage);"></div>
+        <div class="talk-body">
+          <span class="talk-venue"><i class="fa-solid fa-hashtag"></i> MathsJam Annual Gathering</span>
+          <h3 class="talk-title">On Sequences of Consecutive Odd Semi-Primes</h3>
+          <p class="talk-desc">Presented original number theory research at MathsJam 2025, following an earlier presentation of consecutive semi-prime work at MathsJam 2023.</p>
+        </div>
+        <div class="talk-foot">
+          <span class="talk-date">2023 &amp; 2025</span>
+          <span class="talk-badge badge-invite">Speaker</span>
+        </div>
+      </div>
+
+      <div class="talk-card">
+        <div class="talk-stripe" style="background: var(--green);"></div>
+        <div class="talk-body">
+          <span class="talk-venue"><i class="fa-solid fa-graduation-cap"></i> Changing the Face of Science Symposium</span>
+          <h3 class="talk-title">MVN NGBoost for Ocean Surface Current Prediction</h3>
+          <p class="talk-desc">Presented PhD research in progress at this symposium celebrating diversity in STEM research. One of several academic conferences where I've shared work from the CDT.</p>
+        </div>
+        <div class="talk-foot">
+          <span class="talk-date">2025</span>
+          <span class="talk-badge badge-invite">Conference talk</span>
+        </div>
+      </div>
+
+      <div class="talk-card">
+        <div class="talk-stripe" style="background: var(--mustard);"></div>
+        <div class="talk-body">
+          <span class="talk-venue"><i class="fa-solid fa-book"></i> Young Scientists Journal Conference · King's Canterbury</span>
+          <h3 class="talk-title">Rubber Ducks, Oceans &amp; Ridiculous Hypotheticals About Jam Tarts</h3>
+          <p class="talk-desc">Delivered the flagship rubber duck talk to sixth form students at the Young Scientists Journal Conference, one of several school and public science events where this talk has been given.</p>
+        </div>
+        <div class="talk-foot">
+          <span class="talk-date">2024</span>
+          <span class="talk-badge badge-invite">Invited speaker</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ WRITING ══ -->
+<section class="writing-bg" aria-labelledby="writing-h" style="padding: 1px 0;">
+  <div class="section">
+    <div class="section-header">
+      <span class="section-eyebrow">Articles · Poems · Essays · Blogs</span>
+      <h2 class="section-h" id="writing-h">Science writing</h2>
+    </div>
+
+    <div class="writing-grid">
+
+      <div class="writing-card">
+        <div class="wc-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <span class="wc-pub">Womanthology · 2024</span>
+        <h3 class="wc-title">Science is Best When it's Shared</h3>
+        <p class="wc-desc">A reflection on the importance of making science accessible and the personal commitment behind science communication work. Published in Womanthology's online platform.</p>
+        <a href="https://womanthology.co.uk" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read at Womanthology</a>
+      </div>
+
+      <div class="writing-card">
+        <div class="wc-icon"><i class="fa-solid fa-heart"></i></div>
+        <span class="wc-pub">Medium · Nov 2023 · Featured in Carnival of Mathematics</span>
+        <h3 class="wc-title">Nursery Rhymes for Curious Minds: The Queen of Hearts (Understanding Bayes' Theorem)</h3>
+        <p class="wc-desc">A science poem reimagining a classic nursery rhyme as an introduction to Bayes' Theorem. Selected for inclusion in the Carnival of Mathematics — a monthly collection of the best mathematics writing online.</p>
+        <a href="https://medium.com" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Medium</a>
+      </div>
+
+      <div class="writing-card">
+        <div class="wc-icon"><i class="fa-solid fa-star"></i></div>
+        <span class="wc-pub">Medium · Jan 2024</span>
+        <h3 class="wc-title">The Universe, in Rhyme and Verse: When a Star Gets Old</h3>
+        <p class="wc-desc">Another entry in the science poetry series — this one turning stellar evolution into verse. Part of an ongoing project exploring how poetry can make scientific ideas visceral and memorable.</p>
+        <a href="https://medium.com" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Medium</a>
+      </div>
+
+      <div class="writing-card">
+        <div class="wc-icon"><i class="fa-solid fa-flask"></i></div>
+        <span class="wc-pub">Imperial College Faculty of Natural Sciences Blog</span>
+        <h3 class="wc-title">Do Ducks Have Knees? &amp; other science communication writing</h3>
+        <p class="wc-desc">A series of pieces for the Imperial College Faculty of Natural Sciences blog, including reflections on extracurricular STEM clubs, science engagement, and the Black Lives Matter survey of 250+ students and staff whose findings were presented to the Head of the Department of Mathematics.</p>
+        <a href="https://www.imperial.ac.uk/natural-sciences/blog" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Imperial blog</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ ART ══ -->
+<section aria-labelledby="art-h">
+  <div class="section">
+    <div class="section-header">
+      <span class="section-eyebrow">Illustrations · Competitions · Permanent installations</span>
+      <h2 class="section-h" id="art-h">Science art</h2>
+    </div>
+
+    <div class="art-grid">
+
+      <div class="art-card">
+        <div class="art-preview" style="background: #E8F4F8;">
+          <i class="fa-solid fa-water" style="color: #1A6E8A; font-size: 5rem;"></i>
+        </div>
+        <div class="art-body">
+          <span class="art-type"><i class="fa-solid fa-trophy"></i> Competition entry · First Runner-Up</span>
+          <h3 class="art-title">The Making of a Modeller</h3>
+          <p class="art-desc">First Runner-Up in the Challenger Society for Marine Science Art and Photography Competition 2024. The piece reflects on what it means to build mathematical models of the ocean.</p>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-preview" style="background: var(--mist);">
+          <i class="fa-solid fa-timeline" style="color: var(--green); font-size: 5rem;"></i>
+        </div>
+        <div class="art-body">
+          <span class="art-type"><i class="fa-solid fa-landmark"></i> Permanent installation · Imperial College London</span>
+          <h3 class="art-title">History of Mathematics Window Display</h3>
+          <p class="art-desc">Designed seven consecutive windows spanning mathematics history from 2700 BC to the present day, displayed in the Huxley Building at Imperial College London until at least 2034.</p>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-preview" style="background: #FBF0E4;">
+          <i class="fa-solid fa-pen-nib" style="color: #B06A2A; font-size: 5rem;"></i>
+        </div>
+        <div class="art-body">
+          <span class="art-type"><i class="fa-solid fa-star"></i> Science poetry</span>
+          <h3 class="art-title">Science poetry &amp; mathematical illustration</h3>
+          <p class="art-desc">An ongoing body of work combining poetry, illustration, and mathematics — including the Nursery Rhymes for Curious Minds series and digital art and illustrations created with Procreate.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ OUTREACH ══ -->
+<section aria-labelledby="outreach-h">
+  <div class="section">
+    <div class="section-header">
+      <span class="section-eyebrow">Long-term projects · Programmes · Initiatives</span>
+      <h2 class="section-h" id="outreach-h">Public engagement &amp; outreach</h2>
+    </div>
+
+    <div class="outreach-grid">
+
+      <div class="outreach-card">
+        <div class="oc-icon" style="background: var(--mist); color: var(--green);">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <h3 class="oc-title">Hello World Hack</h3>
+        <p class="oc-desc">Co-founded and co-designed a coding workshop for girls aged 7–10, awarded £2,000 from the Imperial College Societal Engagement Seed Fund. Initially planned for 120+ children, pivoted to a successful virtual event during COVID-19 and has since become an annual fixture.</p>
+        <span class="oc-stat">60+ children in person · 30 virtually · Now annual</span>
+      </div>
+
+      <div class="outreach-card">
+        <div class="oc-icon" style="background: #FEF9C3; color: #713F12;">
+          <i class="fa-solid fa-trophy"></i>
+        </div>
+        <h3 class="oc-title">RCSU Science Challenge — Chair</h3>
+        <p class="oc-desc">Chaired the annual science communication competition for school students (aged 15–18) in 2022–23. Introduced Science Shorts video series, established a partnership with the Young Scientists Journal, recruited judges including Kathy Sykes (BBC) and Tom Crawford (Numberphile), and secured a £1,000 pledge from Professor Lord Robert Winston.</p>
+        <span class="oc-stat">80% increase in participation · ~180 school-division participants worldwide</span>
+      </div>
+
+      <div class="outreach-card">
+        <div class="oc-icon" style="background: #FCE7F3; color: #9D174D;">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3 class="oc-title">Project Insight</h3>
+        <p class="oc-desc">Founded a website providing STEM role models for minority students through interviews with professionals across industry and academia. Grew the team to 6 members and built relationships with 30+ STEM professionals, including the Global CEO of Publicis Sapient and the President of the Institute of Mathematics and its Applications.</p>
+        <span class="oc-stat">700+ website visitors · 6-person team</span>
+      </div>
+
+      <div class="outreach-card">
+        <div class="oc-icon" style="background: var(--mist); color: var(--green);">
+          <i class="fa-solid fa-chalkboard-user"></i>
+        </div>
+        <h3 class="oc-title">Imperial College London Outreach</h3>
+        <p class="oc-desc">Academic Leader and Mentor across multiple outreach programmes (2021–2025) including the Sutton Trust Summer School, STEM Futures, STEM Potential, and Insights residential programmes. Created content on fluid dynamics, probability, fractals, number theory, and infinity for Year 10–12 students from underrepresented backgrounds, and co-led Primary Science Club and the Primary Maths Transition Programme.</p>
+        <span class="oc-stat">Sutton Trust · STEM Futures · STEM Potential · Insights · Primary Maths · Primary Science</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRESS ══ -->
+<section class="press-bg" aria-labelledby="press-h">
+  <div class="press-inner">
+    <span class="section-eyebrow">Selected press &amp; media</span>
+    <h2 class="section-h" id="press-h">In the news</h2>
+
+    <div class="press-list" role="list">
+
+      <div class="press-item" role="listitem">
+        <span class="press-outlet">BBC Breakfast TV</span>
+        <span class="press-title">Interview on securing full scholarships for Black heritage students in Mathematics and Physics</span>
+        <span class="press-year">2021</span>
+      </div>
+
+      <div class="press-item" role="listitem">
+        <span class="press-outlet">Imperial College London News</span>
+        <span class="press-title">Transformative Engagement Work Celebrated in Prestigious Awards</span>
+        <span class="press-year">2024</span>
+      </div>
+
+      <div class="press-item" role="listitem">
+        <span class="press-outlet">Imperial College London News</span>
+        <span class="press-title">New Window Displays in the Huxley Building Weave Maths Through History</span>
+        <span class="press-year">2024</span>
+      </div>
+
+      <div class="press-item" role="listitem">
+        <span class="press-outlet">Imperial College London Stories</span>
+        <span class="press-title">From Student to Senior Researcher: Five Women Who Are Making Their Mark at Imperial</span>
+        <span class="press-year">2023</span>
+      </div>
+
+      <div class="press-item" role="listitem">
+        <span class="press-outlet">Imperial College London Stories</span>
+        <span class="press-title">Outreach at 50: Counting on Maths</span>
+        <span class="press-year">2023</span>
+      </div>
+
+      <div class="press-item" role="listitem">
+        <span class="press-outlet">Imperial College London News</span>
+        <span class="press-title">Maths Student Becomes Next Rising Star — Top 10 Black Students in the UK</span>
+        <span class="press-year">2020</span>
+      </div>
+
+      <div class="press-item" role="listitem">
+        <span class="press-outlet">Womanthology</span>
+        <span class="press-title">Formal Proof of Passion for Maths (profile, A-level years)</span>
+        <span class="press-year">2018</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="contact-band" aria-labelledby="contact-h">
+  <span class="cb-scribble">for speaking enquiries, collaborations, or just a chat</span>
+  <h2 class="cb-h" id="contact-h">Want to work together?</h2>
+  <p class="cb-p">
+    I'm available for talks, workshops, panel appearances, podcasts,<br>
+    science writing commissions, and public engagement partnerships.
+  </p>
+  <a href="mailto:vanessa@vanessamadu.com" class="cb-btn">
+    <i class="fa-solid fa-envelope"></i> vanessa@vanessamadu.com
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Vanessa Madu</div>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <div class="footer-email">vanessa@vanessamadu.com</div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/sessions">Sessions</a>
+      <a href="/research">Research</a>
+      <a href="/sci-comm">Science Communication</a>
+      <a href="/writing">Writing &amp; Notes</a>
+      <a href="/about">About</a>
+      <a href="/cv">Academic CV</a>
+      <a href="/sessions#enquire">Book a Session</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
+  </div>
+</footer>
+
+</body>
+</html>
