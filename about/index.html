@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Vanessa Madu</title>
+<title>About</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -49,10 +50,15 @@ a { text-decoration: none; color: inherit; }
 
 /* ── NAV ── */
 nav {
-  background: var(--green);
   padding: 0 2.5rem; height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200;
+}
+main-nav {
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+  background: var(--green);
 }
 .nav-logo {
   font-family: 'Fraunces', serif;
@@ -82,16 +88,16 @@ nav {
 
 .about-hero::after {
   content: '';
-  position: absolute; bottom: -2px; left: 0; right: 0;
-  height: 50px;
+  position: absolute; bottom: 0px; left: 0; right: 0;
+  height: 75px;
   background: var(--cream);
   clip-path: polygon(0% 70%, 2% 30%, 5% 60%, 8% 20%, 11% 55%, 15% 25%, 19% 60%, 23% 20%, 27% 55%, 31% 30%, 35% 65%, 39% 20%, 43% 55%, 47% 30%, 51% 60%, 55% 20%, 59% 55%, 63% 30%, 67% 65%, 71% 20%, 75% 55%, 79% 30%, 83% 60%, 87% 20%, 91% 55%, 95% 30%, 98% 60%, 100% 40%, 100% 100%, 0% 100%);
   z-index: 2;
 }
 
 .about-hero-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 380px 1fr;
+  max-width: 1200px; 
+  display: grid; grid-template-columns: 500px 1fr;
   min-height: 85vh;
 }
 
@@ -199,7 +205,6 @@ nav {
 .research-bg {
   background: var(--green);
   position: relative; overflow: hidden;
-  clip-path: polygon(0 28px, 1% 8px, 2% 22px, 4% 5px, 6% 20px, 8% 6px, 10% 24px, 13% 4px, 16% 18px, 19% 5px, 22% 22px, 25% 4px, 28% 20px, 31% 6px, 34% 24px, 37% 4px, 40% 20px, 43% 5px, 46% 22px, 49% 4px, 52% 20px, 55% 6px, 58% 24px, 61% 4px, 64% 20px, 67% 5px, 70% 22px, 73% 4px, 76% 20px, 79% 6px, 82% 24px, 85% 4px, 88% 20px, 91% 5px, 94% 22px, 97% 6px, 100% 18px, 100% 100%, 0 100%);
   margin-top: -20px; padding-top: 3rem;
 }
 
@@ -464,13 +469,14 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   font-size: 0.88rem; color: rgba(255,255,255,0.2);
 }
 </style>
+<link rel="stylesheet" href="/assets/css/vanessa-responsive.css">
 </head>
 <body>
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
-<nav aria-label="Main navigation">
+<main-nav aria-label="Main navigation">
   <a href="/" class="nav-logo">Vanessa Madu</a>
   <ul class="nav-links">
     <li><a href="/sessions">Sessions</a></li>
@@ -480,14 +486,14 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <li><a href="/about" class="active">About</a></li>
     <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
   </ul>
-</nav>
+</main-nav>
 
 <!-- HERO INTRO -->
 <section class="about-hero" aria-label="Introduction" id="main-content">
   <div class="about-hero-inner">
 
     <div class="about-photo-col" aria-hidden="true">
-      <img src="vanessa-hero.jpg" alt="Vanessa Madu holding giant playing cards, wearing a red coat and maths-patterned dress">
+      <img src="/assets/img/vanessa-portrait.jpg" alt="Vanessa Madu sitting on a desk, wearing a maths-patterned dress, in front of a blackboard with equations written on it">
     </div>
 
     <div class="about-text-col">
@@ -1118,7 +1124,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       <a href="/sci-comm">Science Communication</a>
       <a href="/writing">Writing &amp; Notes</a>
       <a href="/about">About</a>
-      <a href="/cv">Academic CV</a>
+      <a href="/about/#cv">Academic CV</a>
       <a href="/sessions#enquire">Book a Session</a>
     </nav>
   </div>
@@ -1127,6 +1133,6 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
   </div>
 </footer>
-
+<script src="/assets/js/vanessa-site.js" defer></script>
 </body>
 </html>

@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sessions — Vanessa Madu</title>
+<title>Sessions</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -50,10 +52,15 @@ a { text-decoration: none; color: inherit; }
 
 /* ── NAV ── */
 nav {
-  background: var(--green);
   padding: 0 2.5rem; height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200;
+}
+main-nav {
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+  background: var(--green);
 }
 .nav-logo {
   font-family: 'Fraunces', serif;
@@ -117,7 +124,7 @@ nav {
   font-family: 'Caveat', cursive;
   font-size: 1rem; font-weight: 500;
   color: var(--pencil); line-height: 1.6;
-  max-width: 320px; text-align: right;
+  max-width: 320px; text-align: center;
   transform: rotate(0.8deg); display: block;
   border: 1.5px dashed rgba(69,88,200,0.2);
   border-radius: 8px; padding: 0.7rem 1rem;
@@ -461,14 +468,51 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   font-size: 0.88rem; color: rgba(255,255,255,0.2);
 }
 .footer-quote { font-style: italic; }
+
+.form-confirmation {
+  display: none;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.form-confirmation.visible { display: block; }
+
+.confirmation-inner i {
+  font-size: 3rem;
+  color: var(--mustard);
+  display: block;
+  margin-bottom: 1rem;
+}
+.confirmation-inner h3 {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900;
+  font-size: 2rem; color: var(--cream);
+  margin-bottom: 0.8rem;
+}
+.confirmation-inner p {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem; color: rgba(255,255,255,0.8);
+  margin-bottom: 2rem;
+}
+.btn-back {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 900; font-size: 0.95rem;
+  background: var(--rose); color: var(--cream);
+  padding: 0.7rem 1.8rem; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  transition: background 0.2s;
+}
+.btn-back:hover { background: var(--rose2); }
 </style>
+<link rel="stylesheet" href="/assets/css/vanessa-responsive.css">
 </head>
 <body>
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
-<nav aria-label="Main navigation">
+<main-nav aria-label="Main navigation">
   <a href="/" class="nav-logo">Vanessa Madu</a>
   <ul class="nav-links">
     <li><a href="/sessions" class="active">Sessions</a></li>
@@ -478,7 +522,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <li><a href="/about">About</a></li>
     <li><a href="#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
   </ul>
-</nav>
+</main-nav>
 
 <!-- PAGE HEADER -->
 <header class="page-header" id="main-content">
@@ -488,10 +532,10 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       <h1 class="page-h1">Talks &amp; workshops<br>for curious schools</h1>
     </div>
     <span class="header-note">
-      Year 3 through Sixth Form<br>
-      Schools, universities &amp; public events<br>
-      London &amp; surrounding areas<br>
-      Bespoke sessions always welcome
+      <i class="fa-solid fa-people-group fa-xs" aria-hidden="true"></i> Year 3 through Sixth Form<br>
+      <i class="fa-solid fa-school fa-xs" aria-hidden="true"></i> Schools, universities &amp; public events<br>
+      <i class="fa-solid fa-location-dot fa-xs" aria-hidden="true"></i> London &amp; surrounding areas <br>
+      <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i> Bespoke sessions always welcome 
     </span>
   </div>
 </header>
@@ -1360,78 +1404,91 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <h2 class="form-heading" id="form-heading">Let's make something<br>happen.</h2>
     <span class="form-sub">Fill in the form and I'll get back to you within a few days</span>
 
-    <form class="form-grid" novalidate>
+    <form class="form-grid" id="enquiry-form"
+    action="https://formspree.io/f/xnjooprq"
+    method="POST">
+
+    <input type="hidden" name="_subject" value="New session enquiry from vanessamadu.com">
+    <input type="hidden" name="_next" value="https://www.vanessamadu.com/sessions/?submitted=true">
 
       <div class="form-field">
         <label for="name">Your name</label>
-        <input type="text" id="name" placeholder="Jane Smith" autocomplete="name">
+        <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name">
       </div>
 
       <div class="form-field">
         <label for="role">Your role</label>
-        <input type="text" id="role" placeholder="Head of Maths, STEM Coordinator...">
+        <input type="text" id="role" name="role" placeholder="Head of Maths, STEM Coordinator...">
       </div>
 
       <div class="form-field">
-        <label for="school">School name</label>
-        <input type="text" id="school" placeholder="School or institution">
+        <label for="organisation">Organisation name</label>
+        <input type="text" id="organisation" name="organisation" placeholder="School, institution, or organisation">
       </div>
 
       <div class="form-field">
         <label for="email">Email address</label>
-        <input type="email" id="email" placeholder="you@school.ac.uk" autocomplete="email">
+        <input type="email" id="email" name="email" placeholder="you@org.uk" autocomplete="email">
       </div>
 
       <div class="form-field">
-        <label for="year-group">Year group(s)</label>
-        <select id="year-group">
-          <option value="" disabled selected>Select year group</option>
+        <label for="audience">Audience</label>
+        <select id="audience" name="audience">
+          <option value="audience-selection" disabled selected>Select audience</option>
           <option>KS2 (Year 3–6)</option>
           <option>KS3 (Year 7–9)</option>
           <option>KS4 (Year 10–11)</option>
           <option>KS5 / Sixth Form (Year 12–13)</option>
-          <option>Mixed year groups</option>
+          <option>Families</option>
+          <option>General Audience</option>
+          <option>Adults</option>
+          <option>Other (please give more detail below)</option>
         </select>
       </div>
 
       <div class="form-field">
         <label for="date">Preferred date(s)</label>
-        <input type="text" id="date" placeholder="e.g. any Tuesday in March">
+        <input type="text" id="date" name="date" placeholder="e.g. any Tuesday in March">
       </div>
 
       <div class="form-field full">
         <label>Sessions interested in</label>
         <div class="form-checkbox-group">
-          <label class="form-checkbox"><input type="checkbox"> Rubber Ducks, Oceans &amp; Ridiculous Hypotheticals</label>
-          <label class="form-checkbox"><input type="checkbox"> Exploring Mathematical Ocean Sciences (Yrs 5–6)</label>
-          <label class="form-checkbox"><input type="checkbox"> How Do We Know Humans Are Causing Climate Change?</label>
-          <label class="form-checkbox"><input type="checkbox"> Around the Mathematical World</label>
-          <label class="form-checkbox"><input type="checkbox"> When Infinity Becomes Infinities</label>
-          <label class="form-checkbox"><input type="checkbox"> On Sequences of Semi-Primes</label>
-          <label class="form-checkbox"><input type="checkbox"> Tomorrow: Not a Question of When, But Where!</label>
-          <label class="form-checkbox"><input type="checkbox"> Why Does a Zebra Have Stripes?</label>
-          <label class="form-checkbox"><input type="checkbox"> Population Dynamics: Matters of Life and Death</label>
-          <label class="form-checkbox"><input type="checkbox"> Nonsense Inference and How to Avoid It</label>
-          <label class="form-checkbox"><input type="checkbox"> Data, Data Everywhere, but Not an Insight in Sight</label>
-          <label class="form-checkbox"><input type="checkbox"> Statistical Fallacies</label>
-          <label class="form-checkbox"><input type="checkbox"> What Are the Odds?! (workshop)</label>
-          <label class="form-checkbox"><input type="checkbox"> Probability: Play to Win (workshop)</label>
-          <label class="form-checkbox"><input type="checkbox"> How Things Get Carried Away: Fluid Dynamics (Yr 12)</label>
-          <label class="form-checkbox"><input type="checkbox"> Go With the Flow: Fluid Dynamics (Yrs 10–12)</label>
-          <label class="form-checkbox"><input type="checkbox"> Curve Stitching: Where Art Meets Algebra</label>
-          <label class="form-checkbox"><input type="checkbox"> Exploring Mathematical Secrets (series)</label>
-          <label class="form-checkbox"><input type="checkbox"> Meet a Researcher</label>
-          <label class="form-checkbox"><input type="checkbox"> Meet an Oceanographically-Enabled Mathematical Statistician</label>
-          <label class="form-checkbox"><input type="checkbox"> Wisdom from Wonderland (talk series)</label>
-          <label class="form-checkbox"><input type="checkbox"> Hello World: Introduction to Coding for Girls</label>
-          <label class="form-checkbox"><input type="checkbox"> Science is for Everyone (assembly)</label>
-          <label class="form-checkbox"><input type="checkbox"> Not sure yet — happy to chat!</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Rubber Ducks"> Rubber Ducks, Oceans &amp; Ridiculous Hypotheticals</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Ocean sciences"> Exploring Mathematical Ocean Sciences (Yrs 5–6)</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Climate change"> How Do We Know Humans Are Causing Climate Change?</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Around the mathematical world"> Around the Mathematical World</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Infinity"> When Infinity Becomes Infinities</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Sequences of semi-primes"> On Sequences of Semi-Primes</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="International dateline"> Tomorrow: Not a Question of When, But Where!</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Reaction-diffusion"> Why Does a Zebra Have Stripes?</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Polutation dynamics"> Population Dynamics: Matters of Life and Death</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Nonsense inference"> Nonsense Inference and How to Avoid It</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Data, data"> Data, Data Everywhere, but Not an Insight in Sight</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Statistical falacies"> Statistical Fallacies</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="What are the odds"> What Are the Odds?! (workshop)</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Probability"> Probability: Play to Win (workshop)</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="How things get carried away"> How Things Get Carried Away: Fluid Dynamics (Yr 12)</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Go with the flow"> Go With the Flow: Fluid Dynamics (Yrs 10–12)</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Curve stitching"> Curve Stitching: Where Art Meets Algebra</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Mathematical secrets"> Exploring Mathematical Secrets (series)</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Meet a researcher"> Meet a Researcher</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Meet an Oceanographically-Enabled"> Meet an Oceanographically-Enabled Mathematical Statistician</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Wisdom from wonderland"> Wisdom from Wonderland (talk series)</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Hello World"> Hello World: Introduction to Coding for Girls</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Science is for everyone"> Science is for Everyone (assembly)</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Bespoke"> Something bespoke</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Not sure"> Not sure yet (I'm happy to chat!)</label>
         </div>
       </div>
 
       <div class="form-field full">
         <label for="message">Anything else I should know?</label>
-        <textarea id="message" placeholder="Group size, any context about your students, access requirements, budget questions — anything that would help me plan..."></textarea>
+        <textarea id="message" name="message" placeholder="Group size, any context about your group, access requirements, budget questions/restrictions - anything that would help me plan..."></textarea>
+      </div>
+
+      <div class="form-field full">
+        <div class="h-captcha" data-sitekey="3e2ade38-7fd6-4698-8108-c58a329406b2"></div>
       </div>
 
       <div class="form-submit full">
@@ -1443,6 +1500,17 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 
     </form>
   </div>
+
+  <div class="form-confirmation" id="form-confirmation" aria-live="polite">
+  <div class="confirmation-inner">
+    <i class="fa-solid fa-circle-check"></i>
+    <h3>Thank you!</h3>
+    <p>Your enquiry is on its way. I aim to reply within 2–3 working days.</p>
+    <a href="/sessions/" class="btn-back">
+      <i class="fa-solid fa-arrow-left"></i> Back to sessions
+    </a>
+  </div>
+</div>
 </section>
 
 <!-- FOOTER -->
@@ -1459,7 +1527,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       <a href="/sci-comm">Science Communication</a>
       <a href="/writing">Writing &amp; Notes</a>
       <a href="/about">About</a>
-      <a href="/cv">Academic CV</a>
+      <a href="/about/#cv">Academic CV</a>
       <a href="#enquire">Book a Session</a>
     </nav>
   </div>
@@ -1519,5 +1587,17 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   });
 </script>
 
+<script>
+  // Show confirmation if redirected back from Formspree
+  if (new URLSearchParams(window.location.search).get('submitted') === 'true') {
+    document.getElementById('form-confirmation').classList.add('visible');
+    document.getElementById('enquiry-form').style.display = 'none';
+    // Scroll to the confirmation
+    document.getElementById('enquiry-form').closest('section').scrollIntoView({ behavior: 'smooth' });
+    // Clean up the URL
+    history.replaceState(null, '', window.location.pathname);
+  }
+</script>
+<script src="/assets/js/vanessa-site.js" defer></script>
 </body>
 </html>

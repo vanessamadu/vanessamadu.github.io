@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rabbit Hole #2 — Consecutive Odd Semi-Primes — Vanessa Madu</title>
+<title>Rabbit Hole #2 — Consecutive Odd Semi-Primes</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- MathJax for LaTeX rendering -->
@@ -65,10 +66,15 @@ a { text-decoration: none; color: inherit; }
 
 /* ── NAV ── */
 nav {
-  background: var(--green);
   padding: 0 2.5rem; height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200;
+}
+main-nav {
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+  background: var(--green);
 }
 .nav-logo {
   font-family: 'Fraunces', serif;
@@ -471,12 +477,13 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   font-size: 0.88rem; color: rgba(255,255,255,0.2);
 }
 </style>
+<link rel="stylesheet" href="/assets/css/vanessa-responsive.css">
 </head>
 <body>
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<nav aria-label="Main navigation">
+<main-nav aria-label="Main navigation">
   <a href="/" class="nav-logo">Vanessa Madu</a>
   <ul class="nav-links">
     <li><a href="/sessions">Sessions</a></li>
@@ -486,7 +493,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <li><a href="/about">About</a></li>
     <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
   </ul>
-</nav>
+</main-nav>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb" aria-label="Breadcrumb">
@@ -710,7 +717,7 @@ n = <span class="tok-num">9</span>
       <a href="/sci-comm">Science Communication</a>
       <a href="/writing">Writing &amp; Notes</a>
       <a href="/about">About</a>
-      <a href="/cv">Academic CV</a>
+      <a href="/about/#cv">Academic CV</a>
       <a href="/sessions#enquire">Book a Session</a>
     </nav>
   </div>
@@ -719,6 +726,6 @@ n = <span class="tok-num">9</span>
     <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
   </div>
 </footer>
-
+<script src="/assets/js/vanessa-site.js" defer></script>
 </body>
 </html>

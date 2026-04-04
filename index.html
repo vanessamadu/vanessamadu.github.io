@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vanessa Madu — Mathematician & Science Communicator</title>
+<title>Vanessa Madu: Mathematician & Science Communicator</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -55,12 +56,15 @@ a { text-decoration: none; color: inherit; }
    NAV — feels like a pinboard header
 ══════════════════════════════ */
 nav {
-  background: var(--green);
-  padding: 0 2.5rem;
-  height: 56px;
+  padding: 0 2.5rem; height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200;
-  /* slight skew on bottom edge via border trick */
+}
+main-nav {
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+  background: var(--green);
 }
 
 .nav-logo {
@@ -94,7 +98,7 @@ nav {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-image: url('vanessa-hero.jpg');
+  background-image: url('/assets/img/vanessa-hero.jpg');
   background-size: cover;
   background-position: 65% top;
 }
@@ -599,6 +603,7 @@ nav {
   /* wavy top */
   clip-path: polygon(0 40px, 1% 15px, 2% 35px, 4% 8px, 6% 30px, 8% 10px, 10% 38px, 13% 6px, 16% 32px, 19% 8px, 22% 36px, 25% 5px, 28% 28px, 31% 10px, 34% 38px, 37% 6px, 40% 30px, 43% 8px, 46% 36px, 49% 5px, 52% 28px, 55% 10px, 58% 38px, 61% 6px, 64% 30px, 67% 8px, 70% 36px, 73% 5px, 76% 28px, 79% 10px, 82% 38px, 85% 6px, 88% 30px, 91% 8px, 94% 36px, 97% 12px, 100% 32px, 100% 100%, 0 100%);
   margin-top: -30px;
+  margin-bottom: -1px;
 }
 
 .cta-scribble {
@@ -687,13 +692,14 @@ footer {
 .sc-icon { font-size: 1.8rem; display: block; margin-bottom: 1rem; }
 .scicomm-icon { font-size: 1.8rem; display: block; margin-bottom: 1rem; }
 </style>
+<link rel="stylesheet" href="/assets/css/vanessa-responsive.css">
 </head>
 <body>
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
-<nav aria-label="Main navigation">
+<main-nav aria-label="Main navigation">
   <a href="/" class="nav-logo">Vanessa Madu</a>
   <ul class="nav-links">
     <li><a href="/sessions">Sessions</a></li>
@@ -701,9 +707,9 @@ footer {
     <li><a href="/sci-comm">Sci Comm</a></li>
     <li><a href="/writing">Writing</a></li>
     <li><a href="/about">About</a></li>
-    <li><a href="/book" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
+    <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
   </ul>
-</nav>
+</main-nav>
 
 <!-- ══════ HERO ══════ -->
 <section class="hero" aria-label="Introduction">
@@ -739,7 +745,6 @@ footer {
         <p>I'm a <strong>PhD researcher in Statistical Machine Learning</strong> at Imperial College London and a Guest Teacher in Mathematics at the LSE. My research develops new methods for predicting ocean surface currents — involving an embarrassing amount of thinking about rubber ducks.</p>
         <p>I've spoken at the Royal Institution, won FameLab, presented at the Gathering for Gardner in Atlanta, and reviewed for The Mathematical Gazette. I also keep a notebook of mathematical ideas I'm too excited about to leave alone.</p>
         <p>I attended a school that didn't offer Further Mathematics, came to Imperial via a non-linear path, and care deeply about making mathematics feel possible for <em>everyone</em> — not just the people who were always told they were good at it.</p>
-        <span class="margin-note">← this bit matters a lot to me</span>
       </div>
     </div>
 
@@ -951,7 +956,7 @@ footer {
     London & surrounding areas · weekdays & some weekends<br>
     bespoke content very welcome
   </p>
-  <a href="/cdn-cgi/l/email-protection#3046515e554343517046515e554343515d5154451e535f5d" class="cta-btn">get in touch →</a>
+  <a href="mailto:vanessa@vanessamadu.com" class="cta-btn">get in touch →</a>
 </section>
 
 <!-- FOOTER -->
@@ -960,7 +965,7 @@ footer {
     <div>
       <div class="footer-logo">Vanessa Madu</div>
       <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
-      <div class="footer-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0573646b607676644573646b60767664686461702b666a68">[email&#160;protected]</a></div>
+      <div class="footer-email">vanessa@vanessamadu.com</div>
     </div>
     <nav class="footer-nav" aria-label="Footer navigation">
       <a href="/sessions">Sessions</a>
@@ -968,5 +973,5 @@ footer {
       <a href="/sci-comm">Science Communication</a>
       <a href="/writing">Writing & Notes</a>
       <a href="/about">About</a>
-      <a href="/cv">Academic CV</a>
-      <a href="/cdn-cgi/l/email-protection#2c5a4d42495f5f4d6c5a4d42495f5f4d414d4859024f4341">Book a Session
+      <a href="/about/#cv">Academic CV</a>
+      <a href="/sessions#enquire">Book a Session</a>
