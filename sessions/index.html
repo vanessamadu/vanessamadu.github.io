@@ -120,6 +120,12 @@ main-nav {
   letter-spacing: -0.02em;
 }
 
+.page-h1 span {
+  font-weight: 500;
+  color: var(--green);
+  display: block;
+}
+
 .header-note {
   font-family: 'Caveat', cursive;
   font-size: 1rem; font-weight: 500;
@@ -349,6 +355,12 @@ main-nav {
   margin-bottom: 0.5rem;
 }
 
+.form-cat{
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 800;
+  color: var(--mist);
+}
+
 .form-sub {
   font-family: 'Caveat', cursive;
   font-size: 1rem; font-weight: 500;
@@ -529,7 +541,8 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   <div class="page-header-inner">
     <div>
       <span class="header-scribble">talks, workshops, assemblies &amp; more</span>
-      <h1 class="page-h1">Talks &amp; workshops<br>for the curiously curious</h1>
+      <h1 class="page-h1">Talks &amp; workshops<br>
+        <span>for the curiously curious</span></h1>
     </div>
     <span class="header-note">
       <i class="fa-solid fa-people-group fa-xs" aria-hidden="true"></i> Year 3 through Sixth Form<br>
@@ -1371,7 +1384,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       <div class="form-field full">
         <label>Sessions interested in</label>
         <div class="form-checkbox-group">
-          <div>Maths Talks:</div>
+          <div class="form-cat">Maths Talks:</div>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Rubber Ducks"> Rubber Ducks, Oceans &amp; Ridiculous Hypotheticals</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Climate change"> How Do We Know Humans Are Causing Climate Change?</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Around the mathematical world"> Around the Mathematical World</label>
@@ -1383,19 +1396,19 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Nonsense inference"> Nonsense Inference and How to Avoid It</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Data, data"> Data, Data Everywhere, but Not an Insight in Sight</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Wisdom from wonderland"> Wisdom from Wonderland (talk series)</label>
-          <div>Workshops:</div>
+          <div class="form-cat">Workshops:</div>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="What are the odds"> What Are the Odds?!</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Probability"> Probability: Play to Win </label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="How things get carried away"> How Things Get Carried Away</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Curve stitching"> Curve Stitching: Where Art Meets Algebra</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Mathematical secrets"> Exploring Mathematical Secrets (series)</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Hello World"> Hello World: Introduction to Coding for Girls</label>
-          <div>Careers Talks:</div>
+          <div class="form-cat">Careers Talks:</div>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Meet a researcher"> Meet a Researcher</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Meet an Oceanographically-Enabled"> Meet an Oceanographically-Enabled Mathematical Statistician</label>
-          <div>Assemblies:</div>
+          <div class="form-cat">Assemblies:</div>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Could I be a Scientist"> Could I be a Scientist?</label>
-          <div>Something else:</div>
+          <div class="form-cat">Something else:</div>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Bespoke"> Something bespoke</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Not sure"> Not sure yet (I'm happy to chat!)</label>
         </div>
