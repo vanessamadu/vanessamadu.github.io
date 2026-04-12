@@ -459,7 +459,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       <span class="header-eyebrow">PhD Researcher · Imperial College London · EPSRC CDT StatML</span>
       <h1 class="page-h1">Research</h1>
       <p class="header-summary">
-        My research sits at the intersection of <strong>Statistical Machine Learning</strong>, <strong>physical oceanography</strong>, and <strong>uncertainty quantification</strong> — developing probabilistic methods for predicting ocean surface currents from sparse, noisy drifter data. Alongside my PhD I pursue recreational mathematics and am beginning to write about pedagogy in university mathematics.
+        My research sits at the intersection of <strong>Statistical Machine Learning</strong> and <strong>oceanography</strong> developing probabilistic methods for predicting ocean surface currents from sparse, noisy drifter data. Alongside my PhD I pursue recreational mathematics and am also interested in pedagogy in university mathematics.
       </p>
     </div>
     <nav class="area-nav" aria-label="Jump to research area">
@@ -498,27 +498,24 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
             <span class="project-date">Jun 2024 – Present</span>
             <span class="project-supervisor"><i class="fa-solid fa-user-tie fa-xs"></i> Sykulski &amp; Evangelou</span>
           </div>
-          <h3 class="project-title">Multivariate probabilistic prediction of ocean surface currents via NGBoost</h3>
+          <h3 class="project-title">Multivariate probabilistic prediction of ocean surface currents using NGBoost</h3>
           <p class="project-desc">
-            Developing <strong>multivariate extensions of Natural Gradient Boosting (NGBoost)</strong> for probabilistic signal extraction in high-dimensional spatiotemporal systems. The core challenge is learning structured uncertainty over correlated velocity components — eastward and northward — from surface drifter observations that are sparse, irregularly sampled, and contaminated by inertial oscillations.
+            Developing <strong>multivariate extensions of Natural Gradient Boosting (NGBoost)</strong> for probabilistic regression in spatiotemporal systems. The core challenge is learning structured uncertainty over correlated velocity components from surface drifter observations that are sparse, irregularly sampled, and contaminated by inertial oscillations.
           </p>
           <div class="project-details">
             <div class="detail-block">
               <h4>Methodological contributions</h4>
               <ul>
-                <li>Multivariate NGBoost with correlated output distributions</li>
-                <li>Robust pipelines for structured missingness in drifter data</li>
-                <li>Spatial interpolation via inverse distance weighting with haversine metrics</li>
-                <li>Extension of O'Malley et al. (2023) by incorporating SST gradients as covariates</li>
+                <li>Robust data interpolation and processing pipelines for drifter and level 4 processed data products</li>
+                <li>Extension of O'Malley et al. (2023) by incorporating sea surface temperature gradients as covariates</li>
                 <li>Rigorous uncertainty quantification, calibration, and out-of-sample diagnostics</li>
               </ul>
             </div>
             <div class="detail-block">
               <h4>Context &amp; motivation</h4>
               <ul>
-                <li>Ocean surface currents drive heat and carbon transport — accurate prediction matters for climate modelling</li>
-                <li>GDP-scale surface drifter array provides rich but irregular data</li>
-                <li>Probabilistic forecasts are essential for assimilation into ocean circulation models</li>
+                <li>Ocean surface currents drive heat and carbon transport; accurate prediction is crucial for climate modelling</li>
+                <li>Probabilistic forecasts are essential for uncertainty quantification</li>
                 <li>Presented work-in-progress at Changing the Face of Science Symposium 2025</li>
               </ul>
             </div>
@@ -529,8 +526,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
             <span class="keyword">Spatiotemporal modelling</span>
             <span class="keyword">Uncertainty quantification</span>
             <span class="keyword">Ocean drifters</span>
-            <span class="keyword">Multivariate output</span>
-            <span class="keyword">Sea surface temperature</span>
+            <span class="keyword">Multivariate regression</span>
           </div>
         </div>
       </div>
@@ -552,7 +548,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
         <span class="section-label" style="color: var(--green);">Short Projects · 2023–2024</span>
         <h2 class="section-h" id="projects-h">Statistical theory<br>&amp; ocean model evaluation</h2>
         <p class="section-intro">
-          Two 2.5-month research projects completed during the first year of the CDT, each resulting in novel theoretical or methodological contributions.
+          Two 2.5-month research projects completed during the first year of the CDT, each resulting in theoretical or methodological contributions.
         </p>
       </div>
     </div>
@@ -569,21 +565,21 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           </div>
           <h3 class="project-title">Robust models for time-varying signals: PDF derivation for complex random variables</h3>
           <p class="project-desc">
-            Working alongside the paper <em>Robust Filtering of a Location Parameter</em> (Catania, Harvey &amp; Luati, 2024), this project derived a <strong>novel general form of the probability density function</strong> for complex random variables under symmetry and regularity conditions. I produced a new and thorough proof validating the PDF for a weighted infinite sum of i.i.d. uniform random variables, providing additional proof details absent from the working paper, and derived a novel general PDF for an infinite sum of i.i.d. symmetrically distributed random variables, establishing conditions on distributions and weights for existence.
+            Working alongside the paper <em>Robust CDF-Filtering of a Location Parameter</em> (Catania, Harvey &amp; Luati, 2025), this project derived a general form of the probability density function for complex random variables under symmetry and regularity conditions. I produced a thorough proof validating the PDF for a weighted infinite sum of i.i.d. uniform random variables, providing additional proof details absent from the working paper, and derived a general PDF for an infinite sum of i.i.d. symmetrically beta distributed random variables, establishing conditions on distributions and weights for existence.
           </p>
           <div class="project-details">
             <div class="detail-block">
               <h4>Key results</h4>
               <ul>
-                <li>Novel general PDF under symmetry conditions for complex random variables</li>
-                <li>New proof of PDF for weighted infinite sum of i.i.d. uniform variables</li>
-                <li>General PDF for infinite sums of i.i.d. symmetrically distributed variables with existence conditions</li>
+                <li>General PDF under symmetry conditions for complex random variables</li>
+                <li>Proof of PDF for weighted infinite sum of i.i.d. uniform variables</li>
+                <li>General PDF for infinite sums of i.i.d. symmetrically beta distributed variables with existence conditions</li>
               </ul>
             </div>
             <div class="detail-block">
               <h4>Related work</h4>
               <ul>
-                <li>Catania, Harvey &amp; Luati (2024) — Robust Filtering of a Location Parameter</li>
+                <li><a href="https://doi.org/10.1111/jtsa.70026" target="_blank">Catania, Harvey &amp; Luati (2025) - Robust CDF-Filtering of a Location Parameter</a></li>
                 <li>Score-driven models for time-varying parameters</li>
               </ul>
             </div>
@@ -608,7 +604,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           </div>
           <h3 class="project-title">Physically interpretable error metrics for ocean surface current models</h3>
           <p class="project-desc">
-            Proposed a system of <strong>model evaluation and uncertainty metrics</strong> for a phenomena-centred approach to ocean surface modelling, aimed at maximising information gain from observational ocean data. The framework was designed to connect statistical model diagnostics to physically meaningful quantities — a gap in existing evaluation methodology for data-driven ocean models.
+            Proposed a system of model evaluation and uncertainty metrics for a phenomena-centred approach to ocean surface modelling, aimed at maximising information gain from observational ocean data. The framework was designed to connect statistical model diagnostics to physically meaningful quantities, a gap in existing evaluation methodology for data-driven ocean models.
           </p>
           <div class="project-details">
             <div class="detail-block">
@@ -632,7 +628,6 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
             <span class="keyword">Model evaluation</span>
             <span class="keyword">Ocean drifters</span>
             <span class="keyword">Uncertainty quantification</span>
-            <span class="keyword">Lagrangian oceanography</span>
             <span class="keyword">Error metrics</span>
           </div>
         </div>
@@ -653,9 +648,9 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       </div>
       <div class="section-heading-group">
         <span class="section-label" style="color: var(--rec);">Recreational Mathematics</span>
-        <h2 class="section-h" id="rec-h">Original research<br>for the joy of it</h2>
+        <h2 class="section-h" id="rec-h">Other research<br>(because it's fun)</h2>
         <p class="section-intro">
-          Alongside my formal PhD work I pursue original questions in recreational mathematics — the kind that start with "I wonder what happens if…" and end with a conference talk. I keep a notebook of ideas I'm too excited about to leave alone, and occasionally one of them turns into something worth presenting.
+          Alongside my formal PhD work I pursue original questions in recreational mathematics. I investigate new ideas often, and occasionally one of them turns into something worth presenting.
         </p>
       </div>
     </div>
@@ -671,7 +666,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           </div>
           <h3 class="project-title">On sequences of consecutive odd semi-primes</h3>
           <p class="project-desc">
-            A semi-prime is a positive integer that is the product of exactly two primes (not necessarily distinct). This project investigates <strong>sequences of consecutive odd semi-primes</strong> — characterising their structure, identifying patterns, and exploring upper bounds on their length. The question arose from a prior investigation into consecutive semi-primes (including even ones), and the restriction to odd numbers introduces substantially richer arithmetic structure.
+            A semi-prime is a positive integer that is the product of exactly two primes (not necessarily distinct). This project investigates <strong>sequences of consecutive odd semi-primes</strong>, characterising their structure, identifying patterns, and exploring upper bounds on their length. The question arose from a prior investigation into consecutive semi-primes (including even ones), and the restriction to odd numbers introduces substantially richer arithmetic structure.
           </p>
           <div class="project-details">
             <div class="detail-block">
@@ -686,9 +681,6 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
               <h4>Dissemination</h4>
               <ul>
                 <li>MathsJam Annual Gathering 2025</li>
-                <li>Gathering for Gardner (G4G15), Atlanta, Georgia, 2024</li>
-                <li>Awarded full G4G scholarship + £900 Dean's Fund Travel Grant</li>
-                <li>Reviewer for The Mathematical Gazette (2024–present)</li>
               </ul>
             </div>
           </div>
@@ -710,7 +702,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           </div>
           <h3 class="project-title">Further recreational work in progress</h3>
           <p class="project-desc">
-            More investigations are underway — including extensions of the semi-prime work and a few other rabbit holes. Watch this space, or get in touch if you'd like to hear more.
+            The ideas I am currently interested in include extensions of my work on arithmetic sequences of semi-primes and the relationship between curve-stitching and cyclic groups. Get in touch if you'd like to hear more or work together!
           </p>
         </div>
       </div>
@@ -732,62 +724,21 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
         <span class="section-label" style="color: var(--ped);">Pedagogical Research · In development</span>
         <h2 class="section-h" id="ped-h">Mathematics education<br>&amp; university pedagogy</h2>
         <p class="section-intro">
-          My experience teaching mathematics at Imperial College London and the London School of Economics — across analysis, linear algebra, probability, fluid dynamics, and more — has raised questions I want to investigate formally. This is a nascent but growing part of my research identity.
+          My experience teaching mathematics at the London School of Economics across analysis, algebra, algorithms, and more has raised questions I want to investigate formally. This is a nascent but growing part of my research identity.
         </p>
       </div>
     </div>
-
-    <div class="project-layout">
-
-      <div class="project-card coming-soon">
-        <div class="project-stripe" style="background: var(--ped);"></div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-tag tag-soon">In preparation</span>
-            <span class="project-date">2025 – 2026</span>
-          </div>
-          <h3 class="project-title">Article submission to <em>Postgraduate Pedagogies</em></h3>
-          <p class="project-desc">
-            An article currently in preparation for submission to <em>Postgraduate Pedagogies</em>, the journal of the Higher Education Academy. The piece draws on my experience as a graduate teaching assistant and guest teacher, and engages with questions around inclusion, mathematical identity, and the culture of university mathematics teaching.
-          </p>
-          <div class="project-details">
-            <div class="detail-block">
-              <h4>Themes</h4>
-              <ul>
-                <li>Mathematical identity and belonging in higher education</li>
-                <li>Inclusive pedagogy in quantitative disciplines</li>
-                <li>The GTA experience: positionality and teaching practice</li>
-              </ul>
-            </div>
-            <div class="detail-block">
-              <h4>Context</h4>
-              <ul>
-                <li>Drawing on teaching at Imperial College London and the LSE</li>
-                <li>Informed by EDI advocacy and widening participation work</li>
-                <li>Get in touch if you work in this area — I'd love to connect</li>
-              </ul>
-            </div>
-          </div>
-          <div class="keyword-tags">
-            <span class="keyword">University pedagogy</span>
-            <span class="keyword">Mathematical identity</span>
-            <span class="keyword">Inclusive teaching</span>
-            <span class="keyword">Graduate teaching</span>
-            <span class="keyword">Postgraduate Pedagogies</span>
-          </div>
-        </div>
-      </div>
 
       <div class="project-card coming-soon">
         <div class="project-stripe" style="background: rgba(176,106,42,0.3);"></div>
         <div class="project-body">
           <div class="project-meta">
             <span class="project-tag tag-soon">Coming soon</span>
-            <span class="project-date">Watch this space</span>
+            <span class="project-date">In the notebook</span>
           </div>
           <h3 class="project-title">Further pedagogical work</h3>
           <p class="project-desc">
-            More projects in development. If you work in mathematics education research or are interested in collaborating on questions around undergraduate or postgraduate pedagogy, I'd be very glad to hear from you.
+            Ideas in development. If you work in mathematics education research or are interested in collaborating on questions around undergraduate or postgraduate pedagogy, I'd be very glad to hear from you.
           </p>
         </div>
       </div>
@@ -800,7 +751,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 <section class="collab-bg" aria-labelledby="collab-h">
   <div class="collab-inner">
     <div>
-      <h2 class="collab-heading" id="collab-h">Supervisors &amp;<br>collaborators</h2>
+      <h2 class="collab-heading" id="collab-h">Current supervisors &amp;<br>collaborators</h2>
       <span class="collab-sub">Imperial College London · EPSRC CDT StatML</span>
       <div class="supervisor-list">
         <div class="supervisor-card">
@@ -810,14 +761,6 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
         <div class="supervisor-card">
           <div class="sup-name">Dr Marina Evangelou</div>
           <div class="sup-role">PhD Supervisor · Department of Mathematics, Imperial College London<br>Specialisms: Statistical machine learning, biostatistics</div>
-        </div>
-        <div class="supervisor-card">
-          <div class="sup-name">Professor Alessandra Luati</div>
-          <div class="sup-role">Short Project Supervisor · Department of Statistics, LSE<br>Specialisms: Score-driven models, robust statistics, time series</div>
-        </div>
-        <div class="supervisor-card">
-          <div class="sup-name">Professor Pavel Berloff</div>
-          <div class="sup-role">MSci Project Supervisor · Department of Mathematics, Imperial College London<br>Specialisms: Geophysical fluid dynamics, ocean modelling</div>
         </div>
       </div>
     </div>
@@ -839,7 +782,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Vanessa Madu</div>
-      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, wearer of many hats.</p>
       <div class="footer-email">vanessa@vanessamadu.com</div>
     </div>
     <nav class="footer-nav" aria-label="Footer navigation">

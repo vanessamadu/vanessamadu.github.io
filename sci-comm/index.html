@@ -121,12 +121,13 @@ main-nav {
   font-size: clamp(2.8rem, 5vw, 4.8rem);
   color: var(--green); line-height: 0.95;
   letter-spacing: -0.02em; margin-bottom: 1.5rem;
+  line-height: 1em;
 }
 
 .hero-desc {
   font-size: 1rem; font-weight: 300;
   color: var(--pencil); line-height: 1.85;
-  max-width: 560px;
+  max-width: 1200px;
 }
 .hero-desc strong { color: var(--ink); font-weight: 500; }
 
@@ -236,15 +237,16 @@ main-nav {
 
 .fc-visual {
   background: rgba(255,255,255,0.06);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: left;
   font-size: 6rem; color: rgba(255,255,255,0.15);
-  position: relative; overflow: hidden;
+  position: relative; overflow: hidden; padding-left: 2rem;
 }
 
 .fc-visual-inner {
   display: flex; flex-direction: column;
   align-items: center; gap: 1rem;
   position: relative; z-index: 1;
+  padding-top: 0.5rem; padding-bottom: 0.5rem;
 }
 
 .fc-visual-title {
@@ -254,19 +256,28 @@ main-nav {
   text-align: center; max-width: 200px; line-height: 1.3;
 }
 
+
+
 .ep-list {
-  display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 220px;
+  display: flex; flex-direction: column; gap: 0.4rem; width: 100%;
 }
 
 .ep-item {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 6px; padding: 0.5rem 0.8rem;
-  font-size: 0.72rem; color: rgba(255,255,255,0.65);
+   border-radius: 6px; padding: 0.25rem 0.5rem 0.25rem;
+  font-size: 0.78rem; color: rgba(255,255,255,0.75);
   line-height: 1.4;
   display: flex; align-items: center; gap: 0.5rem;
 }
 .ep-item i { font-size: 0.65rem; color: var(--rose); flex-shrink: 0; }
+
+.ep-small {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem; font-weight: 500;
+  color: rgba(200,210,255,0.6);
+  margin-bottom: 0.5rem;
+}
 
 /* ── TALKS GRID ── */
 .talks-grid {
@@ -500,9 +511,8 @@ main-nav {
   position: relative; overflow: hidden;
 }
 .contact-band::before {
-  content: '<i class="fa-solid fa-microphone"></i>';
   position: absolute; font-size: 14rem;
-  left: 4rem; top: 50%; transform: translateY(-50%);
+  left: 4rem; top: 50%; transform: translateY(-35%);
   color: rgba(255,255,255,0.06); pointer-events: none; user-select: none;
 }
 
@@ -595,25 +605,12 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 <header class="hero" id="main-content">
   <div class="hero-inner">
     <div>
-      <span class="hero-eyebrow">FameLab Regional Winner · Royal Institution Speaker · Mathematical Gazette Reviewer</span>
-      <h1 class="hero-h1">Making maths feel<br>as thrilling as it is.</h1>
+      <span class="hero-eyebrow">Speaker · Writer · Performer · Science Poet · Reviewer</span>
+      <h1 class="hero-h1">Re-enchanting the Mathematical</h1>
       <p class="hero-desc">
-        I believe <strong>mathematics is for everyone</strong> — not as a platitude, but as a commitment I try to act on every time I give a talk, write an article, or hand a child a giant playing card. This page is a highlights reel of what that's looked like so far.
+        I really like maths, like, a lot. In fact, I think <strong>maths is the closest thing we have to magic</strong> and I design everything I do around
+        helping others to experience that for themselves! This page is a highlights reel of what that's looked like so far.
       </p>
-    </div>
-    <div class="hero-stats" aria-label="Key statistics">
-      <div class="stat-sticker">
-        <span class="stat-n">300+</span>
-        <span class="stat-l">students in one<br>Royal Institution lecture</span>
-      </div>
-      <div class="stat-sticker">
-        <span class="stat-n">80%</span>
-        <span class="stat-l">increase in RCSU Science<br>Challenge participation</span>
-      </div>
-      <div class="stat-sticker">
-        <span class="stat-n">2024</span>
-        <span class="stat-l">Gathering for Gardner,<br>Atlanta — full scholar</span>
-      </div>
     </div>
   </div>
 </header>
@@ -622,16 +619,18 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 <section aria-labelledby="video-h">
   <div class="section">
     <div class="section-header">
-      <span class="section-eyebrow">YouTube · FameLab-style short talks</span>
-      <h2 class="section-h" id="video-h">Wisdom from Wonderland</h2>
+      <span class="section-eyebrow">YouTube · 3 minutes or less </span>
+      <h2 class="section-h" id="video-h">Short Science Talks</h2>
     </div>
 
     <div class="feature-card" style="margin-bottom:0;">
       <div class="fc-text">
-        <span class="fc-tag"><i class="fa-solid fa-circle-play"></i> Video series · All years</span>
-        <h3 class="fc-title">Four short talks. One Wonderland. Actual mathematics.</h3>
+        <span class="fc-tag"><i class="fa-solid fa-circle-play"></i> Videos</span>
+        <h3 class="fc-title">Quick Science</h3>
         <p class="fc-desc">
-          Using Lewis Carroll's <em>Alice in Wonderland</em> as a jumping-off point, each talk takes one idea — data science, statistical inference, ocean science, climate attribution — and makes it genuinely exciting in under twenty minutes. Designed for curious people of any background, each episode can be extended to 30–45 minutes for school or university audiences.
+          Attention spans are short these days. Want a dose of science in 3 minutes* or less? Look no further. <br>
+
+          <span class="ep-small">*the videos longer than 3 minutes have a Q&A at the end :)</span>
         </p>
         <a href="https://youtu.be/ASeRrt7XYJk" class="fc-link" target="_blank" rel="noopener">
           <i class="fa-brands fa-youtube"></i> Watch on YouTube
@@ -639,12 +638,13 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       </div>
       <div class="fc-visual">
         <div class="fc-visual-inner">
-          <div class="fc-visual-title">Four episodes</div>
           <div class="ep-list">
             <div class="ep-item"><i class="fa-solid fa-circle-play"></i> Data, Data Everywhere, but Not an Insight in Sight</div>
             <div class="ep-item"><i class="fa-solid fa-circle-play"></i> Nonsense Inference and How to Avoid It</div>
             <div class="ep-item"><i class="fa-solid fa-circle-play"></i> How Rubber Ducks Taught Us About the North Pacific</div>
             <div class="ep-item"><i class="fa-solid fa-circle-play"></i> How Do We Know Humans Are Causing Climate Change?</div>
+            <div class="ep-item"><i class="fa-solid fa-circle-play"></i> Why do we need to prove that 1+1=2?</div>
+          </div>
           </div>
         </div>
       </div>
@@ -672,7 +672,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           <p class="talk-desc">Delivered in the main lecture theatre to 300+ Year 5 and 6 students as part of the Climate Innovation Day. Teacher feedback: <em>"The best explanation of fluid dynamics I've ever heard, and I did a mechanical engineering degree!"</em></p>
         </div>
         <div class="talk-foot">
-          <span class="talk-date">2024</span>
+          <span class="talk-date">2023</span>
           <span class="talk-badge badge-invite">Guest lecture</span>
         </div>
       </div>
@@ -682,7 +682,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
         <div class="talk-body">
           <span class="talk-venue"><i class="fa-solid fa-dice"></i> Gathering for Gardner (G4G15) · Atlanta</span>
           <h3 class="talk-title">A Chaotic Series of Mathematical Accidents</h3>
-          <p class="talk-desc">Presented original recreational mathematics research at one of the world's most celebrated gatherings of mathematical minds. Awarded full G4G scholarship and £900 Dean's Fund Travel Grant.</p>
+          <p class="talk-desc">Presented a talk on the role of 'accidents' in mathematical discovery at one of the world's most celebrated gatherings of mathematical minds. Awarded full G4G scholarship and £900 Dean's Fund Travel Grant.</p>
         </div>
         <div class="talk-foot">
           <span class="talk-date">2024</span>
@@ -695,50 +695,12 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
         <div class="talk-body">
           <span class="talk-venue"><i class="fa-solid fa-microphone"></i> FameLab · Cheltenham Science Festival</span>
           <h3 class="talk-title">Regional Winner &amp; National Finalist</h3>
-          <p class="talk-desc">Competed in FameLab — the international science communication competition — winning the regional heat and reaching the national final. Broadcast on KMTV.</p>
+          <p class="talk-desc">Competed in FameLab, the international science communication competition, winning the South East regional final and reaching the national final. 
+            The regional final was broadcasted on <em>KMTV</em> and the nation final took place at <em>Cheltenham Science Festival</em></p>
         </div>
         <div class="talk-foot">
           <span class="talk-date">2023</span>
           <span class="talk-badge badge-award">Award winner</span>
-        </div>
-      </div>
-
-      <div class="talk-card">
-        <div class="talk-stripe" style="background: var(--sage);"></div>
-        <div class="talk-body">
-          <span class="talk-venue"><i class="fa-solid fa-hashtag"></i> MathsJam Annual Gathering</span>
-          <h3 class="talk-title">On Sequences of Consecutive Odd Semi-Primes</h3>
-          <p class="talk-desc">Presented original number theory research at MathsJam 2025, following an earlier presentation of consecutive semi-prime work at MathsJam 2023.</p>
-        </div>
-        <div class="talk-foot">
-          <span class="talk-date">2023 &amp; 2025</span>
-          <span class="talk-badge badge-invite">Speaker</span>
-        </div>
-      </div>
-
-      <div class="talk-card">
-        <div class="talk-stripe" style="background: var(--green);"></div>
-        <div class="talk-body">
-          <span class="talk-venue"><i class="fa-solid fa-graduation-cap"></i> Changing the Face of Science Symposium</span>
-          <h3 class="talk-title">MVN NGBoost for Ocean Surface Current Prediction</h3>
-          <p class="talk-desc">Presented PhD research in progress at this symposium celebrating diversity in STEM research. One of several academic conferences where I've shared work from the CDT.</p>
-        </div>
-        <div class="talk-foot">
-          <span class="talk-date">2025</span>
-          <span class="talk-badge badge-invite">Conference talk</span>
-        </div>
-      </div>
-
-      <div class="talk-card">
-        <div class="talk-stripe" style="background: var(--mustard);"></div>
-        <div class="talk-body">
-          <span class="talk-venue"><i class="fa-solid fa-book"></i> Young Scientists Journal Conference · King's Canterbury</span>
-          <h3 class="talk-title">Rubber Ducks, Oceans &amp; Ridiculous Hypotheticals About Jam Tarts</h3>
-          <p class="talk-desc">Delivered the flagship rubber duck talk to sixth form students at the Young Scientists Journal Conference, one of several school and public science events where this talk has been given.</p>
-        </div>
-        <div class="talk-foot">
-          <span class="talk-date">2024</span>
-          <span class="talk-badge badge-invite">Invited speaker</span>
         </div>
       </div>
 
@@ -759,35 +721,35 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <div class="writing-grid">
 
       <div class="writing-card">
-        <div class="wc-icon"><i class="fa-solid fa-pen-nib"></i></div>
-        <span class="wc-pub">Womanthology · 2024</span>
-        <h3 class="wc-title">Science is Best When it's Shared</h3>
-        <p class="wc-desc">A reflection on the importance of making science accessible and the personal commitment behind science communication work. Published in Womanthology's online platform.</p>
-        <a href="https://womanthology.co.uk" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read at Womanthology</a>
-      </div>
-
-      <div class="writing-card">
         <div class="wc-icon"><i class="fa-solid fa-heart"></i></div>
         <span class="wc-pub">Medium · Nov 2023 · Featured in Carnival of Mathematics</span>
-        <h3 class="wc-title">Nursery Rhymes for Curious Minds: The Queen of Hearts (Understanding Bayes' Theorem)</h3>
-        <p class="wc-desc">A science poem reimagining a classic nursery rhyme as an introduction to Bayes' Theorem. Selected for inclusion in the Carnival of Mathematics — a monthly collection of the best mathematics writing online.</p>
-        <a href="https://medium.com" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Medium</a>
+        <h3 class="wc-title">Nursery Rhymes for Curious Minds: The Queen of Hearts Messes Up Her Tarts</h3>
+        <p class="wc-desc">A science poem reimagining a classic nursery rhyme as an introduction to Bayes' Theorem. Selected for inclusion in the Carnival of Mathematics.</p>
+        <a href="https://medium.com/@vanessamadu/nursery-rhymes-for-curious-minds-the-queen-of-hearts-messes-up-her-tarts-43580870a2d3" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Medium</a>
       </div>
 
       <div class="writing-card">
         <div class="wc-icon"><i class="fa-solid fa-star"></i></div>
         <span class="wc-pub">Medium · Jan 2024</span>
-        <h3 class="wc-title">The Universe, in Rhyme and Verse: When a Star Gets Old</h3>
-        <p class="wc-desc">Another entry in the science poetry series — this one turning stellar evolution into verse. Part of an ongoing project exploring how poetry can make scientific ideas visceral and memorable.</p>
-        <a href="https://medium.com" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Medium</a>
+        <h3 class="wc-title">A Star, That Ran Out of Fuel, and Suffered a Catastrophe of Supermassive Dimensions</h3>
+        <p class="wc-desc">Another entry in the science poetry series, this one turning stellar evolution into verse as a parody of <em>George, Who played with a Dangerous Toy, and suffered a Catastrophe of considerable Dimensions</em> from Hilaire Beloc's </em>Cautionary Tales for Children</em>. Part of an ongoing project exploring how poetry can make scientific ideas playful and memorable.</p>
+        <a href="https://medium.com/@vanessamadu/the-universe-in-rhyme-and-verse-when-a-star-gets-old-a55e07681832" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Medium</a>
+      </div>
+
+            <div class="writing-card">
+        <div class="wc-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <span class="wc-pub">Womanthology · 2024</span>
+        <h3 class="wc-title">Science is Best When it's Shared</h3>
+        <p class="wc-desc">A reflection on the importance of making science accessible and the personal commitment behind science communication work. Published in Womanthology's online platform.</p>
+        <a href="https://www.womanthology.co.uk/science-is-best-when-its-shared/" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read at Womanthology</a>
       </div>
 
       <div class="writing-card">
         <div class="wc-icon"><i class="fa-solid fa-flask"></i></div>
-        <span class="wc-pub">Imperial College Faculty of Natural Sciences Blog</span>
-        <h3 class="wc-title">Do Ducks Have Knees? &amp; other science communication writing</h3>
-        <p class="wc-desc">A series of pieces for the Imperial College Faculty of Natural Sciences blog, including reflections on extracurricular STEM clubs, science engagement, and the Black Lives Matter survey of 250+ students and staff whose findings were presented to the Head of the Department of Mathematics.</p>
-        <a href="https://www.imperial.ac.uk/natural-sciences/blog" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Imperial blog</a>
+        <span class="wc-pub">Imperial College Faculty of Natural Sciences Blog · 2024</span>
+        <h3 class="wc-title">Do Ducks Have Knees? </h3>
+        <p class="wc-desc">A piece for the Imperial College Faculty of Natural Sciences blog reflecting on the importance of extracurricular STEM clubs in promoting passion for science and mathematics in young students.</p>
+        <a href="https://blogs.imperial.ac.uk/natural-sciences/2024/04/21/do-ducks-have-knees/" class="wc-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Read on Imperial blog</a>
       </div>
 
     </div>
@@ -835,7 +797,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
         <div class="art-body">
           <span class="art-type"><i class="fa-solid fa-star"></i> Science poetry</span>
           <h3 class="art-title">Science poetry &amp; mathematical illustration</h3>
-          <p class="art-desc">An ongoing body of work combining poetry, illustration, and mathematics — including the Nursery Rhymes for Curious Minds series and digital art and illustrations created with Procreate.</p>
+          <p class="art-desc">An ongoing body of work combining poetry, illustration, and mathematics, including the Nursery Rhymes for Curious Minds series and digital art and illustrations created with Procreate.</p>
         </div>
       </div>
 
@@ -860,26 +822,8 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           <i class="fa-solid fa-laptop-code"></i>
         </div>
         <h3 class="oc-title">Hello World Hack</h3>
-        <p class="oc-desc">Co-founded and co-designed a coding workshop for girls aged 7–10, awarded £2,000 from the Imperial College Societal Engagement Seed Fund. Initially planned for 120+ children, pivoted to a successful virtual event during COVID-19 and has since become an annual fixture.</p>
-        <span class="oc-stat">60+ children in person · 30 virtually · Now annual</span>
-      </div>
-
-      <div class="outreach-card">
-        <div class="oc-icon" style="background: #FEF9C3; color: #713F12;">
-          <i class="fa-solid fa-trophy"></i>
-        </div>
-        <h3 class="oc-title">RCSU Science Challenge — Chair</h3>
-        <p class="oc-desc">Chaired the annual science communication competition for school students (aged 15–18) in 2022–23. Introduced Science Shorts video series, established a partnership with the Young Scientists Journal, recruited judges including Kathy Sykes (BBC) and Tom Crawford (Numberphile), and secured a £1,000 pledge from Professor Lord Robert Winston.</p>
-        <span class="oc-stat">80% increase in participation · ~180 school-division participants worldwide</span>
-      </div>
-
-      <div class="outreach-card">
-        <div class="oc-icon" style="background: #FCE7F3; color: #9D174D;">
-          <i class="fa-solid fa-users"></i>
-        </div>
-        <h3 class="oc-title">Project Insight</h3>
-        <p class="oc-desc">Founded a website providing STEM role models for minority students through interviews with professionals across industry and academia. Grew the team to 6 members and built relationships with 30+ STEM professionals, including the Global CEO of Publicis Sapient and the President of the Institute of Mathematics and its Applications.</p>
-        <span class="oc-stat">700+ website visitors · 6-person team</span>
+        <p class="oc-desc">Co-created and co-designed a coding workshop for girls aged 7–10, awarded £2,000 from the Imperial College Societal Engagement Seed Fund. Delivered to 60+ children in person and 30 virtually.</p>
+        <span class="oc-stat">Partnership with Imperial College London's Department of Computing </span>
       </div>
 
       <div class="outreach-card">
@@ -887,7 +831,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           <i class="fa-solid fa-chalkboard-user"></i>
         </div>
         <h3 class="oc-title">Imperial College London Outreach</h3>
-        <p class="oc-desc">Academic Leader and Mentor across multiple outreach programmes (2021–2025) including the Sutton Trust Summer School, STEM Futures, STEM Potential, and Insights residential programmes. Created content on fluid dynamics, probability, fractals, number theory, and infinity for Year 10–12 students from underrepresented backgrounds, and co-led Primary Science Club and the Primary Maths Transition Programme.</p>
+        <p class="oc-desc">Academic Leader and Mentor across multiple outreach programmes (2021–2025) including the Sutton Trust Summer School, STEM Futures, STEM Potential, and Insights residential programmes. Created content on fluid dynamics and probability for Year 10–12 students from underrepresented backgrounds, and co-led Primary Science Club and Primary Maths Transition Programme sessions.</p>
         <span class="oc-stat">Sutton Trust · STEM Futures · STEM Potential · Insights · Primary Maths · Primary Science</span>
       </div>
 
@@ -910,6 +854,12 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       </div>
 
       <div class="press-item" role="listitem">
+        <span class="press-outlet">Imperial College London Stories</span>
+        <span class="press-title">Outreach at 50: Counting on Maths</span>
+        <span class="press-year">2025</span>
+      </div>
+
+      <div class="press-item" role="listitem">
         <span class="press-outlet">Imperial College London News</span>
         <span class="press-title">Transformative Engagement Work Celebrated in Prestigious Awards</span>
         <span class="press-year">2024</span>
@@ -918,7 +868,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       <div class="press-item" role="listitem">
         <span class="press-outlet">Imperial College London News</span>
         <span class="press-title">New Window Displays in the Huxley Building Weave Maths Through History</span>
-        <span class="press-year">2024</span>
+        <span class="press-year">2023</span>
       </div>
 
       <div class="press-item" role="listitem">
@@ -928,20 +878,14 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       </div>
 
       <div class="press-item" role="listitem">
-        <span class="press-outlet">Imperial College London Stories</span>
-        <span class="press-title">Outreach at 50: Counting on Maths</span>
-        <span class="press-year">2023</span>
-      </div>
-
-      <div class="press-item" role="listitem">
         <span class="press-outlet">Imperial College London News</span>
-        <span class="press-title">Maths Student Becomes Next Rising Star — Top 10 Black Students in the UK</span>
+        <span class="press-title">Maths Student Becomes Next Rising Star - Top 10 Black Students in the UK</span>
         <span class="press-year">2020</span>
       </div>
 
       <div class="press-item" role="listitem">
         <span class="press-outlet">Womanthology</span>
-        <span class="press-title">Formal Proof of Passion for Maths (profile, A-level years)</span>
+        <span class="press-title">Formal Proof of Passion for Maths (profile, sixth from years)</span>
         <span class="press-year">2018</span>
       </div>
 
@@ -967,7 +911,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Vanessa Madu</div>
-      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, rubber duck enthusiast.</p>
+      <p class="footer-desc">PhD Researcher in Statistical Machine Learning · Imperial College London · Guest Teacher in Mathematics · LSE · Science communicator, mathematician, ocean scientist, wearer of many hats.</p>
       <div class="footer-email">vanessa@vanessamadu.com</div>
     </div>
     <nav class="footer-nav" aria-label="Footer navigation">
