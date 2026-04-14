@@ -39,6 +39,7 @@
 .numbers-inner,
 .meadow-inner {
   max-width: min(1200px, 92vw);
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -67,7 +68,7 @@
 @media (max-width: 768px) {
   .nav-hamburger { display: block; }
 
-  .nav-links {
+  .site-nav .nav-links {
     display: none;
     position: absolute;
     top: 56px; left: 0; right: 0;
@@ -475,11 +476,26 @@
 ══════════════════════════════════════════ */
 
 @media (min-width: 1400px) {
-  /* Hero background-image stays edge-to-edge
-     but content doesn't go beyond 1200px */
-  .hero-content { padding-left: calc((100vw - 1200px) / 2 + 4rem); }
-
   /* Research hero */
   .page-header > *,
   .header-inner { padding-left: 0; padding-right: 0; }
+}
+
+/* ══════════════════════════════════════════
+   21. HERO CONTENT ALIGNMENT
+══════════════════════════════════════════ */
+
+/* Keep hero text left-aligned and not pushed right on wide screens */
+.hero-content {
+  width: 100%;
+  max-width: 600px;
+  margin-left: max(3rem, calc((100vw - 1200px) / 2 + 3rem));
+  margin-right: 0;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    margin-left: 0;
+    max-width: 100%;
+  }
 }

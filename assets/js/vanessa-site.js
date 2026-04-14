@@ -2,7 +2,7 @@
 
 // ── Mobile nav hamburger ──────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  const nav = document.querySelector('nav');
+  const nav = document.querySelector('.site-nav');
   const links = document.querySelector('.nav-links');
   if (!nav || !links) return;
 

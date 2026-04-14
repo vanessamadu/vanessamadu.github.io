@@ -65,16 +65,11 @@ a { text-decoration: none; color: inherit; }
 .skip-link:focus { top: 1rem; }
 
 /* ── NAV ── */
-nav {
-  padding: 0 2.5rem; height: 56px;
-  display: flex; align-items: center; justify-content: space-between;
-  position: sticky; top: 0; z-index: 200;
-}
-main-nav {
-  padding: 0 2.5rem; height: 56px;
-  display: flex; align-items: center; justify-content: space-between;
-  position: sticky; top: 0; z-index: 200;
+.site-nav {
   background: var(--green);
+  padding: 0 2.5rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
 }
 .nav-logo {
   font-family: 'Fraunces', serif;
@@ -483,7 +478,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main-nav aria-label="Main navigation">
+<nav class="site-nav" aria-label="Main navigation">
   <a href="/" class="nav-logo">Vanessa Madu</a>
   <ul class="nav-links">
     <li><a href="/sessions">Sessions</a></li>
@@ -493,7 +488,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <li><a href="/about">About</a></li>
     <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
   </ul>
-</main-nav>
+</nav>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb" aria-label="Breadcrumb">
