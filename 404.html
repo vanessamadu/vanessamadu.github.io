@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 | Vanessa Madu</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/vanessa-responsive.css">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -64,15 +66,10 @@ p {
   transition: background 0.2s; box-shadow: 3px 3px 0 var(--indigo2);
 }
 .home-btn:hover { background: var(--indigo2); }
-.margin-note {
-  font-family: 'Caveat', cursive; font-size: 0.95rem; font-weight: 600;
-  color: var(--rose); display: block; margin-top: 1.5rem;
-  transform: rotate(-1deg);
-}
 </style>
 </head>
 <body>
-<nav>
+<nav class="site-nav">
   <a href="/" class="nav-logo">Vanessa Madu</a>
 </nav>
 <main class="main">
@@ -84,5 +81,6 @@ p {
     <a href="/" class="home-btn"><i class="fa-solid fa-house"></i> Back to home</a>
   </div>
 </main>
+<script src="/assets/js/vanessa-site.js" defer></script>
 </body>
 </html>
