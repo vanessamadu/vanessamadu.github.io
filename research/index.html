@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research</title>
+<title>Research | Vanessa Madu</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green:   #4558C8;
-  --green2:  #3448B0;
+  --indigo:   #4558C8;
+  --indigo2:  #3448B0;
   --sage:    #5AA06E;
   --mist:    #C8D2FF;
   --cream:   #F4F2EC;
@@ -22,7 +22,7 @@
   --rose2:   #A85A50;
   --ink:     #1C1C18;
   --pencil:  #4A4860;
-  --mustard: #7FC48E;
+  --sage2: #7FC48E;
   --ocean:   #1A6E8A;
   --ocean-pale: #E0F2F8;
   --rec:     #7B5EA7;
@@ -49,23 +49,19 @@ a { text-decoration: none; color: inherit; }
 
 .skip-link {
   position: absolute; top: -999px; left: 1rem;
-  background: var(--cream); color: var(--green);
+  background: var(--cream); color: var(--indigo);
   font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
 }
 .skip-link:focus { top: 1rem; }
 
 /* ── NAV ── */
-nav {
+.site-nav {
   padding: 0 2.5rem; height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200;
+  background: var(--indigo);
 }
-main-nav {
-  padding: 0 2.5rem; height: 56px;
-  display: flex; align-items: center; justify-content: space-between;
-  position: sticky; top: 0; z-index: 200;
-  background: var(--green);
-}
+
 .nav-logo {
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
@@ -88,7 +84,7 @@ main-nav {
 
 /* ── PAGE HEADER ── */
 .page-header {
-  background: var(--green);
+  background: var(--indigo);
   padding: 6rem 3rem 6rem;
   position: relative; overflow: hidden;
 }
@@ -113,7 +109,7 @@ main-nav {
 }
 
 .header-inner {
-  max-width: 1200px; margin-bottom: 0 auto;
+  max-width: 1200px; margin: 0 auto;
   position: relative; z-index: 1;
   display: grid; grid-template-columns: 1fr auto;
   gap: 3rem; align-items: end;
@@ -244,7 +240,7 @@ main-nav {
 }
 
 .tag-current { background: #D1FAE5; color: #065F46; }
-.tag-complete { background: var(--mist); color: var(--green2); }
+.tag-complete { background: var(--mist); color: var(--indigo2); }
 .tag-soon    { background: #FEF9C3; color: #713F12; }
 
 .project-date {
@@ -306,7 +302,7 @@ main-nav {
   background: rgba(69,88,200,0.07);
   border: 1px solid rgba(69,88,200,0.15);
   border-radius: 4px; padding: 0.2rem 0.5rem;
-  color: var(--green);
+  color: var(--indigo);
 }
 
 /* coming soon project */
@@ -325,7 +321,7 @@ main-nav {
 
 /* ── COLLABORATORS / CONTACT ── */
 .collab-bg {
-  background: var(--green);
+  background: var(--indigo);
   clip-path: polygon(0 28px, 1% 8px, 2% 22px, 4% 5px, 6% 20px, 8% 6px, 10% 24px, 13% 4px, 16% 18px, 19% 5px, 22% 22px, 25% 4px, 28% 20px, 31% 6px, 34% 24px, 37% 4px, 40% 20px, 43% 5px, 46% 22px, 49% 4px, 52% 20px, 55% 6px, 58% 24px, 61% 4px, 64% 20px, 67% 5px, 70% 22px, 73% 4px, 76% 20px, 79% 6px, 82% 24px, 85% 4px, 88% 20px, 91% 5px, 94% 22px, 97% 6px, 100% 18px, 100% 100%, 0 100%);
   margin-top: -20px; padding-top: 3rem;
 }
@@ -440,7 +436,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
-<main-nav aria-label="Main navigation">
+<nav class= "site-nav" aria-label="Main navigation">
   <a href="/" class="nav-logo">Vanessa Madu</a>
   <ul class="nav-links">
     <li><a href="/sessions">Sessions</a></li>
@@ -450,7 +446,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <li><a href="/about">About</a></li>
     <li><a href="/sessions#enquire" class="nav-book">Book a session <i class="fa-solid fa-star fa-xs" aria-hidden="true"></i></a></li>
   </ul>
-</main-nav>
+</nav>
 
 <!-- PAGE HEADER -->
 <header class="page-header" id="main-content">
@@ -471,6 +467,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   </div>
 </header>
 
+<main class="main">
 <!-- ══ PhD RESEARCH ══ -->
 <section id="phd" aria-labelledby="phd-h">
   <div class="research-section">
@@ -541,11 +538,11 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 <section id="projects" aria-labelledby="projects-h">
   <div class="research-section">
     <div class="section-header">
-      <div class="section-icon" style="background: var(--mist); color: var(--green);">
+      <div class="section-icon" style="background: var(--mist); color: var(--indigo);">
         <i class="fa-solid fa-flask"></i>
       </div>
       <div class="section-heading-group">
-        <span class="section-label" style="color: var(--green);">Short Projects · 2023–2024</span>
+        <span class="section-label" style="color: var(--indigo);">Short Projects · 2023–2024</span>
         <h2 class="section-h" id="projects-h">Statistical theory<br>&amp; ocean model evaluation</h2>
         <p class="section-intro">
           Two 2.5-month research projects completed during the first year of the CDT, each resulting in theoretical or methodological contributions.
@@ -556,7 +553,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     <div class="project-layout">
 
       <div class="project-card">
-        <div class="project-stripe" style="background: var(--green);"></div>
+        <div class="project-stripe" style="background: var(--indigo);"></div>
         <div class="project-body">
           <div class="project-meta">
             <span class="project-tag tag-complete">Complete</span>
@@ -729,6 +726,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
       </div>
     </div>
 
+    <div class="project-layout">
       <div class="project-card coming-soon">
         <div class="project-stripe" style="background: rgba(176,106,42,0.3);"></div>
         <div class="project-body">
@@ -742,7 +740,6 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           </p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -776,6 +773,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -796,7 +794,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     </nav>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span>© 2026 Vanessa Madu · London, UK</span>
     <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
   </div>
 </footer>

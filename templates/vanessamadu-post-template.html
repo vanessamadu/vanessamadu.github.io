@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rabbit Hole #2 — Consecutive Odd Semi-Primes</title>
+<title>Rabbit Hole #2 — Consecutive Odd Semi-Primes | Vanessa Madu</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green:   #4558C8;
-  --green2:  #3448B0;
+  --indigo:   #4558C8;
+  --indigo2:  #3448B0;
   --sage:    #5AA06E;
   --mist:    #C8D2FF;
   --cream:   #F4F2EC;
@@ -34,7 +34,7 @@
   --rose2:   #A85A50;
   --ink:     #1C1C18;
   --pencil:  #4A4860;
-  --mustard: #7FC48E;
+  --sage2: #7FC48E;
 
   /* reading typography */
   --body-size: 1.05rem;
@@ -59,14 +59,14 @@ a { text-decoration: none; color: inherit; }
 }
 .skip-link {
   position: absolute; top: -999px; left: 1rem;
-  background: var(--cream); color: var(--green);
+  background: var(--cream); color: var(--indigo);
   font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
 }
 .skip-link:focus { top: 1rem; }
 
 /* ── NAV ── */
 .site-nav {
-  background: var(--green);
+  background: var(--indigo);
   padding: 0 2.5rem; height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200;
@@ -99,7 +99,7 @@ a { text-decoration: none; color: inherit; }
   display: flex; align-items: center; gap: 0.5rem;
 }
 .breadcrumb a { color: var(--sage); transition: color 0.15s; }
-.breadcrumb a:hover { color: var(--green); }
+.breadcrumb a:hover { color: var(--indigo); }
 .breadcrumb i { font-size: 0.65rem; color: var(--pencil); opacity: 0.5; }
 
 /* ── POST HEADER ── */
@@ -184,7 +184,7 @@ a { text-decoration: none; color: inherit; }
 .toc-list li a::before {
   content: '—'; color: var(--sage); font-size: 0.7rem; flex-shrink: 0;
 }
-.toc-list li a:hover { color: var(--green); }
+.toc-list li a:hover { color: var(--indigo); }
 
 /* share / back links */
 .post-actions {
@@ -198,7 +198,7 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.15s;
 }
 .action-link i { font-size: 0.8rem; color: var(--sage); }
-.action-link:hover { color: var(--green); }
+.action-link:hover { color: var(--indigo); }
 
 /* ── POST BODY ── */
 .post-body {
@@ -224,11 +224,11 @@ a { text-decoration: none; color: inherit; }
 .prose em { font-style: italic; }
 
 .prose a {
-  color: var(--green);
+  color: var(--indigo);
   border-bottom: 1px solid rgba(69,88,200,0.3);
   transition: border-color 0.15s;
 }
-.prose a:hover { border-color: var(--green); }
+.prose a:hover { border-color: var(--indigo); }
 
 /* headings */
 .prose h2 {
@@ -242,7 +242,7 @@ a { text-decoration: none; color: inherit; }
 .prose h3 {
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
-  font-size: 1.2rem; color: var(--green);
+  font-size: 1.2rem; color: var(--indigo);
   margin: 2rem 0 0.8rem;
 }
 .prose h4 {
@@ -306,7 +306,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid rgba(69,88,200,0.15);
   border-radius: 4px;
   padding: 0.1rem 0.4rem;
-  color: var(--green);
+  color: var(--indigo);
 }
 .prose pre code { color: #E8E6FF; background: none; border: none; padding: 0; }
 
@@ -366,8 +366,8 @@ a { text-decoration: none; color: inherit; }
 .callout-body { font-size: 0.88rem; color: var(--pencil); line-height: 1.72; }
 .callout-body strong { font-weight: 500; }
 
-.callout-note    { background: #EEF0FF; border-left: 4px solid var(--green); }
-.callout-note .callout-body strong { color: var(--green); }
+.callout-note    { background: #EEF0FF; border-left: 4px solid var(--indigo); }
+.callout-note .callout-body strong { color: var(--indigo); }
 .callout-warning { background: #FEF9C3; border-left: 4px solid #CA8A04; }
 .callout-result  { background: #D1FAE5; border-left: 4px solid var(--sage); }
 .callout-result .callout-body strong { color: #065F46; }
@@ -382,7 +382,7 @@ a { text-decoration: none; color: inherit; }
 .definition-label {
   font-family: 'Caveat', cursive;
   font-size: 0.85rem; font-weight: 700;
-  color: var(--green); display: block;
+  color: var(--indigo); display: block;
   margin-bottom: 0.5rem;
 }
 .definition p {
@@ -427,18 +427,18 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.75rem; font-weight: 700;
   color: var(--sage); display: block; margin-bottom: 0.2rem;
 }
-.nav-post:hover { color: var(--green); }
+.nav-post:hover { color: var(--indigo); }
 
 .back-to-writing {
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
   font-size: 0.9rem;
-  background: var(--green); color: var(--cream);
+  background: var(--indigo); color: var(--cream);
   padding: 0.6rem 1.4rem; border-radius: 999px;
   display: inline-flex; align-items: center; gap: 0.5rem;
   transition: background 0.2s; align-self: start;
 }
-.back-to-writing:hover { background: var(--green2); }
+.back-to-writing:hover { background: var(--indigo2); }
 
 /* ── FOOTER ── */
 footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
@@ -503,7 +503,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 <header class="post-header" id="main-content">
   <div>
     <div class="post-meta-top">
-      <span class="post-cat" style="background:#EEF0FF; color:var(--green);">
+      <span class="post-cat" style="background:#EEF0FF; color:var(--indigo);">
         <i class="fa-solid fa-infinity"></i> Recreational Maths
       </span>
       <span class="post-date">Aug 2024</span>
@@ -543,6 +543,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
   </aside>
 </header>
 
+<main class="main">
 <!-- POST BODY -->
 <div class="post-body">
   <article class="prose" id="post-content">
@@ -679,6 +680,7 @@ n = <span class="tok-num">9</span>
   <!-- empty second column keeps grid layout -->
   <div></div>
 </div>
+</main>
 
 <!-- POST FOOTER -->
 <div class="post-footer">
@@ -717,7 +719,7 @@ n = <span class="tok-num">9</span>
     </nav>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span>© 2026 Vanessa Madu · London, UK</span>
     <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
   </div>
 </footer>

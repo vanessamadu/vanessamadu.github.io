@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sessions</title>
+<title>Sessions | Vanessa Madu</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +13,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green:   #4558C8;
-  --green2:  #3448B0;
+  --indigo:   #4558C8;
+  --indigo2:  #3448B0;
   --sage:    #5AA06E;
   --mist:    #C8D2FF;
   --cream:   #F4F2EC;
@@ -45,14 +45,14 @@ a { text-decoration: none; color: inherit; }
 
 .skip-link {
   position: absolute; top: -999px; left: 1rem;
-  background: var(--cream); color: var(--green);
+  background: var(--cream); color: var(--indigo);
   font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
 }
 .skip-link:focus { top: 1rem; }
 
 /* ── NAV ── */
 .site-nav {
-  background: var(--green);
+  background: var(--indigo);
   padding: 0 2.5rem; height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200;
@@ -111,13 +111,13 @@ a { text-decoration: none; color: inherit; }
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
   font-size: clamp(2.5rem, 5vw, 4rem);
-  color: var(--green); line-height: 1;
+  color: var(--indigo); line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .page-h1 span {
   font-weight: 500;
-  color: var(--green);
+  color: var(--indigo);
   display: block;
 }
 
@@ -159,8 +159,8 @@ a { text-decoration: none; color: inherit; }
   cursor: pointer;
   transition: all 0.15s;
 }
-.filter-pill:hover { border-color: var(--green); color: var(--green); }
-.filter-pill.active { background: var(--green); color: var(--cream); border-color: var(--green); }
+.filter-pill:hover { border-color: var(--indigo); color: var(--indigo); }
+.filter-pill.active { background: var(--indigo); color: var(--cream); border-color: var(--indigo); }
 
 .filter-clear {
   font-family: 'Caveat', cursive;
@@ -213,7 +213,7 @@ a { text-decoration: none; color: inherit; }
 }
 .s-card.expanded {
   transform: rotate(0deg) !important;
-  border-color: var(--green);
+  border-color: var(--indigo);
   box-shadow: 0 8px 32px rgba(69,88,200,0.15);
   grid-column: span 2;
 }
@@ -221,7 +221,7 @@ a { text-decoration: none; color: inherit; }
 
 .card-tab { height: 5px; flex-shrink: 0; }
 .tab-ocean    { background: #3BA8A8; }
-.tab-pure     { background: var(--green); }
+.tab-pure     { background: var(--indigo); }
 .tab-stats    { background: var(--rose); }
 .tab-career   { background: var(--mustard); }
 .tab-workshop { background: var(--sage); }
@@ -265,7 +265,7 @@ a { text-decoration: none; color: inherit; }
 .card-toggle {
   font-family: 'Caveat', cursive;
   font-size: 0.82rem; font-weight: 700;
-  color: var(--green);
+  color: var(--indigo);
   display: flex; align-items: center; gap: 0.3rem;
   transition: color 0.15s;
 }
@@ -294,7 +294,7 @@ a { text-decoration: none; color: inherit; }
 .detail-block h4 {
   font-family: 'Caveat', cursive;
   font-size: 0.9rem; font-weight: 700;
-  color: var(--green); margin-bottom: 0.5rem;
+  color: var(--indigo); margin-bottom: 0.5rem;
   display: flex; align-items: center; gap: 0.4rem;
 }
 .detail-block h4 i { font-size: 0.8rem; }
@@ -322,16 +322,16 @@ a { text-decoration: none; color: inherit; }
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
   font-size: 0.9rem;
-  background: var(--green); color: var(--cream);
+  background: var(--indigo); color: var(--cream);
   padding: 0.6rem 1.4rem; border-radius: 999px;
   transition: background 0.2s;
   border: none; cursor: pointer;
 }
-.enquire-btn:hover { background: var(--green2); }
+.enquire-btn:hover { background: var(--indigo2); }
 
 /* ── ENQUIRY FORM ── */
 .form-section {
-  background: var(--green);
+  background: var(--indigo);
   position: relative; overflow: hidden;
   clip-path: polygon(0 30px, 1% 10px, 2% 24px, 4% 6px, 6% 22px, 8% 8px, 10% 26px, 13% 4px, 16% 20px, 19% 6px, 22% 24px, 25% 5px, 28% 22px, 31% 8px, 34% 26px, 37% 4px, 40% 22px, 43% 6px, 46% 24px, 49% 5px, 52% 22px, 55% 8px, 58% 26px, 61% 4px, 64% 22px, 67% 6px, 70% 24px, 73% 5px, 76% 22px, 79% 8px, 82% 26px, 85% 4px, 88% 22px, 91% 6px, 94% 24px, 97% 8px, 100% 20px, 100% 100%, 0 100%);
   margin-top: -20px;
@@ -399,7 +399,7 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.35);
 }
 
-.form-field select option { background: var(--green2); color: var(--cream); }
+.form-field select option { background: var(--indigo2); color: var(--cream); }
 
 .form-field input:focus,
 .form-field select:focus,
@@ -581,6 +581,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 
 <p class="results-count" id="resultsCount" aria-live="polite"></p>
 
+<main class="main">
 <!-- SESSIONS -->
 <div class="sessions-wrapper">
   <div class="sessions-grid" id="sessionsGrid">
@@ -1322,7 +1323,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 
   </div>
 </div>
-
+</main>
 <!-- ENQUIRY FORM -->
 <section class="form-section" id="enquire" aria-labelledby="form-heading">
   <div class="form-inner">
@@ -1387,7 +1388,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Sequences of semi-primes"> On Sequences of Semi-Primes</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="International dateline"> Tomorrow: Not a Question of When, But Where!</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Reaction-diffusion"> Why Does a Zebra Have Stripes?</label>
-          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Polutation dynamics"> Population Dynamics: Matters of Life and Death</label>
+          <label class="form-checkbox"><input type="checkbox" name="sessions" value="Population dynamics"> Population Dynamics: Matters of Life and Death</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Nonsense inference"> Nonsense Inference and How to Avoid It</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Data, data"> Data, Data Everywhere, but Not an Insight in Sight</label>
           <label class="form-checkbox"><input type="checkbox" name="sessions" value="Wisdom from wonderland"> Wisdom from Wonderland (talk series)</label>
@@ -1459,7 +1460,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     </nav>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span>© 2026 Vanessa Madu · London, UK</span>
     <span class="footer-quote">"Science is my Wonderland and Mathematics makes it tick."</span>
   </div>
 </footer>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About</title>
+<title>About | Vanessa Madu</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green:   #4558C8;
-  --green2:  #3448B0;
+  --indigo:   #4558C8;
+  --indigo2:  #3448B0;
   --sage:    #5AA06E;
   --mist:    #C8D2FF;
   --cream:   #F4F2EC;
@@ -22,7 +22,7 @@
   --rose2:   #A85A50;
   --ink:     #1C1C18;
   --pencil:  #4A4860;
-  --mustard: #7FC48E;
+  --sage2: #7FC48E;
 }
 
 html { scroll-behavior: smooth; }
@@ -43,14 +43,14 @@ a { text-decoration: none; color: inherit; }
 
 .skip-link {
   position: absolute; top: -999px; left: 1rem;
-  background: var(--cream); color: var(--green);
+  background: var(--cream); color: var(--indigo);
   font-weight: 700; padding: 0.5rem 1rem; z-index: 9999;
 }
 .skip-link:focus { top: 1rem; }
 
 /* ── NAV ── */
 .site-nav {
-  background: var(--green);
+  background: var(--indigo);
   padding: 0 2.5rem; height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200;
@@ -101,7 +101,7 @@ a { text-decoration: none; color: inherit; }
 /* photo column */
 .about-photo-col {
   position: relative; overflow: hidden;
-  background: var(--green);
+  background: var(--indigo);
 }
 
 .about-photo-col img {
@@ -139,7 +139,7 @@ a { text-decoration: none; color: inherit; }
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
   font-size: clamp(2.8rem, 5vw, 4.5rem);
-  color: var(--green); line-height: 0.95;
+  color: var(--indigo); line-height: 0.95;
   letter-spacing: -0.02em; margin-bottom: 1.8rem;
 }
 
@@ -194,62 +194,13 @@ a { text-decoration: none; color: inherit; }
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
   font-size: clamp(2rem, 3.5vw, 3rem);
-  color: var(--green); line-height: 1.05;
+  color: var(--indigo); line-height: 1.05;
   letter-spacing: -0.02em; margin-bottom: 3rem;
 }
 
-/* ── RESEARCH SECTION ── */
-.research-bg {
-  background: var(--green);
-  position: relative; overflow: hidden;
-  margin-top: -20px; padding-top: 3rem;
-}
-
-.research-inner {
-  max-width: 1200px; margin: 0 auto;
-  padding: 3rem 3rem 5rem;
-}
-
-.research-inner .section-eyebrow { color: rgba(200,210,255,0.7); transform: none; }
-.research-inner .section-h { color: var(--cream); }
-
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
-}
-
-.research-card {
-  background: rgba(255,255,255,0.08);
-  border: 1.5px solid rgba(255,255,255,0.12);
-  border-radius: 8px; padding: 1.8rem;
-  transition: border-color 0.2s, transform 0.2s;
-  position: relative;
-}
-.research-card:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-3px); }
-.research-card:nth-child(odd) { transform: rotate(-0.3deg); }
-.research-card:nth-child(even) { transform: rotate(0.4deg); margin-top: 0.5rem; }
-.research-card:hover { transform: rotate(0deg) translateY(-3px) !important; }
-
-.rc-label {
-  font-family: 'Caveat', cursive;
-  font-size: 0.85rem; font-weight: 700;
-  color: var(--mist); opacity: 0.7;
-  display: block; margin-bottom: 0.5rem;
-}
-.rc-title {
-  font-family: 'Fraunces', serif;
-  font-size: 1.1rem; font-weight: 900;
-  color: var(--cream); line-height: 1.25; margin-bottom: 0.7rem;
-}
-.rc-body {
-  font-size: 0.82rem; color: rgba(200,210,255,0.7); line-height: 1.75;
-}
-
-
 /* ── AWARDS SECTION ── */
 .awards-bg {
-  background: var(--green);
+  background: var(--indigo);
   border-top: 1px dashed rgba(69,88,200,0.15);
   border-bottom: 1px dashed rgba(69,88,200,0.15);
 }
@@ -284,7 +235,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 1rem; flex-shrink: 0;
 }
 .award-icon.gold   { background: #FEF9C3; color: #854D0E; }
-.award-icon.purple { background: var(--mist); color: var(--green); }
+.award-icon.purple { background: var(--mist); color: var(--indigo); }
 .award-icon.rose   { background: #FCE7F3; color: #9D174D; }
 .award-icon.green  { background: #D1FAE5; color: #065F46; }
 
@@ -330,7 +281,7 @@ a { text-decoration: none; color: inherit; }
   align-items: center; gap: 0.5rem;
   transition: background 0.15s, color 0.15s;
 }
-.cv-nav a:hover { background: var(--paper); color: var(--green); }
+.cv-nav a:hover { background: var(--paper); color: var(--indigo); }
 .cv-nav a i { font-size: 0.8rem; color: var(--sage); width: 16px; }
 
 .cv-download {
@@ -338,13 +289,13 @@ a { text-decoration: none; color: inherit; }
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
   font-size: 0.88rem;
-  background: var(--green); color: var(--cream);
+  background: var(--indigo); color: var(--cream);
   padding: 0.6rem 1.2rem; border-radius: 999px;
   display: flex; align-items: center; gap: 0.5rem;
   transition: background 0.2s;
   border: none; cursor: pointer; width: fit-content;
 }
-.cv-download:hover { background: var(--green2); }
+.cv-download:hover { background: var(--indigo2); }
 
 .cv-content { padding-left: 3rem; }
 
@@ -353,7 +304,7 @@ a { text-decoration: none; color: inherit; }
 .cv-section-h {
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
-  font-size: 1.4rem; color: var(--green);
+  font-size: 1.4rem; color: var(--indigo);
   margin-bottom: 1.5rem;
   display: flex; align-items: center; gap: 0.6rem;
 }
@@ -485,7 +436,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 
   </div>
 </section>
-
+<main class="main">
 <!-- AWARDS -->
 <section class="awards-bg" aria-labelledby="awards-h">
   <div class="awards-inner">
@@ -581,7 +532,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
           <div class="award-name">EPSRC PhD Studentship - Full Funding</div>
           <div class="award-sub">Statistical Machine Learning, Imperial College London</div>
         </div>
-        <div class="award-year">2023–2030</div>
+        <div class="award-year">2023 (start)</div>
       </div>
 
     </div>
@@ -633,12 +584,13 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
  
           <div class="cv-entry">
             <div class="cv-date">Oct 2018<br>– Jun 2023</div>
-            <div>
-              <div class="cv-entry-title">MSci Mathematics, First Class Honours</div>
-              <div class="cv-entry-place">Imperial College London</div>
-              <div class="cv-entry-detail">
-                Awards: RCSA Prize, Dean's List (Year 3), First Year Poster Project Prize.
-                Final year research project in Mathematical Computational Oceanography.
+              <div>
+                <div class="cv-entry-title">MSci Mathematics, First Class Honours</div>
+                <div class="cv-entry-place">Imperial College London</div>
+                <div class="cv-entry-detail">
+                  Awards: RCSA Prize, Dean's List (Year 3), First Year Poster Project Prize.
+                  Final year research project in Mathematical Computational Oceanography.
+              </div>
             </div>
           </div>
         </div>
@@ -880,6 +832,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
               <div class="cv-entry-place">National Physical Laboratory </div>
             </div>
           </div>
+        </div>
         <!-- Skills -->
         <div class="cv-section" id="cv-skills">
           <h3 class="cv-section-h"><i class="fa-solid fa-laptop-code"></i> Skills</h3>
@@ -965,7 +918,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     </div>
   </div>
 </section>
-
+</main>
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -985,7 +938,7 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
     </nav>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Vanessa Madu · London, UK</span>
+    <span>© 2026 Vanessa Madu · London, UK</span>
     <span style="font-style:italic;">"Science is my Wonderland and Mathematics makes it tick."</span>
   </div>
 </footer>
