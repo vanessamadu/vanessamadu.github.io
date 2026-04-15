@@ -74,22 +74,21 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-book:hover { background: var(--rose2) !important; }
 
-/* ── HERO ── */
-.hero {
+/* ── PAGE HEADER ── */
+.page-header {
   background: var(--paper);
   padding: 2rem 3rem 4rem;
   position: relative; overflow: hidden;
 }
-.hero::after {
-  content: '';
+.page-header::after {
+ content: '';
   position: absolute; bottom: -2px; left: 0; right: 0; height: 50px;
   background: var(--cream);
   clip-path: polygon(0% 70%, 2% 30%, 5% 60%, 8% 20%, 11% 55%, 15% 25%, 19% 60%, 23% 20%, 27% 55%, 31% 30%, 35% 65%, 39% 20%, 43% 55%, 47% 30%, 51% 60%, 55% 20%, 59% 55%, 63% 30%, 67% 65%, 71% 20%, 75% 55%, 79% 30%, 83% 60%, 87% 20%, 91% 55%, 95% 30%, 98% 60%, 100% 40%, 100% 100%, 0% 100%);
 }
 
-/* big quote as watermark */
-.hero::before {
-  content: '"';
+.page-header::before {
+   content: '"';
   font-family: 'Fraunces', serif;
   font-size: 28rem; font-weight: 900;
   color: rgba(69,88,200,0.05);
@@ -97,21 +96,21 @@ a { text-decoration: none; color: inherit; }
   line-height: 1; pointer-events: none; user-select: none;
 }
 
-.hero-inner {
-  max-width: 1200px; margin: 0 auto;
+.header-inner {
+max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 320px;
   gap: 4rem; align-items: end;
   position: relative; z-index: 1;
 }
 
-.hero-eyebrow {
+.header-eyebrow {
   font-family: 'Caveat', cursive;
   font-size: 1rem; font-weight: 600;
   color: var(--sage); display: block;
   transform: rotate(-1.5deg); margin-bottom: 0.5rem;
 }
 
-.hero-h1 {
+.page-h1 {
   font-family: 'Fraunces', serif;
   font-style: italic; font-weight: 900;
   font-size: clamp(2.8rem, 5vw, 4.8rem);
@@ -120,15 +119,17 @@ a { text-decoration: none; color: inherit; }
   line-height: 1em;
 }
 
-.hero-desc {
+.header-desc {
   font-size: 1rem; font-weight: 300;
   color: var(--pencil); line-height: 1.85;
   max-width: 1200px;
 }
-.hero-desc strong { color: var(--ink); font-weight: 500; }
+
+
+.header-desc strong { color: var(--ink); font-weight: 500; }
 
 /* stat stickers */
-.hero-stats {
+.header-stats {
   display: flex; flex-direction: column; gap: 0.8rem;
   align-self: center;
 }
@@ -599,12 +600,12 @@ footer { background: var(--ink); padding: 3.5rem 2.5rem 2rem; }
 
 
 <!-- HERO -->
-<header class="hero" id="main-content">
-  <div class="hero-inner">
+<header class="page-header" id="main-content">
+  <div class="header-inner">
     <div>
-      <span class="hero-eyebrow">Speaker · Writer · Performer · Science Poet · Reviewer</span>
-      <h1 class="hero-h1">Re-enchanting the Mathematical</h1>
-      <p class="hero-desc">
+      <span class="header-eyebrow">Speaker · Writer · Performer · Science Poet · Reviewer</span>
+      <h1 class="page-h1">Re-enchanting the Mathematical</h1>
+      <p class="header-desc">
         I really like maths, like, a lot. In fact, I think <strong>maths is the closest thing we have to magic</strong> and I design everything I do around
         helping others to experience that for themselves! This page is a highlights reel of what that's looked like so far.
       </p>
