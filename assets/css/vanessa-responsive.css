@@ -129,23 +129,50 @@
 
 @media (max-width: 600px) {
   .hero {
-    /* on small phones, stack photo below text */
     background-image: none !important;
-    background-color: var(--green);
+    background-color: var(--green) !important;
+    min-height: auto;
+    padding-bottom: 3rem;
   }
 
+  /* Keep the gradient overlay — it ensures text stays readable */
   .hero::before {
     background: none !important;
   }
 
   .hero-content {
-    padding: 3rem 1.5rem 4rem;
-    background: none;
+    padding: 3rem 1.5rem 2rem;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .hero-h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+  .hero-h1 .wonderland { font-size: clamp(3rem, 13vw, 4.5rem); }
+  .hero-note { max-width: 100%; }
+}
 
-  .hero-h1 .wonderland { font-size: clamp(3.2rem, 13vw, 5rem); }
+@media (max-width: 600px) {
+  .hero {
+    background-image: none !important;
+    background-color: var(--green) !important;
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+
+  /* Keep the gradient overlay — it ensures text stays readable */
+  .hero::before {
+    background: none !important;
+  }
+
+  .hero-content {
+    padding: 3rem 1.5rem 2rem;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+  .hero-h1 .wonderland { font-size: clamp(3rem, 13vw, 4.5rem); }
+  .hero-note { max-width: 100%; }
 
   /* show photo as a block below hero text on mobile */
   .hero::after {
@@ -158,8 +185,8 @@
     max-height: 50vw;
     object-fit: cover;
     object-position: 60% 20%;
-  }
-}
+  }}
+
 
 /* ══════════════════════════════════════════
    4. ABOUT STRIP (homepage)
@@ -497,5 +524,20 @@
   .hero-content {
     margin-left: 0;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Credentials / about strip on homepage */
+  .about-strip,
+  .creds-grid,
+  .about-grid,
+  .intro-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cred-card,
+  .intro-card {
+    transform: none !important;
   }
 }
