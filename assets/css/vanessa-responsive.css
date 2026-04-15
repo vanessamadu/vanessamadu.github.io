@@ -8,17 +8,11 @@
 /* ══════════════════════════════════════════
    1. BODY CAP — prevents too-wide layouts
 ══════════════════════════════════════════ */
-
-/*
-  Cap the effective content width so things don't
-  spread into oblivion on ultrawide monitors.
-  The page bg still fills edge-to-edge.
-*/
 .section,
-.hero-inner,
 .hero-content,
-.about-inner,
+.about-section,
 .sessions-wrapper,
+.sessions-inner,
 .research-section,
 .collab-inner,
 .press-inner,
@@ -35,15 +29,12 @@
 .post-body,
 .post-footer-inner,
 .breadcrumb,
-.stats-inner,
-.numbers-inner,
-.meadow-inner {
+.stats-inner {
   max-width: min(1200px, 92vw);
   margin-left: auto;
   margin-right: auto;
 }
 
-/* research page has narrower inner max */
 .cv-content,
 .cv-layout {
   min-width: 0;
@@ -58,7 +49,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--cream);
+  color: #F4F2EC;
   font-size: 1.3rem;
   padding: 0.4rem;
   transition: opacity 0.2s;
@@ -72,7 +63,7 @@
     display: none;
     position: absolute;
     top: 56px; left: 0; right: 0;
-    background: var(--green);
+    background: #4558C8;
     flex-direction: column;
     padding: 0.8rem 1.5rem 1.2rem;
     gap: 0.2rem;
@@ -98,193 +89,123 @@
 
 @media (max-width: 900px) {
   .hero {
-    /* switch from background-image split to stacked */
     min-height: auto;
     background-position: 70% top;
   }
 
   .hero-content {
     padding: 4rem 2rem 5rem;
-    /* darker overlay so text reads on smaller screens */
-    background: linear-gradient(
-      to right,
-      rgba(69,88,200,0.97) 0%,
-      rgba(69,88,200,0.97) 55%,
-      rgba(69,88,200,0.80) 80%,
-      rgba(69,88,200,0.40) 100%
-    );
     max-width: 100%;
   }
 
-  .hero-h1 {
-    font-size: clamp(2.2rem, 7vw, 4rem);
-  }
-
-  .hero-h1 .wonderland {
-    font-size: clamp(3rem, 10vw, 5.5rem);
-  }
-
+  .hero-h1 { font-size: clamp(2.2rem, 7vw, 4rem); }
+  .hero-h1 .wonderland { font-size: clamp(2.2rem, 7vw, 4rem); }
   .hero-note { max-width: 100%; }
 }
 
 @media (max-width: 600px) {
   .hero {
     background-image: none !important;
-    background-color: var(--green) !important;
+    background-color: #4558C8 !important;
     min-height: auto;
-    padding-bottom: 3rem;
   }
 
-  /* Keep the gradient overlay — it ensures text stays readable */
-  .hero::before {
-    background: none !important;
-  }
+  .hero::before { background: none !important; }
 
   .hero-content {
     padding: 3rem 1.5rem 2rem;
     max-width: 100%;
     margin-left: 0;
+    background: none !important;
   }
 
   .hero-h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
-  .hero-h1 .wonderland { font-size: clamp(3rem, 13vw, 4.5rem); }
+  .hero-h1 .wonderland { font-size: clamp(2.4rem, 11vw, 3.5rem); }
   .hero-note { max-width: 100%; }
 }
-
-@media (max-width: 600px) {
-  .hero {
-    background-image: none !important;
-    background-color: var(--green) !important;
-    min-height: auto;
-    padding-bottom: 3rem;
-  }
-
-  /* Keep the gradient overlay — it ensures text stays readable */
-  .hero::before {
-    background: none !important;
-  }
-
-  .hero-content {
-    padding: 3rem 1.5rem 2rem;
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-  .hero-h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
-  .hero-h1 .wonderland { font-size: clamp(3rem, 13vw, 4.5rem); }
-  .hero-note { max-width: 100%; }
-
-  /* show photo as a block below hero text on mobile */
-  .hero::after {
-    /* override torn-paper edge positioning */
-  }
-
-  .hero-photo-mobile {
-    display: block !important;
-    width: 100%;
-    max-height: 50vw;
-    object-fit: cover;
-    object-position: 60% 20%;
-  }}
-
 
 /* ══════════════════════════════════════════
-   4. ABOUT STRIP (homepage)
+   4. HOMEPAGE ABOUT SECTION
 ══════════════════════════════════════════ */
 
 @media (max-width: 900px) {
-  .about-inner {
-    grid-template-columns: 1fr;
+  .about-section {
+    grid-template-columns: 1fr !important;
     gap: 2.5rem;
     padding: 3rem 2rem;
   }
+}
+
+@media (max-width: 640px) {
+  .fact-card { transform: none !important; }
 }
 
 /* ══════════════════════════════════════════
    5. SESSIONS GRID (homepage + sessions page)
 ══════════════════════════════════════════ */
 
+@media (max-width: 900px) {
+  .sessions-heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 1024px) {
-  .sessions-grid,
   .sessions-scatter,
-  .sessions-inner {
-    grid-template-columns: repeat(2, 1fr);
+  .sessions-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 640px) {
-  .sessions-grid,
   .sessions-scatter,
-  .sessions-inner {
-    grid-template-columns: 1fr;
+  .sessions-grid {
+    grid-template-columns: 1fr !important;
   }
-
-  /* remove card tilts on mobile — too jarring at small sizes */
-  .s-card,
-  .session-card,
-  .session-tile {
-    transform: none !important;
-  }
+  .s-card { transform: none !important; }
 }
 
 /* ══════════════════════════════════════════
-   6. STATS / NUMBERS ROW
+   6. STATS ROW
 ══════════════════════════════════════════ */
 
 @media (max-width: 900px) {
-  .stats-grid,
-  .numbers-grid,
-  .stats-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .stat-block + .stat-block {
-    border-left: none;
-    border-top: 1px solid var(--rule, rgba(201,150,42,0.2));
+  .stats-inner {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2.5rem;
   }
 }
 
 @media (max-width: 500px) {
-  .stats-grid,
-  .numbers-grid,
-  .stats-row {
-    grid-template-columns: 1fr 1fr;
-  }
+  .stats-inner { grid-template-columns: 1fr 1fr !important; }
 }
 
 /* ══════════════════════════════════════════
-   7. SCI COMM / GARDEN GRID
+   7. SCI COMM GRID
 ══════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-  .scicomm-grid,
-  .garden-grid,
-  .scicomm-section .scicomm-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .scicomm-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
 @media (max-width: 640px) {
-  .scicomm-grid,
-  .garden-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .scicomm-grid { grid-template-columns: 1fr !important; }
   .sc-card { transform: none !important; }
 }
 
 /* ══════════════════════════════════════════
-   8. WRITING LIST
+   8. WRITING LIST (homepage + writing page)
 ══════════════════════════════════════════ */
 
 @media (max-width: 640px) {
-  .writing-item,
   .w-item {
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 60px 1fr !important;
     gap: 0.8rem;
   }
-  .writing-tag,
-  .w-tag { display: none; } /* hide category tag on mobile — redundant in grouped view */
+  .w-tag { display: none; }
+  .post-tag { display: none; }
 }
 
 /* ══════════════════════════════════════════
@@ -293,18 +214,14 @@
 
 @media (max-width: 900px) {
   .about-hero-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     min-height: auto;
   }
-
   .about-photo-col {
     height: 60vw;
     max-height: 400px;
   }
-
-  .about-text-col {
-    padding: 3rem 2rem 4rem;
-  }
+  .about-text-col { padding: 3rem 2rem 4rem; }
 }
 
 /* ══════════════════════════════════════════
@@ -312,23 +229,20 @@
 ══════════════════════════════════════════ */
 
 @media (max-width: 900px) {
-  .research-grid { grid-template-columns: 1fr; }
-  .project-details { grid-template-columns: 1fr; }
-  .collab-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .research-grid { grid-template-columns: 1fr !important; }
+  .project-details { grid-template-columns: 1fr !important; }
+  .collab-inner { grid-template-columns: 1fr !important; gap: 2.5rem; }
 }
 
 /* ══════════════════════════════════════════
-   11. CV LAYOUT (sidebar + content)
+   11. CV LAYOUT
 ══════════════════════════════════════════ */
 
 @media (max-width: 900px) {
-  .cv-layout {
-    grid-template-columns: 1fr;
-  }
+  .cv-layout { grid-template-columns: 1fr !important; }
   .cv-sidebar {
     position: static;
-    padding-right: 0;
-    padding-bottom: 1.5rem;
+    padding-right: 0; padding-bottom: 1.5rem;
     border-right: none;
     border-bottom: 1px dashed rgba(69,88,200,0.15);
   }
@@ -339,12 +253,12 @@
 }
 
 @media (max-width: 500px) {
-  .cv-entry { grid-template-columns: 1fr; gap: 0.3rem; }
+  .cv-entry { grid-template-columns: 1fr !important; gap: 0.3rem; }
   .cv-date { padding-top: 0; font-size: 0.8rem; }
 }
 
 /* ══════════════════════════════════════════
-   12. POST TEMPLATE (blog post)
+   12. POST TEMPLATE
 ══════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
@@ -353,20 +267,18 @@
   .post-header,
   .post-body,
   .post-footer-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 0;
   }
 
   .post-sidebar { position: static; margin-bottom: 2rem; }
   .toc-card { transform: none; }
-
   .post-header { padding-bottom: 0; }
   .post-body { padding-top: 2rem; }
 }
 
 @media (max-width: 640px) {
-  .post-header,
-  .post-body { padding: 1.5rem; }
+  .post-header, .post-body { padding: 1.5rem; }
   .prose pre { padding: 1rem; font-size: 0.78rem; }
   .prose h2 { font-size: 1.4rem; }
   .post-footer-nav { flex-direction: column; gap: 1rem; }
@@ -378,141 +290,113 @@
 ══════════════════════════════════════════ */
 
 @media (max-width: 900px) {
-  .page-header-inner { grid-template-columns: 1fr; }
+  .page-header-inner { grid-template-columns: 1fr !important; }
   .header-note { text-align: left; transform: none; }
-
-  /* stack filter groups vertically */
   .filter-group { gap: 0.4rem; }
   .filter-clear { margin-left: 0; margin-top: 0.3rem; }
 }
 
 @media (max-width: 640px) {
   .filter-pill { font-size: 0.7rem; padding: 0.3rem 0.7rem; }
-
-  /* expanded card goes full width */
-  .s-card.expanded { grid-column: span 1; }
-  .card-detail { grid-template-columns: 1fr; }
+  .s-card.expanded { grid-column: span 1 !important; }
+  .card-detail { grid-template-columns: 1fr !important; }
 }
 
 /* ══════════════════════════════════════════
-   14. FORM (sessions enquiry)
+   14. ENQUIRY FORM
 ══════════════════════════════════════════ */
 
 @media (max-width: 700px) {
-  .form-grid { grid-template-columns: 1fr; }
-  .form-field.full { grid-column: span 1; }
-  .form-inner { padding: 3rem 1.5rem 3rem; }
+  .form-grid { grid-template-columns: 1fr !important; }
+  .form-field.full { grid-column: span 1 !important; }
+  .form-inner { padding: 3rem 1.5rem; }
 }
 
 /* ══════════════════════════════════════════
-   15. PRESS LIST (sci comm page)
+   15. PRESS LIST
 ══════════════════════════════════════════ */
 
 @media (max-width: 640px) {
   .press-item {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto !important;
     gap: 0.5rem;
   }
-  .press-outlet { display: none; } /* title + year is enough on mobile */
+  .press-outlet { display: none; }
 }
 
 /* ══════════════════════════════════════════
-   16. FEATURE CARD (sci comm / YouTube)
+   16. FEATURE CARD (sci comm video)
 ══════════════════════════════════════════ */
 
 @media (max-width: 900px) {
-  .feature-card { grid-template-columns: 1fr; }
+  .feature-card { grid-template-columns: 1fr !important; }
   .fc-visual { min-height: 160px; }
   .ep-list { max-width: 100%; }
 }
 
 /* ══════════════════════════════════════════
-   17. WRITING INDEX
+   17. WRITING INDEX PAGE
 ══════════════════════════════════════════ */
 
 @media (max-width: 640px) {
   .filter-bar { padding: 0 1.5rem; }
   .posts-wrapper { padding: 1.5rem 1.5rem 4rem; }
   .post-item {
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 60px 1fr !important;
     gap: 0.7rem;
   }
-  /* hide the tag pill — category already shown by group header */
-  .post-tag { display: none; }
 }
 
 /* ══════════════════════════════════════════
-   18. OUTREACH GRID (sci comm)
+   18. OUTREACH + WRITING GRIDS
 ══════════════════════════════════════════ */
 
 @media (max-width: 900px) {
   .outreach-grid,
-  .writing-grid { grid-template-columns: 1fr; }
+  .writing-grid {
+    grid-template-columns: 1fr !important;
+  }
   .outreach-card,
   .writing-card { transform: none !important; }
 }
 
 /* ══════════════════════════════════════════
-   19. GENERAL PADDING REDUCTIONS ON MOBILE
+   19. GENERAL MOBILE PADDING + MISC
 ══════════════════════════════════════════ */
 
 @media (max-width: 640px) {
   .section { padding: 3rem 1.5rem; }
-  .page-header { padding: 3rem 1.5rem 3rem; }
+  .page-header { padding: 3rem 1.5rem; }
   nav { padding: 0 1.5rem; }
   footer { padding: 2.5rem 1.5rem 1.5rem; }
-  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-inner { grid-template-columns: 1fr !important; gap: 2rem; }
   .footer-nav { text-align: left; }
 
-  /* CTA / glade sections */
-  .cta-band,
-  .glade-inner,
-  .contact-band,
-  .cb-h { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .contact-band { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .cta-section  { padding-left: 1.5rem; padding-right: 1.5rem; }
 
-  .cta-band::before,
-  .cta-band::after,
-  .glade-botanical-l,
-  .glade-botanical-r { display: none; } /* decorative only, hide on mobile */
-
-  /* hero stat stickers — horizontal scroll on mobile */
-  .hero-stats {
-    flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-    gap: 0.8rem;
-    -webkit-overflow-scrolling: touch;
-  }
-  .stat-sticker { flex-shrink: 0; min-width: 120px; }
-
-  /* about page role chips */
   .role-chips { gap: 0.4rem; }
   .role-chip { font-size: 0.8rem; }
 
-  /* talks grid (sci comm) */
-  .talks-grid { grid-template-columns: 1fr; }
+  .talks-grid { grid-template-columns: 1fr !important; }
   .talk-card { transform: none !important; }
-
-  /* art grid */
-  .art-grid { grid-template-columns: 1fr; }
+  .art-grid { grid-template-columns: 1fr !important; }
   .art-card { transform: none !important; }
 }
 
 /* ══════════════════════════════════════════
-   20. ULTRAWIDE CAP (prevents the huge gaps)
+   20. ULTRAWIDE CAP
 ══════════════════════════════════════════ */
 
 @media (min-width: 1400px) {
-  /* Research hero */
   .page-header > *,
   .header-inner { padding-left: 0; padding-right: 0; }
 }
 
 /* ══════════════════════════════════════════
-   21. HERO CONTENT ALIGNMENT
+   21. HERO CONTENT ALIGNMENT (desktop)
 ══════════════════════════════════════════ */
 
-/* Keep hero text left-aligned and not pushed right on wide screens */
 .hero-content {
   width: 100%;
   max-width: 560px;
@@ -524,20 +408,5 @@
   .hero-content {
     margin-left: 0;
     max-width: 100%;
-  }
-}
-
-@media (max-width: 640px) {
-  /* Credentials / about strip on homepage */
-  .about-strip,
-  .creds-grid,
-  .about-grid,
-  .intro-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .cred-card,
-  .intro-card {
-    transform: none !important;
   }
 }
